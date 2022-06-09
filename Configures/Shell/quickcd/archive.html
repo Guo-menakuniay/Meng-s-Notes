@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="zh-CN"><head><title data-react-helmet="true">Bash技巧：一个在不同目录之间直接来回快速 cd 的Shell脚本 - SegmentFault 思否</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta httpequiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="alexaVerifyID" content="LkzCRJ7rPEUwt6fVey2vhxiw1vQ">
+    <meta name="apple-itunes-app" content="app-id=958101793, app-argument=">
+    <meta property="qc:admins" content="15317273575564615446375">
+    <meta name="msapplication-TileColor" content="#009a61">
+    <meta name="sogou_site_verification" content="MKVKCoIjwL">
+    <meta name="360-site-verification" content="737314c9bf48873a1a0a22295203d9d1">
+    <meta rel="apple-touch-icon" href="https://cdn.segmentfault.com/r-b7d7730d/touch-icon.png">
+    <meta name="msapplication-square150x150logo" content="https://cdn.segmentfault.com/r-b7d7730d/touch-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.segmentfault.com/r-b7d7730d/favicon.ico">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="SegmentFault">
+    <link rel="alternate" type="application/atom+xml" href="/feeds/questions" title="SegmentFault 最新问题">
+    <link rel="alternate" type="application/atom+xml" href="/feeds/blogs" title="SegmentFault 最新文章">
+    <link rel="stylesheet" href="https://cdn.segmentfault.com/r-b7d7730d/umi.css">
+    <script>
+      window.routerBase = "/";
+    </script>
+    <script>
+      window.publicPath =
+        window.resourceBaseUrl || "https://cdn.segmentfault.com/r-b7d7730d/";
+    </script>
+    <script>
+      //! umi version: 3.5.20
+    </script>
+  <meta data-react-helmet="true" name="keywords" content="linux,bash,shell"><meta data-react-helmet="true" name="description" content="本篇文章介绍一个可以在不同目录之间直接来回快速 cd 的 shell 脚本。假设这个 shell 脚本的名称为 quickcd.sh。在 Linux 下进行项目开发，特别是进行 Androi..."><meta data-react-helmet="true" name="userId" value="" id="SFUserId"><meta data-react-helmet="true" name="userRank" value="" id="SFUserRank"><meta data-react-helmet="true" name="twitter:card" content="summary"><meta data-react-helmet="true" name="twitter:image" content="https://cdn.segmentfault.com/r-b7d7730d/touch-icon.png"><meta data-react-helmet="true" name="twitter:site" content="@segment_fault"><meta data-react-helmet="true" name="twitter:creator" content="@segmentfault"><meta data-react-helmet="true" name="twitter:title" content="Bash技巧：一个在不同目录之间直接来回快速 cd 的Shell脚本"><meta data-react-helmet="true" name="og:type" content="article"><meta data-react-helmet="true" name="og:image" content="https://cdn.segmentfault.com/r-b7d7730d/touch-icon.png"><meta data-react-helmet="true" name="og:title" content="Bash技巧：一个在不同目录之间直接来回快速 cd 的Shell脚本"><meta data-react-helmet="true" name="og:description" content="本篇文章介绍一个可以在不同目录之间直接来回快速 cd 的 shell 脚本。假设这个 shell 脚本的名称为 quickcd.sh。在 Linux 下进行项目开发，特别是进行 Androi..."><meta data-react-helmet="true" name="og:url" content="https://segmentfault.com/a/1190000025190817"><meta data-react-helmet="true" name="og:site_name" content="SegmentFault 思否"><meta data-react-helmet="true" name="msvalidate.01" content="2C018C53297C8388F3E7052F5E9CA6AF"><meta data-react-helmet="true" name="event-object" value="{&quot;current&quot;: [&quot;article&quot;, [&quot;1190000025190817&quot;]], &quot;root&quot;: [&quot;article&quot;, &quot;1190000025190817&quot;]}" id="SFEventObject"><script data-react-helmet="true" async="true" defer="true" data-domain="segmentfault.com" src="https://stats.segmentfault.net/js/plausible.js"></script><script data-react-helmet="true" type="application/ld+json">{
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://google.com/article"
+            },
+            "name": "Bash技巧：一个在不同目录之间直接来回快速 cd 的Shell脚本",
+            "headline": "Bash技巧：一个在不同目录之间直接来回快速 cd 的Shell脚本",
+            "image": "https://cdn.segmentfault.com/r-b7d7730d/touch-icon.png",
+            "datePublished": "2020-11-28T04:00:00.000Z",
+            "dateModified": "2020-11-28T04:00:00.000Z",
+            "url": "https://segmentfault.com/a/1190000025190817",
+            "author": {
+              "@type": "Person",
+              "name": "霜鱼片"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "SegmentFault",
+              "logo": {
+                "@type": "ImageObject",
+                "url":
+                  "https://assets.segmentfault.com/v-5fc4b0b2/global/img/static/touch-icon.png"
+              }
+            }
+          }</script><link rel="preload" href="https://cdn.segmentfault.com/r-b7d7730d/layouts__index~p__Video__Add.chunk.css" as="style" /><link rel="stylesheet" href="https://cdn.segmentfault.com/r-b7d7730d/layouts__index~p__Video__Add.chunk.css" />
+<link rel="preload" href="https://cdn.segmentfault.com/r-b7d7730d/layouts__index.chunk.css" as="style" /><link rel="stylesheet" href="https://cdn.segmentfault.com/r-b7d7730d/layouts__index.chunk.css" />
+<link rel="preload" href="https://cdn.segmentfault.com/r-b7d7730d/p__ArticleDetail.chunk.css" as="style" /><link rel="stylesheet" href="https://cdn.segmentfault.com/r-b7d7730d/p__ArticleDetail.chunk.css" />
+</head>
+  <body>
+    <div id="root"><style></style><div class="d-none d-lg-block text-center"><div id="OA_holder_5" class="ad-container" style="display:none"></div></div><div class="position-fixed" style="top:58px;left:0;right:0;margin:auto;z-index:5"><div class="toast-container position-absolute top-0 start-50 translate-middle-x"></div><div class="toast-container position-absolute top-0 start-50 translate-middle-x"></div></div><div id="root-top-container"></div><nav id="sf-header" class="bg-white shadow-sm sticky-top navbar navbar-expand-lg navbar-light"><div class="position-relative container"><div aria-controls="basic-navbar-nav" aria-label="Toggle navigation" class="self-nav-toogle___jVdh3 navbar-toggler collapsed"><span class="navbar-toggler-icon"></span></div><div class="left-wrap d-flex justify-content-between align-items-center nav-grow"><a href="/" class="sf-header___2cUz5 me-3 me-md-0 me-lg-3 navbar-brand"><img src="https://cdn.segmentfault.com/r-b7d7730d/static/logo-b.d865fc97.svg" width="139" height="26" class="lg-show" alt="segmentfault"/><img src="https://cdn.segmentfault.com/r-b7d7730d/static/sf-icon-small.82a498f6.svg" width="30" height="30" class="lg-none" alt="segmentfault"/></a><div class="d-flex lg-none align-items-center"><a href="/search" aria-label="搜索" class="d-inline-block text-center text-secondary position-relative" style="font-size:20px;width:44px"><i class="fa-fw far fa-magnifying-glass"></i></a><a class="btn btn-primary d-lg-none ms-2" href="/user/login">注册登录</a></div></div><div class="justify-content-between navbar-collapse collapse" id="basic-navbar-nav"><div class="fw-bold navbar-nav"><a href="/questions" data-rr-ui-event-key="/questions" class="nav-link">问答</a><a href="/blogs" data-rr-ui-event-key="/blogs" class="nav-link">专栏</a><a href="https://ke.segmentfault.com" target="_blank" class="nav-link lg-show">课程</a><a href="/jobs" data-rr-ui-event-key="/jobs" class="d-flex align-items-center nav-link">招聘<i class="ms-1 text-danger fas fa-fire" style="width:0.88rem;vertical-align:text-bottom"></i></a><a href="/events" data-rr-ui-event-key="/events" class="nav-link">活动</a><div class="lg-show  hover-down  nav-item dropdown"><a id="basic-nav-dropdown" aria-expanded="false" role="button" class="dropdown-toggle nav-link" tabindex="0">发现</a></div></div><div class="d-none d-xl-block px-3 header-search___28AtS"><div id="header-tsearch-toogle" class="dropdown"><div class="position-relative dropdown-toggle" id="react-aria-2" aria-expanded="false"><div class="icon-search"><i class="far fa-magnifying-glass text-secondary"></i></div><input type="text" name="q" placeholder="搜索关键字" aria-label="搜索" value="" autoComplete="off" class="me-sm-2 w-100 input form-control"/></div><div data-bs-popper="static" class="w-100 dropdown-menu"><a href="https://www.bing.com/search?q=site:segmentfault.com%20" target="_blank" aria-selected="true" data-rr-ui-dropdown-item="" class="dropdown-item active"><span class="search-name">✓</span>使用“Bing”搜本站</a><a href="https://cse.google.com/cse?cx=007438528117617975633:unedhtbhte0&amp;q=" target="_blank" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item"><span class="search-name"></span>使用“Google”搜本站</a><a href="http://www.baidu.com/s?wd=site%3Asegmentfault.com%20" target="_blank" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item"><span class="search-name"></span>使用“百度”搜本站</a><a href="/search?q=" target="_self" aria-selected="false" data-rr-ui-dropdown-item="" class="dropdown-item"><span class="search-name"></span>站内搜索</a></div></div></div><nav class="p-0 navbar navbar-expand navbar-light"><div class="d-none d-lg-block d-xl-none me-2 nav-item"><a href="/search" aria-label="搜索" class="nav-link"><i class="fa-fw far fa-magnifying-glass text-secondary font-size-20"></i></a></div><div class="d-none d-lg-flex me-2 me-md-0 nav-item"><a href="/user/login" class="btn btn-primary">注册登录</a></div></nav></div></div></nav><div class="d-none d-xl-flex justify-content-center"><div id="OA_holder_2" class="ad-container" style="display:block"></div></div><div class="article-content pt-3 pt-sm-0 container"><nav aria-label="breadcrumb" class="font-size-14 px-0 my-0 position-relative mx-4 mx-md-0 d-none d-sm-block" style="z-index:1"><ol class="breadcrumb bg-transparent"><li class="breadcrumb-item"><a href="/">首页</a></li><li class="breadcrumb-item"><a href="/blogs">专栏</a></li><li class="breadcrumb-item"><a href="/blog/shuangyu">南木阁</a></li><li class="breadcrumb-item active" aria-current="page">文章详情</li></ol></nav><div class="row"><div class="col-xl w-0 col-12"><div class="sticky-wrap sticky-top functional-area-left d-none d-xl-flex justify-content-center pt-5 functional-area-left2"><div role="group" class="align-items-center btn-group-vertical"><button aria-label="点赞" type="button" class="func-btn mainLike  sflex-center shadow-sm rounded-circle main-lg-Like mb-3 btn btn-outline-primary"><i class="far fa-thumbs-up"></i><span class="mainLikeNum invisible">0</span></button><button aria-label="收藏" type="button" class="func-btn sflex-center rounded-circle mb-2 btn btn-outline-secondary"><i class="far fa-bookmark"></i></button><a class="func-btn sflex-center btn btn-outline-secondary rounded-circle mb-2" href="#comment-area" aria-label="评论"><i class="far fa-message-lines"></i></a><div class="dropdown"><a href="###" class="func-btn nav-tab-item  rounded-pill btn btn-outline-secondary sflex-center rounded-circle dropdown-toggle"><i class="far fa-share-nodes"></i></a></div></div></div><canvas hidden="" class="qrcode"></canvas><div class="mb-4 card"><div class="p-lg-30 position-relative card-body"><h1 class="h2 mb-3"><a href="/a/1190000025190817" class="text-body">Bash技巧：一个在不同目录之间直接来回快速 cd 的Shell脚本</a></h1><div class="d-flex align-items-center justify-content-between flex-wrap mb-4"><div class="d-flex align-items-center flex-wrap"><a href="/u/shuangyupian" class="d-flex align-items-center"><picture class="me-2"><img src="https://avatar-static.segmentfault.com/415/308/4153086576-5db438eaba715_huge128" alt="" class="d-inline-block rounded-circle" width="32" height="32"/></picture><strong class="align-self-center font-size-14">霜鱼片</strong></a><time class="text-secondary font-size-14" dateTime="2020-11-28T04:00:00.000Z" itemProp="datePublished" style="margin-left:12px">发布于 <!-- -->2020-11-28 </time></div></div><div id="OA_holder_25" class="ad-container" style="display:block"></div><article class="article fmt article-content "><p>本篇文章介绍一个可以在不同目录之间直接来回快速 cd 的 shell 脚本。</p><p>假设这个 shell 脚本的名称为 <code>quickcd.sh</code>。</p><p>在 Linux 下进行项目开发，特别是进行 Android 系统开发工作，经常需要使用 <code>cd</code> 命令切换 shell 的工作目录。</p><p>想象这样一个使用场景：</p><ul><li>当前 shell 位于源码根目录的 <em>frameworks/base/packages/SystemUI/src/com/android/systemui/</em> 目录下。</li><li>接下来要进入源码根目录的 <em>packages/apps/Settings/src/com/android/settings/</em> 目录，使用 git 查看某个文件的修改记录。</li><li>那么需要先数一下 <em>frameworks/base/packages/SystemUI/src/com/android/systemui/</em> 这个路径有多少个目录。</li><li>数完发现有 8 个目录，执行 <code>cd ../../../../../../../../</code> 命令退回到源码根目录。在输入多个 <code>../</code> 时，特别麻烦，很容易出错。</li><li>然后执行 <code>cd packages/apps/Settings/src/com/android/settings/</code> 命令进入指定目录。期间要不停按 Tab 键补全目录名称。</li></ul><p>可以看到，整个过程需要输入很多字符，非常麻烦。</p><p>实际上，在记录当前源码根目录的绝对路径之后，可以使用一些简单字符来对应一些常用的目录路径。</p><p>例如，用 <em>sui</em> 对应 <em>frameworks/base/packages/SystemUI/src/com/android/systemui/</em> 目录。</p><p>用 <em>ps</em> 对应 <em>packages/apps/Settings/src/com/android/settings/</em> 目录。</p><p>可以把这些简写字符传递给这里介绍的 <code>quickcd.sh</code> 脚本，就可以快速 cd 到对应的目录。</p><p>例如，执行 <code>source quickcd.sh ps</code> 命令，<code>quickcd.sh</code> 获取到 <em>ps</em> 对应 <em>packages/apps/Settings/src/com/android/settings/</em> 目录。</p><p>然后自动在这个目录前面加上当前源码根目录的绝对路径，就可以使用 <code>cd</code> 命令直接进入到对应的目录。</p><p>这样只需要输入很少的字符，并省去了执行 <code>cd ../../../</code> 这个步骤。</p><p>后面会介绍如何设置命令别名来避免输入 <code>source quickcd.sh</code> 这些字符，进一步减少输入，更加方便。</p><h2>配置目录路径简写</h2><p>如之前说明，可以用 <em>sui</em> 表示 <em>frameworks/base/packages/SystemUI/src/com/android/systemui/</em> 目录。</p><p>这个 <em>sui</em> 称之为 “路径简写”。</p><p>路径简写使用一些简单字符来表示特定的目录路径。</p><p>为了方便动态添加、删除、查询路径简写，可以把这些路径简写保存在一个配置文件里面。</p><p>在执行 <code>quickcd.sh</code> 脚本时，会读取配置文件内容，获取到各个配置项的值。</p><p>配置项的基本格式是：路径简写|目录路径</p><p>一个参考的配置文件内容如下所示：</p><pre><code>b|frameworks/base
+sui|frameworks/base/packages/SystemUI/src/com/android/systemui
+ps|packages/apps/Settings/src/com/android/settings</code></pre><p>这些配置的目录路径都是 Android 源码根目录下的相对路径。</p><p>在实际执行 <code>cd</code> 命令的时候，会自动上它们所在的 Android 源码根目录的绝对路径。</p><p>这个绝对路径是在运行时通过命令选项所指定。只需要指定一次，会一直生效。</p><p>解析配置文件时，需要用到之前文章介绍的 <code>parsecfg.sh</code> 脚本。</p><p>要获取 <code>parsecfg.sh</code> 脚本的代码，可以查看之前的文章。</p><p>当然，这个脚本并不只限于用在 Android 源码目录上。</p><p><code>quickcd.sh</code> 脚本支持指定任意的顶层目录路径。</p><p>例如，可以指定 Linux 的 HOME 目录，配置 HOME 底下各个目录的路径，就可以进行切换。</p><p>后面会提供具体测试的例子，可供参考。</p><h2>脚本代码</h2><p>列出 <code>quickcd.sh</code> 脚本的具体代码如下所示。</p><p>在这个代码中，对大部分关键代码都提供了详细的注释，方便阅读。</p><p>这篇文章的后面也会对一些关键点进行说明，有助理解。</p><pre><code class="bash">#!/bin/bash
+# 该脚本用于在所指定顶层目录底下的各个目录之间直接来回快速 cd.
+# 把各个目录路径和一些简单的字符对应起来,通过解析预先配置的文本文件,获取
+# 路径简写和对应要 cd 到的目录路径. 基本配置格式为: 路径简写|目录路径
+# 例如配置 "b|frameworks/base",则 b 是路径简写, frameworks/base 是对应的
+# 路径.在顶层目录底下的任意一个目录里面,都可以执行 source quickcd.sh b
+# 命令来直接 cd 到 framework/base 目录下,不需要先退回到顶层目录再执行 cd.
+# 为了让脚本执行结束后,还保持在 cd 后的目录,需要用 source 命令来执行
+# 当前脚本. 可以在 ~/.bashrc 文件中添加如下语句来设置命令别名:
+#   alias c='source quickcd.sh'
+# 后续执行 c 命令,就相当于执行 source quickcd.sh 命令.
+# 这里假设 quickcd.sh 脚本放在 PATH 指定的寻址目录下.例如 /usr/bin 目录.
+# 如果 quickcd.sh 脚本没有放在默认的寻址目录下,请指定完整的绝对路径.
+
+# 下面变量指定默认解析的配置文件名.该文件配置了路径简写、以及对应的路径.
+# 这个 dirinfo.txt 文件需要预先配置好,放到 HOME 目录的 .liconfig 目录下.
+DEFAULT_DIRINFO="${HOME}/.liconfig/dirinfo.txt"
+
+# PARSECFG_filepath 是 parsecfg.sh 脚本里面的变量. 如果这个变量为空,
+# 说明还没有打开过配置文件,进入下面的分支打开默认的配置文件.由于当前的
+# quickcd.sh 脚本和 parsecfg.sh 脚本都是通过 source 命令来调用.只要
+# source 过一次,导出到调用者 shell 的全局变量和函数会一直有效.所以只有
+# PARSECFG_filepath 变量为空才 source parsecfg.sh,避免多次打开配置文件.
+if [ -z "$PARSECFG_filepath" ]; then
+    # 导入解析配置文件的脚本,以便调用该脚本的函数来解析配置文件.
+    source parsecfg.sh
+    # 调用 parsecfg.sh 里面的 open_config_file() 函数解析配置文件.
+    open_config_file "$DEFAULT_DIRINFO"
+    # 当 parsecfg.sh 脚本解析配置文件失败时,则退出,不再往下执行.
+    if [ $? -ne 0 ]; then
+        return 1
+    fi
+fi
+
+# 由于不同源代码的目录结构可能不同,当在不同的源代码目录中使用
+# 当前脚本来切换时,需要指定不同的配置文件.下面函数就用于打开
+# 用户指定的配置文件名. 所给的第一个参数指定配置文件名.
+# 有一个特殊的文件名是 "default",表示要打开脚本默认的配置文件.
+open_user_config_file()
+{
+    if [ $# -ne 1 ]; then
+        echo "Usage: $FUNCNAME filepath"
+        return 1
+    fi
+
+    local filepath
+    if [ "$1" == "default" ]; then
+        filepath="$DEFAULT_DIRINFO"
+    else
+        filepath="$1"
+    fi
+
+    # 调用 parsecfg.sh 的 open_config_file 函数打开配置文件
+    open_config_file "$filepath"
+    # 当 return 后面不带参数时,默认返回上一个命令的状态码.
+    return
+}
+
+# 下面的 DIRECTCD_TOP_DIR 变量用于保存设置的顶层目录路径.
+# 当设置顶层目录为 code/ 时,后续实际 cd 的所有目录路径前面都会加上 code/.
+# 这个设置是为了方便在指定的某个顶层目录(例如源码根目录)底下进行快速 cd.
+# 例如,在一个大型项目代码中,这些代码都放在同一个顶层目录下,我们只需要配置
+# 顶层目录下的子目录路径即可.实际切换目录时,会自动加上顶层目录,再进行 cd.
+# NOTE: 不要在脚本开头为这个变量赋初值.每次 cd 时,都会执行这个脚本.但不是
+#   每次 cd 都要设置顶层目录路径.在多次调用该脚本时,要保持该变量的值不变.
+# DIRECTCD_TOP_DIR=""
+
+quickcd_show_help()
+{
+printf "USAGE
+    source quickcd.sh [option] [symbol]
+OPTIONS
+    option: 可选的选项参数,描述如下:
+        -h: 打印当前帮助信息.
+        -f: 指定要解析的配置文件名.后面跟着一个参数,指定具体的文件路径.
+            如果所给文件名是 'default',表示要打开脚本默认的配置文件.
+        -p: 打印当前设置的顶层目录和所解析的配置文件名.
+        -s: 设置并cd到所给的顶层目录.后面跟着一个参数,指定具体的顶层目录.
+        -r: 清空当前设置的顶层目录.
+        -l: 查看脚本支持的路径简写及其对应的路径.
+        -v: 以键值对的方式打印详细的配置文件信息.
+        -i: 在配置文件中查找指定内容.需要一个参数来指定要查找的内容.
+        -e: 使用 vim 打开脚本的配置文件,以供编辑.
+        -a: 增加或修改一个路径简写和对应的路径到配置文件.后面跟着一个参数,
+            用单引号括起来,以指定路径简写和路径. 格式为: 路径简写|路径
+            例如: -a 'b|frameworks/base'.如果 b 简写还不存在,会新增
+            这个配置项. 如果已经存在,会修改 b 简写对应的路径为新的路径.
+        -d: 从脚本配置文件中删除一个路径简写和对应的路径.后面跟着一个
+            参数,指定路径简写.脚本将从配置文件中删除该路径简写对应的行.
+            例如 -d b, 将删除路径简写为 b 的行.
+    symbol: 可选参数,指定要 cd 到的路径简写.支持的简写可以用-l或-v选项来查看.
+
+    当不提供任何参数且已经设置过顶层目录时,该脚本会 cd 到顶层目录下.
+NOTE
+    可以使用 alias c='source quickcd.sh' 设置 c 别名来方便执行.
+"
+}
+
+# 打印当前设置的顶层目录到标准输出.
+show_top_dir()
+{
+    echo "当前设置的顶层目录路径是: ${DIRECTCD_TOP_DIR}"
+    echo "当前解析的配置文件是: ${PARSECFG_filepath}"
+}
+
+# 该函数设置顶层目录路径. 所给的第一个参数指定顶层目录路径.
+# 这个顶层目录路径可以是相对路径,或者绝对路径.
+setup_top_dir()
+{
+    if [ $# -ne 1 ]; then
+        echo "Usage: $FUNCNAME top_dir"
+        return 1
+    fi
+
+    # 进入到所给的顶层目录路径底下,并检查 cd 命令是否执行成功.
+    \cd "$1"
+    if [ $? -eq 0 ]; then
+        # 所给的顶层目录可以是相对路径.但是代码要获取该顶层目录的
+        # 绝对路径,以便后续通过绝对路径寻址,不受工作目录的影响.
+        DIRECTCD_TOP_DIR="$(pwd)"
+    else
+        echo "出错: 无法进入所给的顶层目录.请检查所给路径是否正确."
+        return 2
+    fi
+}
+
+# 重置 DIRECTCD_TOP_DIR 变量值为空.取消设置顶层目录路径.
+# 由于这个脚本预期通过 source 命令调用.只要设置过顶层目录,在
+# 当前 shell 中,DIRECTCD_TOP_DIR 变量就一直有值.在调试脚本代码时,
+# 如果想要再次测试没有设置顶层目录的情况,只能重新打开终端,比较麻烦.
+# 提供 -r 选项调用下面 reset_top_dir() 函数来重置所设置的顶层目录.
+# 会一起设置 PARSECFG_filepath 变量值为空,以便重新解析配置文件.
+reset_top_dir()
+{
+    DIRECTCD_TOP_DIR=""
+    PARSECFG_filepath=""
+}
+
+# 如果当前路径不位于顶层目录底下,打印一些提示信息,以便用户关注到这一点.
+# 例如,顶层目录是 code/dev/. 而当前所在的shell工作目录是 code/test/,
+# 可能预期执行该脚本时会 cd 到 code/test/ 目录下的子目录,但实际会 cd
+# 到 code/dev/ 目录下的子目录,这可能会修改到不预取目录的代码文件.
+# 为了避免这个问题,这个函数打印一些提示信息,作为提醒.
+check_top_dir()
+{
+    # 查看man bash的"Compound Commands"小节说明, =~ 判断左边字符串是否包含
+    # 右边字符串.如果左边字符串包含右边的字符串,其返回状态码是0,否则返回1.
+    if [[ ! $(pwd) =~ "${DIRECTCD_TOP_DIR}" ]]; then
+        # 如果当前的工作目录不包含所给的顶层目录,说明没有位于顶层目录底下.
+        echo -e 当前路径'\e[31m' $(pwd) '\e[0m'位于设置的顶层目录之外.
+        echo -e 将会跳转到顶层目录'\e[32m' ${DIRECTCD_TOP_DIR} '\e[0m'底下的目录!
+    fi
+}
+
+# 处理所给的路径简写,看配置文件中是否保存这个路径简写.
+# 如果包含,就 cd 到该简写对应的目录底下.
+# 所给的第一个参数指定路径简写.
+handle_symbol()
+{
+    if [ $# -ne 1 ]; then
+        echo "Usage: $FUNCNAME symbol"
+        return 1
+    fi
+    local key="$1"
+
+    # 调用 parsecfg.sh 的 get_value_by_key 函数获取所给的
+    # 路径简写在配置文件中对应的目录路径.
+    local dir_value=$(get_value_by_key "${key}")
+    if test -n "${dir_value}"; then
+        # 如果获取到路径简写对应的目录路径,则在该目录路径前面
+        # 自动加上顶层目录路径,组成完整的绝对路径,然后进行 cd.
+        \cd "${DIRECTCD_TOP_DIR}/${dir_value}"
+        return
+    fi
+
+    echo "出错: 找不到路径简写 '${key}' 对应的行"
+    return 2
+}
+
+# 经过验证发现,用source命令来执行该脚本后,OPTIND的值不会被重置为1,导致
+# 再次用source命令执行脚本时,getopts解析不到参数,所以手动重置OPTIND为1.
+OPTIND=1
+while getopts "hf:ps:rlvi:ea:d:" opt; do
+    # 调用parsecfg.sh脚本处理选项的函数来处理 "lvi:ea:d:" 这几个选项.
+    # 如果处理成功,就直接继续读取下一个选项,不再往下处理.
+    # handle_config_option()函数要求传入的选项以'-'开头,而getopts命令
+    # 返回的选项不带有'-',所以下面在 ${opt} 前面加上一个 '-'.
+    handle_config_option "-${opt}" "${OPTARG}"
+    if [ $? -ne 127 ]; then
+        continue
+    fi
+
+    case "$opt" in
+        h) quickcd_show_help ;;
+        f) open_user_config_file "$OPTARG" || return ;;
+        p) show_top_dir ;;
+        s) setup_top_dir "$OPTARG" || return ;;
+        r) reset_top_dir ;;
+        ?) echo "出错: 异常选项,请使用 -h 选项查看脚本的帮助说明." ;;
+    esac
+done
+
+# $# 大于0,说明提供了命令参数. $# 等于OPTIND减去1,说明传入的参数都
+# 是命令选项. 此时,直接结束执行,不需要执行后面解析symbol参数的语句.
+# 下面的 -a 表示两个表达式都为真时才为真.表达式之间不要加小括号.
+# Shell里面的小括号有特殊含义,跟C语言的小括号有些区别,加上会有问题.
+if [ $# -gt 0 -a $# -eq $((OPTIND-1)) ]; then
+    return 0
+fi
+
+# 下面判断 DIRECTCD_TOP_DIR 变量值是否为空.
+# 如果为空,说明还没有设置顶层目录. 此时不再往下处理,直接报错返回.
+if [ -z "${DIRECTCD_TOP_DIR}" ]; then
+    echo -e "\e[31m还没有设置顶层目录,请使用-h选项查看脚本帮助说明.\e[0m"
+    return 2
+fi
+
+# 检查当前路径是否位于顶层目录下.如果不是,打印一些提示信息.
+check_top_dir
+
+if [ $# -eq 0 ]; then
+    # 执行该脚本不带参数时,默认 cd 到顶层目录下.
+    \cd "${DIRECTCD_TOP_DIR}"
+    # 由于不带参数,不需要往下处理,在 cd 之后直接返回.
+    return 0
+fi
+
+# 移动脚本的参数,去掉前面输入的选项,只剩下表示路径简写的参数.
+shift $((OPTIND-1))
+# 循环遍历所有剩余的参数,可以处理传入多个参数的情况.
+# 例如执行 source quickcd.sh -s topdir a 命令,可以先设置顶层目录,
+# 然后 cd 到 a 简写对应的目录下. 这种情况要注意提供的参数顺序.
+# 如果写为 source quickcd.sh a -s topdir 命令,会在解析 a 简写时
+# 发现还没有设置顶层目录而报错.
+for arg in "$@"; do
+    handle_symbol "$arg"
+done
+
+return</code></pre><h2>代码关键点说明</h2><h3>建议设置命令别名来执行当前脚本</h3><p>如脚本代码开头注释所示，需要使用 <code>source</code> 命令来执行 <code>quickcd.sh</code> 脚本，以便执行该脚本之后，可以保持在 <code>cd</code> 后的目录下。</p><p>即，执行的时候，需要写为 <code>source quickcd.sh</code>。</p><p>这样需要输入比较多的字符，而且也容易忘记提供 <code>source</code> 命令。</p><p>为了方便输入，在脚本注释中，建议设置命令别名来执行当前脚本。</p><p>例如，在 <code>~/.bashrc</code> 文件中添加下面语句来设置命令别名:</p><pre><code class="bash">alias c='source quickcd.sh'</code></pre><p>添加这个语句后，在当前终端中，需要执行 <code>source ~/.bashrc</code> 命令，这个别名才会生效。</p><p>也可以重新打开终端，在新打开的终端中，这个别名默认就会生效。</p><p>在别名生效之后，就可以使用 <em>c</em> 命令来执行 <code>quickcd.sh</code> 脚本。</p><p>例如，<code>c ps</code> 命令等价于 <code>source quickcd.sh ps</code> 命令。</p><p>这里假设 <code>quickcd.sh</code> 脚本放在 PATH 全局变量指定的寻址目录里面，通过文件名就可以执行，不需要指定文件的路径。</p><p>如果该脚本没有放在默认的寻址目录里面，需要提供文件的绝对路径。</p><p>这个脚本所调用的 <code>parsecfg.sh</code> 脚本也需要放在 PATH 全局变量指定的寻址目录里面。</p><p>否则需要修改 <code>quickcd.sh</code> 脚本代码，在 <code>source</code> 的时候提供 <code>parsecfg.sh</code> 脚本文件的绝对路径。</p><p>下面举例执行 <code>quickcd.sh</code> 脚本时，统一使用 <em>c</em> 这个命令别名。</p><h2>使用默认配置文件的测试例子</h2><p><code>quickcd.sh</code> 脚本默认解析的配置文件是 HOME 目录下的 <code>.liconfig/dirinfo.txt</code> 文件。</p><p>可以配置为最常使用的路径简写。</p><p>假设这个文件的内容如下：</p><pre><code>b|frameworks/base
+sui|frameworks/base/packages/SystemUI/src/com/android/systemui
+ps|packages/apps/Settings/src/com/android/settings</code></pre><p>在 Android 源码中使用 <code>quickcd.sh</code> 脚本的例子如下：</p><pre><code class="bash">$ c -s android
+[android]$ c -p
+当前设置的顶层目录路径是: /home/android
+当前解析的配置文件是: /home/.liconfig/dirinfo.txt
+[android]$ c -v
+key='sui'       value='frameworks/base/packages/SystemUI/src/com/android/systemui'
+key='b'         value='frameworks/base'
+key='ps'        value='packages/apps/Settings/src/com/android/settings'
+[android]$ c b
+[android/frameworks/base]$ c sui
+[android/frameworks/base/packages/SystemUI/src/com/android/systemui]$ c ps
+[android/packages/apps/Settings/src/com/android/settings]$</code></pre><p>执行 <code>c -s android</code> 命令设置顶层目录为当前目录下的 <em>android</em> 目录。</p><p><code>-s</code> 选项用于设置顶层目录路径，具体使用说明可以查看脚本打印的帮助信息。</p><p>用 <code>c -p</code> 命令查看所设置的顶层目录绝对路径和解析的配置文件路径。</p><p>用 <code>c -v</code> 命令显示键值对形式的配置项信息，能够查看配置的各个路径简写和对应的目录路径。</p><p>执行 <code>c b</code> 命令跳转到 b 路径简写对应的目录，具体的目录是 <em>frameworks/base</em>。</p><p><code>quickcd.sh</code> 脚本会用顶层目录的绝对路径 <em>/home/android</em> 加上 <em>frameworks/base</em>，得到 <em>/home/android/frameworks/base</em> 路径，然后用 <code>cd</code> 命令跳转到这个路径。</p><p>在上面方括号中间显示的目录路径就是当前 shell 的工作目录，不包含 HOME 目录前面的路径。</p><p>执行 <code>c sui</code> 命令跳转到 sui 路径简写对应的目录。</p><p>执行 <code>c ps</code> 命令跳转到 ps 路径简写对应的目录。</p><p>可以看到，使用 <code>quickcd.sh</code> 脚本可以直接在跨度非常大的目录之间跳转，非常方便。</p><h2>使用 -f 选项指定配置文件的测试例子</h2><p>由于不同顶层目录底下的目录结构可能不同，当在不同结构的目录下中使用当前脚本进行切换时，可以指定不同的配置文件。</p><p><code>quickcd.sh</code> 脚本使用 -f 选项来指定配置文件的路径。</p><p>假设在当前目录下有一个 <em>sample/update/</em> 目录和一个 <em>sample/updatesh/</em> 目录。</p><p>且在 <em>sample/updatesh/</em> 目录下有一个 <em>userdirinfo.txt</em> 文件，该文件内容如下：</p><pre><code>u|sample/update
+sh|sample/updatesh</code></pre><p>在当前目录下使用 <code>quickcd.sh</code> 脚本的例子如下：</p><pre><code class="bash">$ c -f sample/updatesh/userdirinfo.txt
+$ c -s .
+$ c -v
+key='sh'        value='sample/updatesh'
+key='u'         value='sample/update'
+$ c sh
+[sample/updatesh]$ c u
+[sample/update]$</code></pre><p>执行 <code>c -f sample/updatesh/userdirinfo.txt</code> 命令指定新的配置文件。</p><p>执行 <code>c -s .</code> 设置顶层目录为当前目录。</p><p>用 <code>c -v</code> 命令查看配置的路径简写和对应的目录。</p><p>执行 <code>c u</code> 命令跳转到 u 路径简写对应的 <em>sample/update/</em> 目录。</p><p>执行 <code>c sh</code> 命令跳转到 sh 路径简写对应的 <em>sample/updatesh/</em> 目录。</p><p>可以看到，<code>quickcd.sh</code> 脚本是一个通用的脚本，适用于各种目录结构，并不只限于 Android 源码目录。</p></article><div class="d-flex flex-wrap align-items-center "><div class="m-n1 d-flex flex-wrap align-items-center"><a href="/t/linux" class="m-1 badge-tag  ">linux</a><a href="/t/bash" class="m-1 badge-tag  ">bash</a><a href="/t/shell" class="m-1 badge-tag  ">shell</a></div></div><div class="my-4"><div id="OA_holder_3" class="ad-container" style="display:block"></div></div><div class="text-secondary font-size-14 mt-3 mb-5 d-flex flex-wrap justify-content-between"><div><span>阅读 <!-- -->4k</span><span class="split-dot"></span><time dateTime="2020-11-28T04:00:00.000Z" itemProp="datePublished">发布于 <!-- -->2020-11-28 </time></div><div class="operation text-end"><div></div></div></div><div class="functional-area-bottom text-center"><div role="group" class="btn-group like-group align-items-center btn-group"><button type="button" class="btn me-2 rounded btn btn-outline-primary"><i class="far fa-thumbs-up"></i><span class="ms-1">赞</span></button><button type="button" class="btn me-2 rounded btn btn-outline-secondary"><i class="far fa-bookmark"></i><span class="ms-1">收藏</span></button><div class="bottom-share-wrap dropdown"><a href="###" class="nav-tab-item btn d-flex justify-content-center align-items-center dropdown-toggle"><button type="button" class="btn rounded btn btn-outline-secondary"><i class="far fa-share-nodes"></i><span class="ms-1">分享</span></button></a></div></div></div><canvas hidden="" class="qrcode"></canvas><div class="font-size-14 text-secondary text-center mt-3 mb-5"><span>本作品系原创，</span><a target="_blank" class="text-secondary" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">采用《署名-非商业性使用-禁止演绎 4.0 国际》许可协议</a></div><hr class="mb-0"/><div class="pt-4 align-items-center row"><div class="d-flex align-items-center col-12 col-md w-0 col"><a href="/blog/shuangyu"><img class="me-3 rounded" width="64" height="64" src="https://image-static.segmentfault.com/383/303/3833030929-5ffd15fc110ab" aria-hidden="true"/></a><div class="w-100"><a href="/blog/shuangyu" class="text-body"><h5 class="mb-0">南木阁</h5></a><div class="text-truncate-1 text-secondary mt-2">考据党一枚，力求讲述的每个知识点都有出处，有理有据。如能恰好地解答您的疑问，欢迎点赞，谢谢！</div></div></div><div id="followUser" class="col-md-90 col-12 mt-md-0 mt-3 col"><div class="d-grid"><button type="button" class="btn btn-primary">关注专栏</button></div></div></div></div></div><div class="d-block d-xl-none my-4"><div class="card"><div class="card-body"><div class="d-flex align-items-center mb-3"><picture class="rounded-circle me-3"><a href="/u/shuangyupian"><img src="https://avatar-static.segmentfault.com/415/308/4153086576-5db438eaba715_huge128" alt="avatar" width="64" height="64" class="rounded-circle"/></a></picture><div><h5 class="mb-0"><a href="/u/shuangyupian" class="text-body">霜鱼片</a></h5></div></div><div class="text-secondary text-truncate-2 userExcerpt mb-3"><p>解读权威文档，编写易懂文章。如有恰好解答您的疑问，多谢赞赏支持～</p></div><div class="d-flex align-items-center mb-3"><div class="me-4"><strong>358</strong><span class="text-secondary"> 声望</span></div><div><strong>318</strong><span class="text-secondary"> 粉丝</span></div></div><div class="d-grid"><button type="button" class="btn btn-primary">关注作者</button></div></div></div></div><div><div id="comment-area" class="comment-wrap  card"><div class="d-flex align-items-center justify-content-between bg-transparent card-header"><strong>0<!-- --> 条评论</strong><div aria-label="Basic" role="group" class="btn-group"><a href="/a/1190000025190817?sort=votes" role="button" tabindex="0" class="btn btn-secondary btn-sm">得票</a><a href="/a/1190000025190817?sort=newest" role="button" tabindex="0" class="btn btn-outline-secondary btn-sm">最新</a></div></div><div class="card-body"><div class="mb-4 media" tabindex="1"><img src="https://image-static.segmentfault.com/317/931/3179314346-5f61e47221e07" class="rounded-circle me-3" width="38" height="38" aria-hidden="true"/><div class="media-body"><div class="mb-3"><div class="mentions-wrap dropdown"><textarea rows="1" placeholder="撰写评论 …" aria-label="评论" class="comment-text form-control"></textarea><div class="dropdown-toggle"></div></div><div class="invalid-feedback"></div></div><div class="d-flex justify-content-end align-items-center"><a href="###" class="me-3" aria-label="提示" tabindex="-1"><i class="far fa-circle-info text-secondary"></i></a><button disabled="" type="button" class="float-end btn btn-primary">提交评论</button></div></div></div><div class="comment-body-wrap d-none"></div></div></div></div></div><div class="col-xl-auto w-xl-300 d-none d-xl-block p-0 right-side col-12"><div class="sticky-outer-wrapper"><div class="sticky-inner-wrapper" style="position:relative;top:0px;z-index:5"><div class="right-block" id="author"><div class="card"><div class="card-body"><div class="d-flex align-items-center mb-3"><picture class="rounded-circle me-3"><a href="/u/shuangyupian"><img src="https://avatar-static.segmentfault.com/415/308/4153086576-5db438eaba715_huge128" alt="avatar" width="64" height="64" class="rounded-circle"/></a></picture><div><h5 class="mb-0"><a href="/u/shuangyupian" class="text-body">霜鱼片</a></h5></div></div><div class="text-secondary text-truncate-2 userExcerpt mb-3"><p>解读权威文档，编写易懂文章。如有恰好解答您的疑问，多谢赞赏支持～</p></div><div class="d-flex align-items-center mb-3"><div class="me-4"><strong>358</strong><span class="text-secondary"> 声望</span></div><div><strong>318</strong><span class="text-secondary"> 粉丝</span></div></div><div class="d-grid"><button type="button" class="btn btn-primary">关注作者</button></div></div></div></div></div></div><div class="sticky-outer-wrapper"><div class="sticky-inner-wrapper" style="position:relative;top:0px;z-index:4"><div class="right-block" id="first-ad"><div class="card border-0 overflow-hidden d-none d-xl-flex justify-content-center align-items-center float-ads"><div id="OA_holder_1" class="ad-container" style="display:block"></div></div></div></div></div><div class="sticky-outer-wrapper"><div class="sticky-inner-wrapper" style="position:relative;top:0px;z-index:3"><div id="cataLog" class="right-block"><div data-article-nav="true" class="overflow-hidden d-none d-xl-flex card"><div class="d-flex justify-content-between align-items-center  bg-white  card-header"><strong class="nav-header p-0">文章目录</strong><div class="mb-0 form-check form-switch"><input type="checkbox" id="follow-switch" class="form-check-input"/><label title="" for="follow-switch" class="form-check-label">跟随</label></div></div><div class="p-0 py-2 card-body" id="collapseTarget"><nav id="article-nav-list" class="list-group list-group-flush d-flex flex-column font-size-14" data-article-nav-list="true"></nav></div></div></div></div></div><div id="gridAd" class="right-block"><div class="card"><div class="bg-white border-0 card-header"><strong>宣传栏</strong></div><div class="card-body"><div class="mb-3"><div id="OA_holder_7" class="ad-container" style="display:block"></div></div><div class="mb-3"><div id="OA_holder_9" class="ad-container" style="display:block"></div></div><div><div id="OA_holder_10" class="ad-container" style="display:block"></div></div></div></div></div><div class="sticky-outer-wrapper"><div class="sticky-inner-wrapper" style="position:relative;top:0px;z-index:2"><div id="second-ad"><div id="OA_holder_31" class="ad-container" style="display:block"></div></div></div></div></div></div><div id="fixedTools" class="position-fixed d-none " style="right:24px;bottom:24px"><button type="button" class="btn btn-light" title="回顶部">▲</button></div><div class="d-block d-sm-none fix-bottom-action-wrap"><div class="w-100 fixed-bottom-action d-flex align-items-center "><a class="text-center text-body w-25"><i class="far fa-thumbs-up"></i></a><a class="text-center text-body w-25"><i class="far fa-bookmark"></i></a><a class="text-center text-body w-25" href="#comment-area"><i class="far fa-message-lines"></i></a><div class="bottom-share-wrap w-25 text-center  dropdown"><a class="dropdown-toggle" id="share-bottom-toggle" aria-expanded="false"><i class="far fa-share-nodes text-body"></i></a></div></div><canvas hidden="" class="qrcode"></canvas></div></div><footer id="footer" class="d-none d-sm-block bg-white py-5 font-size-14 border-top"><div class="container"><div class="row"><dl class="col-4 col-md-2"><dt class="h6">产品</dt><dd class="my-1"><a class="text-secondary" href="/questions/hottest?utm_source=sf-footer" target="_blank">热门问答</a></dd><dd class="my-1"><a class="text-secondary" href="/blogs/hottest?utm_source=sf-footer" target="_blank">热门专栏</a></dd><dd class="my-1"><a class="text-secondary" href="/lives?utm_source=sf-footer" target="_blank">热门课程</a></dd><dd class="my-1"><a class="text-secondary" href="/events?utm_source=sf-footer" target="_blank">最新活动</a></dd><dd class="my-1"><a class="text-secondary" href="/groups?utm_source=sf-footer" target="_blank">技术圈</a></dd><dd class="my-1"><a class="text-secondary" href="/jobs?utm_source=sf-footer" target="_blank">酷工作</a></dd></dl><dl class="col-4 col-md-2"><dt class="h6">课程</dt><dd class="my-1"><a class="text-secondary" href="/lives/edu?tag=java&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">Java 开发课程</a></dd><dd class="my-1"><a class="text-secondary" href="/lives/edu?tag=php&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">PHP 开发课程</a></dd><dd class="my-1"><a class="text-secondary" href="/lives/edu?tag=python&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">Python 开发课程</a></dd><dd class="my-1"><a class="text-secondary" href="/lives/edu?category=1&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">前端开发课程</a></dd><dd class="my-1"><a class="text-secondary" href="/lives/study?category=3&amp;sort=hottest&amp;utm_source=sf-footer" target="_blank">移动开发课程</a></dd></dl><dl class="col-4 col-md-2 "><dt class="h6">资源</dt><dd class="my-1"><a class="text-secondary" href="/weekly?utm_source=sf-footer" target="_blank">每周精选</a></dd><dd class="my-1"><a class="text-secondary" href="/users?utm_source=sf-footer" target="_blank">用户排行榜</a></dd><dd class="my-1"><a class="text-secondary" href="/help?utm_source=sf-footer" target="_blank">帮助中心</a></dd><dd class="my-1"><a class="text-secondary" href="/0x?utm_source=sf-footer" target="_blank">建议反馈</a></dd></dl><dl class="col-4 col-md-2"><dt class="h6">合作</dt><dd class="my-1"><a class="text-secondary" href="https://about.segmentfault.com/?utm_source=sf-footer" target="_blank">关于我们</a></dd><dd class="my-1"><a class="text-secondary" href="https://business.segmentfault.com/ads?utm_source=sf-footer" target="_blank">广告投放</a></dd><dd class="my-1"><a class="text-secondary" href="/jobs?utm_source=sf-footer" target="_blank">职位发布</a></dd><dd class="my-1"><a class="text-secondary" href="https://jinshuju.net/f/HK5r9K?utm_source=sf-footer" target="_blank">讲师招募</a></dd><dd class="my-1"><a class="text-secondary" href="mailto:pr@segmentfault.com?utm_source=sf-footer" target="_blank">联系我们</a></dd><dd class="my-1"><a class="text-secondary" href="/link?utm_source=sf-footer" target="_blank">合作伙伴</a></dd></dl><dl class="col-4 col-md-2"><dt class="h6">关注</dt><dd class="my-1"><a class="text-secondary" href="/blog/segmentfault?utm_source=sf-footer" target="_blank">产品技术日志</a></dd><dd class="my-1"><a class="text-secondary" href="/blog/community_admin?utm_source=sf-footer" target="_blank">社区运营日志</a></dd><dd class="my-1"><a class="text-secondary" href="/blog/segmentfault_news?utm_source=sf-footer" target="_blank">市场运营日志</a></dd><dd class="my-1"><a class="text-secondary" href="/blog/segmentfault_team?utm_source=sf-footer" target="_blank">团队日志</a></dd><dd class="my-1"><a class="text-secondary" href="/blog/interview?utm_source=sf-footer" target="_blank">社区访谈</a></dd></dl><dl class="col-4 col-md-2" id="license"><dt class="h6">条款</dt><dd class="my-1"><a class="text-secondary" href="/tos?utm_source=sf-footer" target="_blank">服务协议</a></dd><dd class="my-1"><a class="text-secondary" href="/privacy?utm_source=sf-footer" target="_blank">隐私政策</a></dd><dd class="my-1"><a class="text-secondary" href="/app?utm_source=sf-footer">下载 App</a></dd><dd class="my-1"><div class="weixin-qrcode ms-n1" title="微信公众号"></div></dd></dl></div><hr class="mt-2 mb-4"/><div class="row"><div class="col-md-8"><div class="text-secondary"><p class="mb-1">Copyright © 2011-<!-- -->2022<!-- --> SegmentFault. 当前呈现版本 <!-- -->22.06.09</p><p class="mb-1"><a class="text-secondary me-2" target="_blank" href="http://beian.miit.gov.cn" rel="nofollow noreferrer">浙ICP备15005796号-2</a><a class="text-secondary me-2" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602002000" rel="nofollow noreferrer">浙公网安备33010602002000号</a><span class="text-secondary">ICP 经营许可 浙B2-20201554</span></p><p class="mb-0">杭州堆栈科技有限公司版权所有</p></div></div><div class="col-md-4 text-end"><div class="shareContent"><a class="share_weixin" data-share="weixin" href="#javascript" aria-label="微信"><i class="fab fa-weixin"></i></a><a class="share_weibo" data-share="weibo" href="http://weibo.com/segmentfault" target="_blank" aria-label="微博"><i class="fab fa-weibo"></i></a><a class="share_github" data-share="github" href="https://github.com/SegmentFault" target="_blank" aria-label="github"><i class="fab fa-github"></i></a><a class="share_twitter me-0" data-share="twitter" href="https://twitter.com/segment_fault" target="_blank" aria-label="twitter"><i class="fab fa-twitter"></i></a></div></div></div></div></footer></div>
+	<script>
+  window.g_useSSR = true;
+  window.g_initialProps = {"router":{"location":{"pathname":"\u002Fa\u002F1190000025190817","search":"","hash":"","query":{},"state":undefined,"key":"bfux5o"},"action":"POP"},"@@dva":0,"action":{"1190000025190817":{"votes":0,"isLiked":false,"isHated":undefined,"bookmarks":0,"isBookmarked":false}},"sfApp":{"comment":{"isFetchComments":false,"isShowComment":false}},"article":{"articles":{"rows":[],"size":0,"offset":0,"hasMore":true,"error":false,"loading":false,"isStopLoad":false,"cutLoadNum":1,"isLoadedFirstRecommend":false,"query":""},"currentTab":""},"articleDetail":{"artDetail":{"1190000025190817":{"title":"linux - Bash技巧：一个在不同目录之间直接来回快速 cd 的Shell脚本_个人文章","keywords":"linux,bash,shell","description":"本篇文章介绍一个可以在不同目录之间直接来回快速 cd 的 shell 脚本。假设这个 shell 脚本的名称为 quickcd.sh。在 Linux 下进行项目开发，特别是进行 Androi...","article":{"id":1190000025190817,"title":"Bash技巧：一个在不同目录之间直接来回快速 cd 的Shell脚本","cover":null,"tags_list":"1040000000089392,1040000000089686,1040000000089669","user_id":1030000020738421,"blog_id":1200000021183182,"excerpt":"本篇文章介绍一个可以在不同目录之间直接来回快速 cd 的 shell 脚本。假设这个 shell 脚本的名称为 quickcd.sh。在 Linux 下进行项目开发，特别是进行 Androi...","parsed_text":"","is_bookmarked":false,"is_liked":false,"created":1606536000,"modified":1601711070,"real_views":3987,"real_unique_views":3369,"votes":0,"bookmarks":0,"status":0,"origin_url":"","article_type":1,"license":"1","langs":[],"comments":0,"tags":[{"id":1040000000089392,"url":"\u002Ft\u002Flinux","name":"linux","icon_url":""},{"id":1040000000089686,"url":"\u002Ft\u002Fbash","name":"bash","icon_url":""},{"id":1040000000089669,"url":"\u002Ft\u002Fshell","name":"shell","icon_url":""}],"user":{"id":1030000020738421,"name":"霜鱼片","avatar_url":"https:\u002F\u002Favatar-static.segmentfault.com\u002F415\u002F308\u002F4153086576-5db438eaba715_huge128","url":"\u002Fu\u002Fshuangyupian","rank":358,"rank_word":"358","is_followed":false,"excerpt":"\u003Cp\u003E解读权威文档，编写易懂文章。如有恰好解答您的疑问，多谢赞赏支持～\u003C\u002Fp\u003E","followers":318,"articles":90,"user_auth":null},"status_key":"available"},"blog":{"id":1200000021183182,"name":"南木阁","url":"\u002Fblog\u002Fshuangyu","thumbnail_url":null,"is_followed":false,"excerpt":"考据党一枚，力求讲述的每个知识点都有出处，有理有据。如能恰好地解答您的疑问，欢迎点赞，谢谢！","followers":244,"articles":90,"license":"cc"},"actions":[],"member_actions":[],"article_types":{"1":"原创","2":"转载","3":"翻译"},"pay_info":null,"extra":{"reason":null,"operator":null,"operator_time":null},"tag":{"name":"linux","url":"\u002Ft\u002Flinux","icon_url":""},"isServerLoaded":true}},"alertMsg":{"showAlert":false,"msg":""},"articleRelated":[]},"editor":{"markdownContent":"","title":{"value":"","isInvalid":false,"errorMsg":""},"log":{"value":"","isInvalid":false,"errorMsg":""},"tags":{"value":[],"isInvalid":false,"errorMsg":""},"draftInfo":{"id":"","status":""},"isFull":false,"initTags":[],"detail":{}},"global":{"sessionUser":null,"isHiddenHeader":false,"isHiddenFooter":false,"title":"Bash技巧：一个在不同目录之间直接来回快速 cd 的Shell脚本 - SegmentFault 思否","isShowLogin":false,"beginnerGuideState":{"visible":false,"type":1},"isShowBindMobile":false,"authChannel":"","unactivated":false,"isShowRegister":false,"headOptions":{"keywords":"linux,bash,shell","description":"本篇文章介绍一个可以在不同目录之间直接来回快速 cd 的 shell 脚本。假设这个 shell 脚本的名称为 quickcd.sh。在 Linux 下进行项目开发，特别是进行 Androi..."},"notices":[],"sessionInfo":{"key":"4ed4c766b904334efccb30efd592345c","login":false,"id":null},"singleNotice":"","currentRoute":{"customLayout":false,"headerType":undefined,"platform":undefined,"eggCtx":{"request":{"method":"GET","url":"\u002Fa\u002F1190000025190817","header":{"host":"segmentfault.com","x-https-cn":"yes","x-ddos":"yes","connection":"close","accept":"text\u002Fhtml,application\u002Fxhtml+xml,application\u002Fxml;q=0.9,*\u002F*;q=0.8","accept-encoding":"gzip, deflate, br","user-agent":"Mozilla\u002F5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\u002F605.1.15 (KHTML, like Gecko) Version\u002F15.5 Safari\u002F605.1.15","accept-language":"zh-CN,zh-Hans;q=0.9","referer":"https:\u002F\u002Fsegmentfault.com\u002Fu\u002Fshuangyupian","cookie":"PHPSESSID=4ed4c766b904334efccb30efd592345c; _ga=GA1.2.1068568876.1654779668; _gid=GA1.2.40075947.1654779668; csrfToken=jHWPlzsHIGaQRrsvdxIAOx78","x-forwarded-for":"183.6.9.92"}},"response":{"status":404,"message":"Not Found","header":{"set-cookie":["PHPSESSID=4ed4c766b904334efccb30efd592345c; path=\u002F; max-age=604800; expires=Thu, 16 Jun 2022 13:37:50 GMT; domain=.segmentfault.com"]}},"app":{"env":"prod","name":"server","baseDir":"\u002Fusr\u002Fsrc\u002Fapp","subdomainOffset":2,"config":"\u003Cegg config\u003E","controller":"\u003Cegg controller\u003E","httpclient":"\u003Cegg httpclient\u003E","loggers":"\u003Cegg loggers\u003E","middlewares":"\u003Cegg middlewares\u003E","router":"\u003Cegg router\u003E","serviceClasses":"\u003Cegg serviceClasses\u003E"},"originalUrl":"\u002Fa\u002F1190000025190817","req":"\u003Coriginal node req\u003E","res":"\u003Coriginal node res\u003E","socket":"\u003Coriginal node socket\u003E"}},"letterNum":0,"noticeNum":0,"serverData":{"userAgent":"Mozilla\u002F5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit\u002F605.1.15 (KHTML, like Gecko) Version\u002F15.5 Safari\u002F605.1.15","Token":"4ed4c766b904334efccb30efd592345c","X-Forwarded-For":"183.6.9.92"},"userStat":{},"newTask":{},"followedTags":[],"globalCss":"","baiduOxAppState":{"isShow":false,"copyUrl":""},"pageUsers":{},"wxShareCover":"","isBaiduOxApp":false,"showProductAuthModal":{"isShow":false,"title":""},"routeInterceptor":{"path":""},"safeCheckModal":{"isShow":false,"pageSource":""}},"video":{"videoData":{},"relationVideos":[],"videos":{"rows":[],"limit":0,"offset":0,"hasMore":true},"lives":[]},"activity":{"recommendList":[],"newestList":[],"finishedList":{},"eventType":[],"cityList":[]},"activityDetail":{"detailData":{}},"badges":{"listData":{},"detail":{},"records":{"page":1,"rows":[]},"loading":false},"blogHome":{"loading":false,"blogDetail":{},"articleData":{}},"blogs":{"channels":{},"articles":{"mode":"scrollLoad","page":1,"rows":[],"size":0,"offset":0,"hasMore":true,"error":false,"loading":false,"isStopLoad":false,"cutLoadNum":1,"isLoadedFirstRecommend":false},"currentTab":"recommendation","notices":{},"events":{},"recommendArticles":{},"hotQuestions":{},"hotTestData":{},"banners":{},"showOneLoading":false},"bookmark":{"loading":false,"detailInfo":{},"listInfo":{"page":1,"total_page":0,"rows":[]}},"deactivate":{"checkResult":{}},"dianping":{"homeInfo":{},"categroies":[],"categoryList":[],"categoryInfo":{},"loading":false,"companyInfo":{}},"dpDetail":{"dpDetail":{},"dpList":{"page":1,"total_page":10,"rows":[]},"usedsAndWishs":{"useds":0,"wisheds":0},"currentTab":"votes"},"draft":{"listData":{"rows":[],"hasMore":false,"page":1},"inviteListData":{"rows":[],"hasMore":false,"page":1},"inviteRegisterList":{"rows":[],"hasMore":false,"page":1},"loading":true},"help":{"reportRecord":{},"violationRecord":{},"appealsRecord":{},"communityGuide":{},"currentTab":"report"},"letterDetail":{"letterData":{"rows":[],"page":1,"size":100,"total_page":0,"hasMore":true},"loading":true,"readAll":false},"inbox":{"list":{"page":1,"count":0,"rows":{"inbox":{},"messages":[]},"total_page":1},"loading":false},"note":{"notes":{"rows":[],"page":1,"size":30,"hasMore":false,"sort":"modified","query":"mine","q":""},"bookmarkNotes":{"rows":[],"page":1,"size":30,"hasMore":false,"sort":"modified"},"noteDetail":{},"detail":[]},"noticeDetail":{"noticeData":{"rows":[],"offset":"","hasMore":true,"isStopScrollLoad":false,"loadedNum":1},"loading":true,"readAll":false},"personal":{"realTabName":"timeline","personalInfo":{},"listInfo":{},"blogs":[],"tags":{},"badges":{},"ranks":{},"loading":false,"financeInfo":{},"dashboardInfo":{},"dashboardHot":{"offset":1,"rows":[],"hasMore":false},"hotLoading":false},"personalSetting":{"userInfo":{},"accountInfo":{},"notifyInfo":{},"blockInfo":{"rows":[],"page":1,"total_page":1},"labInfo":{},"privacyInfo":{},"errorMsg":{"type":"","msg":""}},"portal":{"pageData":{},"noticeData":[]},"question":{"questionDetail":{},"relateDetail":{}},"questionList":{"questionList":{"page":1,"size":30,"count":0,"total_page":0,"rows":[]},"updateList":{"offset":"","rows":[]},"showLoading":false,"hostData":{},"userRank":{},"notices":{},"loading":false,"currentTab":"","isServerLoad":true,"asidesData":{}},"review":{"loading":true,"articelDetail":{},"suggestEditDetail":{},"tagEditDetail":{},"questionDetail":{},"answerDetail":{},"closeDetail":{},"tagCleanDetail":{},"homeData":{"rows":[]}},"rivision":{"breadNav":[],"detail":[]},"search":{"result":{"rows":[],"page":1,"size":15,"q":"","total_page":0,"query":""}},"sites":{"questionList":{"page":1,"size":30,"count":0,"total_page":0,"rows":[]},"loading":false,"information":{},"articles":[]},"sitesSet":{"loading":false,"information":{}},"tag":{"rows":[],"loadMoreType":"scroll","offset":0,"page":1,"pageSize":30,"info":{},"loadedNum":0,"hasMore":false,"isStopLoad":false,"showLoading":true,"type":"","totalPage":0,"sort":"newest","allTagList":{}},"tagRivision":{"tagInfo":{},"detail":[]},"userTop":{"data":{}},"loading":{"global":false,"models":{"articleDetail":false},"effects":{"articleDetail\u002FgetArtDetail":false}}};
+	</script>
+
+    <script src="https://static.geetest.com/static/tools/gt.js"></script>
+    <script>
+      (function () {
+        var data = window.g_initialProps["gtagData"] || window["gtagData"];
+        var script = document.createElement("script");
+        script.src = "https://www.googletagmanager.com/gtag/js?id=UA-918487-8";
+        script.async = true;
+        script.onload = function () {
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function () {
+            window.dataLayer.push(arguments);
+          };
+          window.gtag("js", new Date());
+          window.gtag("config", "UA-918487-8");
+          data && window.gtag("set", data);
+        };
+        document.getElementsByTagName("head")[0].appendChild(script);
+      })();
+    </script>
+    <script src="https://cdn.segmentfault.com/r-b7d7730d/umi.js"></script>
+  
+
+</body></html>

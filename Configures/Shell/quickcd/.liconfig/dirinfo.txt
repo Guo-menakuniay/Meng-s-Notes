@@ -1,0 +1,3 @@
+genpd|work/genValidation/genproductions/bin/MadGraph5_aMCatNLO
+genVa|work/genValidation/genValidation-master
+gencard|work/Cards
