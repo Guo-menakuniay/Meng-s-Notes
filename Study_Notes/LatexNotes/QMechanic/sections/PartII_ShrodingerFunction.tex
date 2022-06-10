@@ -1,0 +1,420 @@
+\section{定态}
+	对于薛定谔方程
+	\begin{equation}
+	i \hbar \frac{\partial \Psi}{\partial x}=-\frac{\hbar^{2}}{2 m} \frac{\partial^{2} \Psi}{\partial x^{2}}+V \Psi
+	\end{equation}
+	在学习阶段，我们研究的绝大部分情况下都会假设V是不含时间的。在这种情况下薛定谔方程可以通过分离变量法求解：我们寻找乘积形式的解
+	\begin{equation}
+	\Psi(x,t)=\psi(x) \varphi(t)
+	\end{equation} 
+	代入上式通过变形得到
+	\begin{equation}
+	i \hbar \psi(x) \varphi^{\prime}(t)= -\frac{\hbar^2}{2m}\psi^{\prime \prime}(x) \varphi(t)+V \psi(x)\varphi(t)
+	\end{equation}
+	将方程两边同时除以$\psi(x) \varphi(t)$，并将常数令为E，得到
+	\begin{align}
+	\label{eq.2_1_1}
+	i \hbar \frac{\varphi^{\prime}(t)}{\varphi(t)}&=E \quad \Rightarrow \quad \frac{d \varphi(t)}{d t}=-\frac{i E}{\hbar} \varphi(t) \\
+	\label{eq.2_1_2}
+	-\frac{\hbar^{2}}{2 m} \frac{\psi^{\prime \prime}(x)}{\psi(x)}+V&=E \quad \Rightarrow \quad -\frac{\hbar^{2}}{2 m} \frac{d^{2} \psi}{d x^{2}}+V \psi=E \psi
+	\end{align}
+	其中式\ref{eq.2_1_1}能够解出得到
+	\begin{equation}
+	\varphi(t) = \exp(iEt/\hbar)
+	\end{equation}
+	第二式\ref{eq.2_1_2}即为\textbf{定态(time-independent)薛定谔方程}，如果不指定V的话我们就无法进一步求它的解
+
+	我们下面简述一下分离变量法在这里可行的原因
+	\begin{enumerate}
+	\item 虽然波函数本身和时间有关，但是计算几率密度的时候，时间因子相互抵消————在根据式\ref{eq.1_2_0}得到这时候任何一个期待值都是不含时的，我们可以直接用$\psi$来代替$\Psi$
+		\begin{equation}
+		|\Psi(x, t)|^{2}=\Psi^{*} \Psi=\psi^{*} e^{+i E t / \hbar} \psi e^{-i E t / \hbar}=|\psi(x)|^{2}
+		\end{equation}
+	\item 它们都是具有确定总能量的态，对于哈密顿量
+		\begin{equation}
+		H(x, p)=\frac{p^{2}}{2 m}+V(x)
+		\end{equation}
+	用动量的替换算符得到哈密顿量的替换算符
+		\begin{equation}
+		\hat{H}=-\frac{\hbar^{2}}{2 m} \frac{\partial^{2}}{\partial x^{2}}+V(x)
+		\end{equation}
+	这样定态薛定谔方程就可以直接写为
+		\begin{equation}
+		\hat{H} \psi=E \varphi
+		\end{equation}
+	
+	\qquad 可以得到总能量的期望值便是E，这也是前面常数直接令为E的原因。我们验证这个结论，我们可以直接算出H的标准差
+		\begin{equation}
+		\sigma_{H}^{2}=\left\langle H^{2}\right\rangle-\langle H\rangle^{2}=E^{2}-E^{2}=0
+		\end{equation}
+	
+	\qquad 这意味着每个样本有同样的值(分布没有弥散)————结论:分离变量解有这样一种性质, 总能量的每次测量结果是确定的值E
+	\item 一般解是分离变量解的线性叠加，当然对于每个解都有相应的分量常数————\textbf{每个常数对应能量不同的波函数}，一旦得到分离解就可以表示出一般解的形式
+		\begin{equation}
+		\Psi(x, t)=\sum_{n=1}^{\infty} c_{n} \psi_{n}(x) e^{-i E_{n} t / \hbar}
+		\end{equation}
+	\end{enumerate}
+
+	下面简单总结一下，我们研究的一般问题是：\textbf{给定一个势V(x)和一个初始波函数$\Psi(x，0)$，要求出任何时刻的波函数。}我们一般会首先求出定态薛定谔方程，代入初始条件得到在$t=0$时解的线性组合
+		\begin{equation}
+		\Psi(x, 0)=\sum_{n=1}^{\infty} c_{n} \psi_{n}(x)
+		\end{equation}
+	通过上式找到合适的常数之后，加上含时项便得到
+	\begin{equation}
+	\label{eq.2_1_3}
+	\boxed{\Psi(x, t)=\sum_{n=1}^{\infty} c_{n} \psi_{n}(x) e^{-i E_{n} t / \hbar}=\sum_{n=1}^{\infty} c_{n} \Psi_{n}(x, t)}
+	\end{equation}
+	需要强调的是，要区分开定态解和一般解，一般解中不同的定态有不同的能量，因为其时间因子不能相互抵消。
+\section{一维无限深方势阱}
+	如果粒子在势能分布满足
+	\begin{equation}
+	V(x)=\left\{\begin{array}{cl}
+	0, & 0 \leq x \leq a \\
+	\infty, & else \ x
+	\end{array}\right.
+	\end{equation}
+	的区域运动，一个粒子在这样的势能中除了在两个端点外都是自由的,在端点处有无穷大的力限制它逃逸，称为一维无限深势阱。
+
+	我们可以直观的得到，在势阱外找到粒子的几率是零。在势阱内$V(x)=0$，我们有定态薛定谔方程
+	\begin{equation}
+	\hat{H} \psi= -\frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2}= E \psi
+	\end{equation}
+	求解该ODE，得到通解
+	\begin{align}
+	\psi &= A \sin{\mu x}+B \cos{\mu x} \\
+	\mu &= \sqrt{\frac{2mE}{\hbar^2}}
+	\end{align}
+	代入边界条件$\psi(0)=\psi(a)=0$，求解得到
+	\begin{equation}
+	\mu a = \pm n \pi \ , n \in \mathbb{N}^*
+	\end{equation}
+
+	考虑到关系$\sin(-x)=-\sin(x)$，上式可以将正负号合并为
+	\begin{equation}
+	\mu a = n \pi \ , n \in \mathbb{N}^*
+	\end{equation}
+	这个无限深势阱内的前三个定态
+	\begin{figure}[H]
+		\centering  % width栏调节相对行宽的大小
+		\includegraphics[width=0.7\linewidth]{sections/fig/1DInfiniteSquarePotential_1.png}
+		\caption{无限深势阱内的前三个定态示意图} % 图片添加注释
+		\label{fig.1DInfiniteSquarePotential_1}
+	\end{figure}
+
+	代入原式，得到能量之间的关系
+	\begin{equation}
+	\label{eq.2_2_1}
+	\boxed{E= \frac{n^2 \pi^2 \hbar^2}{2m a^2} \ , n \in \mathbb{N}^*}
+	\end{equation}
+
+	上面的求解过程有一个有趣的现象，x轴两端的边界条件没有确定系数的值，反而确定了常数$\mu$可能的取值，从而得到了式\ref{eq.2_2_1}。这里能量的取值和经典情况有所不同，一个量子化的粒子在一维无限深势阱中的能量不能是任意的，它只是这些特殊的许可值，而这一结果（即能量量子化）也是定态薛定谔方程边界条件所要求的结果。
+
+	为求出系数A，利用归一化条件
+	\begin{equation}
+	\int_{0}^{a}|A|^{2} \sin ^{2}(k x) d x=|A|^{2} \frac{a}{2}=1
+	\end{equation}
+
+	得到定态薛定谔方程在阱内的解是
+	\begin{equation}
+	\boxed{\psi_{n}(x)=\sqrt{\frac{2}{a}} \sin \left(\frac{n \pi}{a} x\right)}
+	\end{equation}
+
+	有前文所述，解定态薛定谔方程会得到一个无限的解集（前三个定态解画在了图\ref{fig.1DInfiniteSquarePotential_1}中，\textbf{我们总结一下这些解的性质}
+	\begin{enumerate}
+	\item 它们看起来像在一个长度为a的弦上的驻波；$\psi_1$具有最低的能量，称为基态；其它态的能量正比于$n^2$增加,称为激发态
+	\item 它们相对于势阱的中心是奇偶交替的：$\psi_1$是偶函数，$\psi_2$是奇函数，$\psi_3$是偶函数，依次类推
+	\item 随着能量的增加，态的节点(与x轴交点)数逐次增1；$\psi_1$没有(端点不计)，$\psi_2$有一个，$\psi_3$有两个，依次类推
+	\item 它们是相互正交的，即满足当$m \neq n$时
+			\begin{equation}
+			\int \psi_{\mathrm{m}}^{*}(\mathrm{x}) \psi_{\mathrm{n}}(\mathrm{x}) d x=0
+			\end{equation}
+		  证明在脚注中给出\footnote{证明如下\begin{equation*}
+									\begin{aligned}
+									\int \psi_{\mathrm{m}}{ }^{*} (x) \psi_{\mathrm{n}}(x) d x&=\frac{2}{a} \int_{0}^{a} \sin \left(\frac{m \pi}{a} x\right) \sin \left(\frac{\mathrm{n} \pi}{a} x\right) d x \\
+									&=\frac{1}{a} \int_{0}^{a}\left[\cos \left(\frac{m-n}{a} \pi x\right)-\cos \left(\frac{m+n}{a} \pi x\right)\right] d x \\
+									&=\left.\left\{\frac{1}{(m-n) \pi} \sin \left(\frac{m-n}{a} \pi x\right)-\frac{1}{(m+n) \pi} \sin \left(\frac{m+n}{a} \pi x\right)\right\}\right|_{0} ^{a} \\
+									&=\frac{1}{\pi}\left\{\frac{\sin [(m-n) \pi]}{(m-n)}-\frac{\sin [(m-n) \pi]}{(m-n)}\right\}=0 .
+									\end{aligned}
+									\end{equation*}}
+
+		   事实上，如果考虑$m=n$的情况，我们就可以把正交性和归一性写在一起
+		   \begin{equation}
+				\boxed{\int \psi_{m}{ }^{*}(x) \psi_{n}(x) d x=\delta_{m n}}
+		   \end{equation}
+	\item 它们是完备的。即任意一个函数f(x)都可以用它们的线性迭加来表示
+			\begin{equation}
+				f(x)=\sum_{n=1}^{\infty} c_{n} \psi_{n}(x)=\sqrt{\frac{2}{a}} \sum_{n=1}^{\infty} c_{n} \sin \left(\frac{n \pi}{a} x\right)
+			\end{equation}
+			不难看出，上式即为f(x)的傅立叶展开式，可以通过正交归一性求得任意式的系数
+			\begin{equation}
+				\boxed{c_{n}=\int \psi_{\mathrm{n}}^{*}(\mathrm{x}) f(x) d x}
+			\end{equation}
+	\end{enumerate}
+
+	上述的性质不只在无限深势阱的情况下有效：只要势是对称的，第二个形式就成立；对于其他性质，对于任何势都是普适的，但是证明可能会比较繁琐，在此省略。
+
+	我们的目的是求解无限深势阱的波函数的解，利用前文式\ref{eq.2_1_3}，我们加上含时项，得到波函数的定态解为
+	\begin{equation}
+		\Psi_{n}(x, t)=\sqrt{\frac{2}{a}} \sin \left(\frac{\mathrm{n} \pi}{a} x\right) e^{-i\left(n^{2} \pi^{2} \hbar / 2 m a^{2}\right) t}
+	\end{equation}
+	含时薛定谔方程的一般解是定态解的迭加
+	\begin{equation}
+		\Psi(x, t)=\sum_{n=1}^{\infty} c_{n} \sqrt{\frac{2}{a}} \sin \left(\frac{n \pi}{a} x\right) e^{-i\left(n^{2} \pi^{2} \hbar / 2 m a^{2}\right) t}
+	\end{equation}
+	代入初始的波函数，我们可以通过调整$c_n$系数的值来满足任意初始波函数$\Psi(x,0)$————${\psi_n}$的完备性可以保证上述的成立，我们也同样可以利用正交归一性得到相应的待定系数
+	\begin{equation}
+		c_{n}=\sqrt{\frac{2}{a}} \int_{0}^{a} \sin \left(\frac{n \pi}{a} x\right) \Psi(x, 0) d x
+	\end{equation}
+
+	有了这个波函数,就可以用第一节所学的方法来计算任何一个我们有兴趣的力学量。这种步骤对任何势能函数都是一样的,所不同的仅是$\psi$ 的函数形式和所允许的能量值满足的方程。
+\section{谐振子}
+	经典谐振子的模型是一个质量为 m 物体挂在一个力常数为 k 的弹簧上。其运动由胡克(Hooke)定律决定（忽略摩擦力），它的解是
+	\begin{align}
+		x(t)&=A \sin (\omega t)+B \cos (\omega t) \\
+		\omega &\equiv \frac{k}{m}
+	\end{align}
+
+	由于谐振子在偏离较多的位置胡克定律就是失效，我们一般在势能极小值做泰勒展开
+	\begin{equation}
+		V(x)=V\left(x_{0}\right)+V^{\prime}\left(x_{0}\right)\left(x-x_{0}\right)+\frac{1}{2} V^{\prime \prime}\left(x_{0}\right)\left(x-x_{0}\right)^{2}+\cdots
+	\end{equation}
+	并设置相应的势能零点\footnote{可参见理论力学中微振动一节}，就可以得到形如下式
+	\begin{equation}
+		V(x) \cong \frac{1}{2} V^{\prime \prime}\left(x_{0}\right)\left(x-x_{0}\right)^{2}
+	\end{equation}
+
+	我们考虑量子力学问题————要求解势能为
+	\begin{equation}
+		V(x)=\frac{1}{2} \omega^{2} x^{2}
+	\end{equation}
+	时的定态薛定谔方程。我们已经知道，只需解定态薛定谔方程就足够了
+	\begin{equation}
+	\label{eq.2_3_1}
+		-\frac{\hbar^{2}}{2 m} \frac{d^{2} \psi}{d x^{2}}+\frac{1}{2} m \omega^{2} x^{2}=E \psi
+	\end{equation}
+
+	对于这个问题有两种，第一种是幂级数法直接求解微分方程，第二种是巧妙的代数方法。在这里我们先使用代数方法求解
+
+	\subsection{代数法}
+		我们用更具有启发性的形式改写式\ref{eq.2_3_1}
+		\begin{equation}
+			\frac{1}{2 m}\left[\hat{p}^{2}+(m \omega x)^{2}\right] \psi=E \psi
+		\end{equation}
+		求解的基本思想是分解哈密顿算符
+		\begin{equation}
+			\hat{H}=\frac{1}{2 m}\left[\hat{p}^{2}+(m \omega x)^{2}\right]
+		\end{equation}
+		如果只是数字关系，可以直接进行分解
+		\begin{equation}
+			u^{2}+v^{2}=(i u+v)(-i u+v)
+		\end{equation}
+
+		但是对于算符的运算需要考虑不同的运算次序带来的影响（不同的顺序对算符运算有着影响），为找出衡量算符能否交换的一个量度，我们检验这样的一个量
+		\begin{equation}
+			a_{\pm} \equiv \frac{1}{\sqrt{2 \hbar m \omega}}(\mp i p+m \omega x)
+		\end{equation}
+		（前面的因子是为了使计算的结果更加的优美）
+
+		我们给出两者的积$a_- a_+$
+		\begin{equation}
+		\label{eq.2_3_2}
+			\begin{aligned}
+			a_{-} a_{+} &=\frac{1}{2 \hbar m \omega}(i p+m \omega x)(-i p+m \omega x) \\
+			&=\frac{1}{2 \hbar m \omega}\left[p^{2}+(m \omega x)^{2}-i m \omega(x p-p x)\right]
+			\end{aligned}
+		\end{equation}
+		正如预期，有一个额外项，即涉及到$(xp-px)$————我们称为x与p的对易子，这便是衡量算符是否能够交换的量度。我们简记为，A和B的对易子
+		\begin{equation}
+		[A,B]=AB-BA
+		\end{equation}
+		现在将式\ref{eq.2_3_2}改写为，
+		\begin{equation}
+			a_{-} a_{+}=\frac{1}{2 \hbar m \omega}\left[p^{2}+(m \omega x)^{2}\right]-\frac{i}{2 \hbar}[x, p]
+		\end{equation}
+		接下来需要求出对易子$[x,p]$，注意：我们引入一个待定函数f(x)使这一抽象的运算变得更具像化，在计算的最后再撤去待定函数，对于当前的这一个例子吗，我们有
+		\begin{equation}
+			[x, p] f(x)=\left[x \frac{\hbar}{i} \frac{d}{d x}(f)-\frac{\hbar}{i} \frac{d}{d x}(x f)\right]=\frac{\hbar}{i}\left(x \frac{d f}{d x}-x \frac{d f}{d x}-f\right)=i \hbar f(x)
+		\end{equation}
+		得到
+		\begin{equation}
+		\boxed{[x, p]=i \hbar}
+		\end{equation}
+		这个可爱的结果就是\textbf{正则对易关系}\footnote{量子力学中很多神奇的结论都源于坐标和动量不对易这个事实上去。如果将该关系作为量子力学的公理，也可导出$\hat{p}=(\hbar/i)d/dx$}
+
+		利用上面的关系，我们就可以把式\ref{eq.2_3_2}改写为
+		\begin{align}
+		a_{-} a_{+}&=\frac{1}{\hbar \omega} H+\frac{1}{2} \\
+		\label{eq.2_3_3} H&=\hbar \omega\left(a_{-} a_{+}-\frac{1}{2}\right)
+		\end{align}
+		值得注意的是，式\ref{eq.2_3_3}的写法仍然欠缺一些一般性————对易项前的符号与$a_-$和$a_+$的顺序有关，更一般的，我们将谐振子的定态薛定谔方程记为
+		\begin{equation}
+			\hbar \omega\left(a_{\pm} a_{\mp} \pm \frac{1}{2}\right) \psi=E \psi
+		\end{equation}
+
+		接下来的步骤就是代数法求解的关键所在————通过阶梯算符生成新解，即通过升降能量的方式得到其他能量的解。我们首先给出关键性的一个断言，并随后给出证明：\textbf{断言如果$\Psi$能够满足能量为$E$的薛定谔方程，则$a_+ \psi$满足能量为($E+\hbar \omega$)的薛定谔方程；$a_- \psi$满足能量为($E-\hbar \omega$)的薛定谔方程。}即
+		\begin{equation}
+			\begin{aligned}
+			H\left(a_{+} \psi\right)&=(E+\hbar \omega)\left(a_{+} \psi\right) \\
+			H\left(a_{-} \psi\right)&=(E-\hbar \omega)\left(a_{-} \psi\right)
+			\end{aligned}	
+		\end{equation}
+		
+		下面我们给出证明，在过程中需要注意，算符对于常数来说没有次序的区别，可以直接使用交换律————即算符对任意常数都是对易的
+		\begin{equation}
+			\begin{aligned}
+			H\left(a_{+} \psi\right) &=\hbar \omega\left(a_{+} a_{-}+\frac{1}{2}\right)\left(a_{+} \psi\right)=\hbar \omega\left(a_{+} a_{-} a_{+}+\frac{1}{2} a_{+}\right) \psi \\
+			&=\hbar \omega a_{+}\left(a_{-} a_{+}+\frac{1}{2}\right) \psi=a_{+}\left[\hbar \omega\left(a_{+} a_{-}+1+\frac{1}{2}\right) \psi\right] \\
+			&=a_{+}(H+\hbar \omega) \psi=a_{+}(E+\hbar \omega) \psi=(E+\hbar \omega)\left(a_{+} \psi\right) .
+			\end{aligned}
+		\end{equation}
+
+		我们将$a_{\pm}$称为阶梯算符，可以通过一个解得到其他能态的解。但是根据这种说法，我们要考虑边界的问题，显然是不能一直使用降阶算符进行能态运算的————根据我们的常识，在基态的时候这一降阶的运算就会停止，导致这一结果的情况就是归一化条件的存在。它可能是零或者它的平方积分可能是无限大的，事实上它是前者，即基态的时候满足\footnote{Unfinished\_Why}
+		\begin{equation}
+			a_{-} \psi_{0}=0
+		\end{equation}
+		————这一情况决定了无法进一步使用降阶算符计算
+
+		我们接下来代入$a_-$求解这一基态
+		\begin{equation}
+			\frac{1}{\sqrt{2 \hbar m \omega}}\left(\hbar \frac{d}{d x}+m \omega x\right) \psi_{0}=0
+		\end{equation}
+		改写为
+		\begin{equation}
+			\frac{d \psi_{0}}{d x}=-\frac{m \omega}{\hbar} x \psi_{0}
+		\end{equation}
+		很好求解该ODE
+		\begin{equation}
+			\int \frac{d \psi_{0}}{\psi}=-\frac{m \omega}{\hbar} \int x d x \Rightarrow \ln \psi_{0}=-\frac{m \omega}{2 \hbar} x^{2}+\text{常数}
+		\end{equation}
+		所以
+		\begin{equation}
+			\psi_{0}(x)=A e^{-\frac{m \omega}{2 \hbar} x^{2}}
+		\end{equation}
+		利用归一化求解系数A
+		\begin{equation}
+			1=|A|^{2} \int_{-\infty}^{\infty} e^{-m \omega x^{2} / \hbar} d x=|A|^{2} \sqrt{\frac{\pi \hbar}{m \omega}}
+		\end{equation}
+		得到$A^{2}=\sqrt{m \omega / \pi \hbar}$，因此
+		\begin{equation}
+			\boxed{\psi_{0}(x)=\left(\frac{m \omega}{\pi \hbar}\right)^{1 / 4} e^{-\frac{m \omega}{2 \hbar} x^{2}}}
+		\end{equation}
+		代入薛定谔方程就可以求解相应的能量
+
+		然后我们就可以在基态的时候，通过反复使用升阶算符计算激发态，每一次增加能量为$\hbar \omega$
+		\begin{equation}
+			\boxed{\psi_{n}(x)=A_{n}\left(a_{+}\right)^{n} \psi_{0}(x), \quad E_{n}=\left(n+\frac{1}{2}\right) \hbar \omega}
+		\end{equation}
+	\subsection{解析法}
+		我们重新考虑方程
+			\begin{equation}
+				-\frac{\hbar^{2}}{2 m} \frac{d^{2} \psi}{d x^{2}}+\frac{1}{2} m \omega^{2} x^{2} \psi=E \psi
+			\end{equation}
+		并尝试使用级数的方法去求解。
+
+		为更直观的得到微分方程的解，我们尝试把方程化为
+		\begin{equation}
+			\frac{d^{2} \psi}{d \xi^{2}}=A \psi
+		\end{equation}	
+		的形式
+
+		经过化简，我们得到
+		\begin{equation}
+			\frac{d^{2} \psi}{d \xi^{2}}=\left(\xi^{2}-K\right) \psi
+		\end{equation}
+		其中有
+		\begin{equation}
+			\xi \equiv \sqrt{\frac{m \omega}{\hbar}} x
+		\end{equation}
+		\begin{equation}
+			K \equiv \frac{2 E}{\hbar \omega}
+		\end{equation}
+		其近似解为
+		\begin{equation}
+			\psi(\xi) \approx A e^{-\xi^{2} / 2}+B e^{+\xi^{2} / 2}
+		\end{equation}
+
+
+		我们的主要方向是求解上面的方程，并得到能量E可能的情况（即所有K可能的值），首先在$x \to \infty$时，$\xi \to \infty$，且$\psi \to 0$，所以相关的解可以化简为
+		\begin{equation}
+			\psi(\xi)=h(\xi) e^{-\xi^{2} / 2}
+		\end{equation}
+
+		代入定态薛定谔方程得到
+		\begin{equation}
+			\frac{d^{2} h}{d \xi^{2}}-2 \xi \frac{d h}{d \xi}+(K-1) h=0
+		\end{equation}
+		这是一个Legendre方程，按照数学物理方法中的结论，其中h的级数展开解有
+		\begin{equation}
+			h(\xi)=a_{0}+a_{1} \xi+a_{2} \xi^{2}+\cdots=\sum_{j=0}^{\infty} a_{j} \xi^{j}
+		\end{equation}
+
+		其截断时的特征值需要满足
+		\begin{equation}
+			K=2 n+1
+		\end{equation}
+		也即能量需要满足
+		\begin{equation}
+			E_{n}=\left(n+\frac{1}{2}\right) \hbar \omega, \quad n=0,1,2, \ldots \ldots
+		\end{equation}
+
+		这样写出归一化谐振子定态可以写为\footnote{其中还包含对归一化系数的小调整，具体可以参见教材}
+		\begin{equation}
+			\psi_{n}(x)=\left(\frac{m \omega}{\pi \hbar}\right)^{1 / 4} \frac{1}{\sqrt{2^{n} n !}} H_{n}(\xi) e^{-\xi^{2} / 2}
+		\end{equation}
+		H为Hermitian多项式。
+
+		在这里补充一个结论，对于任何的谐振子定态有
+\section{自由粒子}
+	自由粒子（处处V(x)=0），在经典理论中意味着粒子做等速运动。我们沿用上一节谐振子的处理方式，将方程写作
+	\begin{equation}
+		\frac{d^{2} \psi}{d x^{2}}=-k^{2} \psi , 其中  k \equiv \frac{\sqrt{2 m E}}{\hbar}
+	\end{equation}
+	用指数形式表示其一般解等于
+	\begin{equation}
+		\psi(x)=A e^{i k x}+B e^{-i k x}
+	\end{equation}
+	现在对于无穷远处的情况没有办法限制：自由粒子可以具有任何正的能量值，我们加上标准的时间因子得到完整的波函数方程
+	\begin{equation}
+		\Psi(x, t)=A e^{i k\left(x-\frac{\hbar k}{2 m} t\right)}+B e^{-i k\left(x+\frac{\hbar k}{2 m} t\right)}
+	\end{equation}
+
+	我们可以看出上式的对称性——事实上，两个项分别代表向不同方向传播的波，因为其形式上只有符号的区别，我们可以将它们合并写成一项
+	\begin{equation}
+		\Psi_{k}(x, t)=A e^{i\left(k x-\frac{\hbar k^{2}}{2 m} t\right)}
+	\end{equation}
+	其中满足\footnote{这里需要说明的是，在该方程的解中，与经典粒子速度相匹配的是波包的群速度而非定态时的相速度}
+	\begin{equation}
+	k \equiv \pm \frac{\sqrt{2 m E}}{\hbar}, \quad\left\{\begin{array}{l}
+	k>0 \Rightarrow \text { 向右传播 } \\
+	k<0 \Rightarrow \text { 向左传播 }
+	\end{array}\right.
+	\end{equation}
+
+	则自由粒子的“定态”是传播的波，其波长等于$\lambda=2 \pi /|k|$。
+
+	我们发现自由粒子的波函数是不可归一化的
+	\begin{equation}
+		\int_{-\infty}^{\infty} \Psi_{k}^{*} \Psi_{k} d x=|A|^{2} \int_{-\infty}^{\infty} d x=|A|^{2}(\infty)
+	\end{equation}
+
+	该波函数用作线性叠加依然是有意义的，但是不可归一化说明自由粒子不能存在于一个定态——即没有一个确定的能量。在一般的波函数求解的问题中，会给定$t=0$时的初始状态，我们可以通过傅立叶逆变换得到
+	\begin{equation}
+		\phi(k)=\frac{1}{\sqrt{2 \pi}} \int_{-\infty}^{\infty} \Psi(x, 0) e^{-i k x} d x
+	\end{equation}
+\section{$\delta$函数势}
+	\subsection{束缚态和散射态}
+		薛定鄂方程的两类解恰好对应束缚态和散射态。这种区分在量子的范畴甚至更清晰, 因 为隧道效应（我们会马上讨论到）允许粒子 “渗透” 穿过任何有限的势垒, 所以最关键的是 无限远处的势:
+		\begin{equation}
+		\left\{\begin{array}{l}
+		E<[V(-\infty) \text { 和 } V(\infty)] \Rightarrow \text { 束缚态, } \\
+		E>[V(-\infty) \text { 或 } V(\infty)] \Rightarrow \text { 散射态. }
+		\end{array}\right.
+		\end{equation}
+	\subsection{$\delta$函数势阱}
+	\subsection{有限深方势阱}
+
+
+
+
+
+

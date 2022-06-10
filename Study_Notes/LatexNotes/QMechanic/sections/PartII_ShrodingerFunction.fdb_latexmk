@@ -1,0 +1,14 @@
+# Fdb version 3
+["xdvipdfmx"] 1650608197 "PartII_ShrodingerFunction.xdv" "PartII_ShrodingerFunction.pdf" "PartII_ShrodingerFunction" 1650608197
+  "PartII_ShrodingerFunction.xdv" 1650608197 6532 5d7f8dccd6953cd60e11defd9105e673 "xelatex"
+  (generated)
+  "PartII_ShrodingerFunction.pdf"
+["xelatex"] 1650608197 "PartII_ShrodingerFunction.tex" "PartII_ShrodingerFunction.xdv" "PartII_ShrodingerFunction" 1650608197
+  "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1616443989 39972 3d6bb4d9d719e93193fa020b58adf5d4 ""
+  "/usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt" 1631107612 5093941 61d14e002e1921a5b3190e910f7f9d50 ""
+  "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
+  "PartII_ShrodingerFunction.aux" 1650606226 5792 05f52b8f22200f66a6376ae7ff844a3d ""
+  "PartII_ShrodingerFunction.tex" 1650608196 19106 2f750ccd490653d33a8ea016a2206dda ""
+  (generated)
+  "PartII_ShrodingerFunction.xdv"
+  "PartII_ShrodingerFunction.log"

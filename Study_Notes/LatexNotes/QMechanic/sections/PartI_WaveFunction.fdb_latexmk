@@ -1,0 +1,14 @@
+# Fdb version 3
+["xdvipdfmx"] 0 "PartI_WaveFunction.xdv" "PartI_WaveFunction.pdf" "PartI_WaveFunction" 0
+  "PartI_WaveFunction.xdv" 0 -1 0 "xelatex"
+  (generated)
+  "PartI_WaveFunction.pdf"
+["xelatex"] 1643168541 "PartI_WaveFunction.tex" "PartI_WaveFunction.xdv" "PartI_WaveFunction" 1643168541
+  "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1616443989 39972 3d6bb4d9d719e93193fa020b58adf5d4 ""
+  "/usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt" 1631107612 5093941 61d14e002e1921a5b3190e910f7f9d50 ""
+  "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
+  "PartI_WaveFunction.aux" 1643101772 5146 2fa0fca12f0d2b2acd3957417e1e98a0 ""
+  "PartI_WaveFunction.tex" 1643168541 1620 1dc2be593f13f1fe377d8d1e634fcf03 ""
+  (generated)
+  "PartI_WaveFunction.xdv"
+  "PartI_WaveFunction.log"

@@ -1,0 +1,10 @@
+PWD /Users/menakuniay/Library/CloudStorage/OneDrive-个人/Study/LaTeX文稿/Latex笔记/QMechanic/sections
+INPUT /usr/local/texlive/2021/texmf.cnf
+INPUT /usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt
+INPUT PartIII_HilbertSpace.tex
+OUTPUT PartIII_HilbertSpace.log
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm

@@ -1,0 +1,45 @@
+%!TEX program = xelatex
+	
+%-----------------------------导言区---------------------------%
+	\documentclass[10pt,oneside,UTF8]{book}
+	\usepackage[fontset=mac]{ctex}
+	\usepackage[shortlabels]{enumitem}
+	\usepackage{graphicx,subfigure,booktabs,multirow,caption,setspace,listings,amsmath,lineno,multicol,float,stfloats,wrapfig,amsfonts,mathrsfs}  % 直接导入常用包
+	\usepackage{xcolor,colortbl,rotating,bigstrut}
+	\usepackage{hyperref} % 生成书签和超链接
+	\usepackage{ulem} %解决文字下划线无法自动换行的问题(暂时无用)
+	\usepackage[hyperref=true,backend=biber,bibstyle=gb7714-2015,citestyle=numeric-comp,sorting=none,backref=true]{biblatex}
+	\usepackage{titlesec}
+		%改变section、subsection里面字体的样式。中文黑体，英文TNR。
+		\newfontfamily\sectionef{Times New Roman}
+		\newcommand{\sectioncf}{\CJKfamily{FZHeiTi}}
+		\titleformat*{\section}{\Large\bfseries\sectioncf\sectionef}
+		\titleformat*{\subsection}{\large\bfseries\sectioncf\sectionef}
+	\usepackage{fancyhdr}
+	\usepackage{geometry} % 用于纸张格式的设置
+	\geometry{a4paper,scale=0.85,top=2cm,bottom=2.5cm,left=2.5cm,right=2.5cm}
+	
+	%----------------------标题与分栏线----------------------------%
+	\title{\fontsize{30pt}{30pt}\textbf{电动力学笔记}}
+	% 对于空格有 \! \, \: \ \quad \qquad几种形式，间隔逐渐增大
+	\author
+	{\kaishu 郭蒙 \\
+	\kaishu 中山大学物理学院，广东，广州，510275} % \quad表示单个空格
+	\date{}
+	
+	\setlength\columnsep{1cm} %设置分栏之后的栏间间距
+	\setlength{\columnseprule}{0.5pt} % 设置分栏之后的分割线宽度
+%---------------------正文--------------------------%
+\begin{document}
+	\maketitle  % 将前文的标题进行创建
+\newpage
+\pagenumbering{Roman}
+\setcounter{page}{1}
+\tableofcontents
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+	\chapter{电磁现象的普遍规律}
+		\include{sections/S1/PartI_}
+	% \include{sections/Appendix/Appendies}  
+\end{document}

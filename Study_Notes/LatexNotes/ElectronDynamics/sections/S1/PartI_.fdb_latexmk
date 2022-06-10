@@ -1,0 +1,18 @@
+# Fdb version 3
+["xdvipdfmx"] 1650093355 "PartI_.xdv" "PartI_.pdf" "PartI_" 1650093356
+  "PartI_.xdv" 1650093355 6360 2286744e2558f01a026acc732a576411 "xelatex"
+  (generated)
+  "PartI_.pdf"
+["xelatex"] 1650093355 "PartI_.tex" "PartI_.xdv" "PartI_" 1650093356
+  "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1136768653 1332 f817c21a1ba54560425663374f1b651a ""
+  "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1136768653 1336 3125ccb448c1a09074e3aa4a9832f130 ""
+  "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1616443989 39972 3d6bb4d9d719e93193fa020b58adf5d4 ""
+  "/usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt" 1631107612 5093941 61d14e002e1921a5b3190e910f7f9d50 ""
+  "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
+  "PartI_.aux" 1650093239 9045 cad899e771388106b9cc5be6d76be6f0 ""
+  "PartI_.tex" 1650093354 20147 915fff1ca187dda785bcfe3e758cb6fd ""
+  (generated)
+  "PartI_.xdv"
+  "PartI_.log"

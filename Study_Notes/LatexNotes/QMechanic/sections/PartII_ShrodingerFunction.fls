@@ -1,0 +1,7 @@
+PWD /Users/menakuniay/Library/CloudStorage/OneDrive-个人/Study/LaTeX文稿/Latex笔记/QMechanic/sections
+INPUT /usr/local/texlive/2021/texmf.cnf
+INPUT /usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt
+INPUT PartII_ShrodingerFunction.tex
+OUTPUT PartII_ShrodingerFunction.log
+OUTPUT PartII_ShrodingerFunction.xdv

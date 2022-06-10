@@ -1,0 +1,123 @@
+\section{Hilbert空间}
+	在N维空间中，可以简单地用对应于N个正交归一基矢的分量，可以用行列矩阵来表示
+	\begin{equation}
+		|\alpha\rangle \rightarrow \mathbf{a}=\left(\begin{array}{l}
+		a_{1} \\
+		a_{2} \\
+		\vdots \\
+		a_{N}
+		\end{array}\right)
+	\end{equation}
+	
+	同样可以定义两个矢量的内积
+	\begin{equation}
+		\langle\alpha \mid \beta\rangle=a_{1}^{*} b_{1}+a_{2}^{*} b_{2}+\cdots a_{N}^{*} b_{N}
+	\end{equation}
+
+	矩阵变换可以写做
+	\begin{equation}
+		|\beta\rangle=T|\alpha\rangle \rightarrow \mathbf{b}=\mathbf{T a}=\left(\begin{array}{cccc}
+		t_{11} & t_{12} & \cdots & t_{1 N} \\
+		t_{21} & t_{22} & \cdots & t_{2 N} \\
+		\vdots & \vdots & & \vdots \\
+		t_{N 1} & t_{N 2} & \cdots & t_{N N}
+		\end{array}\right)\left(\begin{array}{l}
+		a_{1} \\
+		a_{2} \\
+		\vdots \\
+		a_{N}
+		\end{array}\right)
+	\end{equation}
+
+	将\textbf{所有在特定区域的平方可积函数的集合}
+		\begin{equation}
+			f(x) \quad \text { 满足 } \quad \int_{a}^{b}|f(x)|^{2} d x<\infty
+		\end{equation}
+	\textbf{构成的一个矢量空间，称为希尔伯特空间。}在量子力学中，波函数是处于希尔伯特空间中的。
+
+	定义两个函数的内积
+	\begin{equation}
+		\langle f \mid g\rangle \equiv \int_{a}^{b} f(x)^{*} g(x) d x
+	\end{equation}
+
+	如果一个函数与自身的内积为 1 , 我们称之为归一化的; 如果两个函数的内积为 0 , 那 么这两个函数是正交的; 如果一组函数即是归一的也是相互正交的, 称之它们为正交归一的。
+	\begin{equation}
+		\left\langle f_{m} \mid f_{n}\right\rangle=\delta_{m v}
+	\end{equation}
+\section{可观测量}
+	\subsection{Hermitian算符}
+		对于一个可观测量，一次测量结果的期望值和多次测量的平均值应当相同
+		\begin{equation}
+			\langle\psi \mid \hat{Q} \psi\rangle=\langle\hat{Q} \psi \mid \psi\rangle
+		\end{equation}
+		我们称这样的算符为Hermitian算符，Hermitian算符的期望值是实数，可观测量由厄密算符表示。
+
+		举个例子，我们可以证明动量算符是厄密算符\footnote{通常会采用到分部积分法}
+		\begin{equation}
+			\langle f \mid \hat{p} g\rangle=\int_{-\infty}^{\infty} f^{*} \frac{h}{i} \frac{d g}{d x} d x=\left.\frac{h}{i} f^{*} g\right|_{-\infty} ^{\infty}+\int_{-\infty}^{\infty}\left(\frac{h}{i} \frac{d f}{d x}\right)^{*} g d x=\langle\hat{p} f \mid g\rangle
+		\end{equation}
+	\subsection{定值态}
+		通常的, 当你对全同体系组成的系综测量一个可观测量 $Q$, 每个体系都处于相同的状态 $\Psi$, 每 次测量并不能得到相同的结果——这就是量子力学中的不确定性问题: 是否能够制备一个态 使得每一次观测 $Q$ 都一定得到同样的值？如果你喜欢, 可以称这样的态为可观测量 $Q$ 的定值态。\footnote{实际上, 我们已经知道一个例子：哈密顿的定态是定值态：测量一个粒子处于定态 $\Psi_{n}$ 时的总能量, 必定得到相应的 “允许的” 能量 $E_{n}$}
+
+		则对于
+		\begin{equation}
+			\hat{Q} \Psi=q \Psi
+		\end{equation}
+		称为算符$\hat{Q}$的本征值方程，q是对应的本征值。有时候两个（或者多个）线性独立的本征函数具有相同的本征值，这种情况称为谱的简并。
+
+	\subsection{Hermitian算符的本征函数}
+		对于厄密算符的本征函数（也即可观测的定值态）分成两类情况
+			\begin{enumerate}
+			\item 如果谱是连续的，那么本征函数是不可归一化的，并且不能代表可能的波函数 
+			\item 如果谱是分立的，那么它们的本征值是实数且不同本征值的本征函数是正交的
+			\end{enumerate}
+
+		某些算符只有分立谱，某些算符只有连续谱，某些算符两者都具有。
+			\subsubsection{分立谱}
+				数学上厄密算符归一化的本征函数有两个性质，我们在前文也已经提到，这里在给出性质的同时给出证明
+					\paragraph*{定理1:它们的本征值是实数\\}
+						\par
+						证明: 假设
+						\begin{equation}
+						\hat{Q} f=q f
+						\end{equation}
+						\begin{equation}
+						\langle f \mid \hat{Q} f\rangle=\langle\hat{Q} f \mid f\rangle
+						\end{equation}
+						( $\hat{Q}$ 是厄密算符)。那么有
+						\begin{equation}
+						q\langle f \mid f\rangle=q^{*}\langle f \mid f\rangle
+						\end{equation}
+						( $q$ 是一个数, 所以它可以移出积分号外, 并且因为内积的左侧是右侧函 数的复共轭 (等式 3.6) 所以在右边 $q$ 也同样移出)但是 $\langle f \mid f\rangle$ 不能是 0 ( $f(x)=0$ 不是正当的本征函数), 所以 $q=q^{*}$, 因此 $q$ 是实数。证毕。
+					\paragraph*{定理2:属于不同本征值的本征函数是正交的\\}
+						\par
+						证明：假设
+						\begin{equation}
+						\hat{Q} f=q f, \quad \hat{Q} g=q^{\prime} g
+						\end{equation}
+						$\hat{Q}$ 是厄密算符。则有 $\langle f \mid \hat{Q} g\rangle=\langle\hat{Q} f \mid g\rangle$, 所以
+						\begin{equation}
+						q^{\prime}\langle f \mid g\rangle=q^{*}\langle f \mid g\rangle
+						\end{equation}
+						(再次, 内积是存在的因为假定本征函数是位于希耳伯特空间内)。但是 $q$ 是 实数 (由定理 1), 所以如果 $q^{\prime} \neq q$ 那么必然有 $\langle f \mid g\rangle=0$.
+
+				补充一个公理：\textbf{可观测量算符的本征函数是完备的，（在希尔伯特空间中）任何函数都可以用它们的线性迭加来表达）}
+			\subsubsection{连续谱}
+		\subsection{广义统计诠释}	
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

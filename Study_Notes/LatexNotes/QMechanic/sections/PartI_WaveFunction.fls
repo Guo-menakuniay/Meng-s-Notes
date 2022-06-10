@@ -1,0 +1,6 @@
+PWD /Users/menakuniay/OneDrive/Study/LaTeX文稿/Latex笔记/量子力学/sections
+INPUT /usr/local/texlive/2021/texmf.cnf
+INPUT /usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt
+INPUT PartI_WaveFunction.tex
+OUTPUT PartI_WaveFunction.log

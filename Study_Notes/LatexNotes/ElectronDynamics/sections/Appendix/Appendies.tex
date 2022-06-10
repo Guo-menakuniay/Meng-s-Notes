@@ -1,0 +1,54 @@
+\chapter{Appendix}
+	\section{张量代数}
+		\subsection{矢量代数}
+			\subsubsection*{坐标基矢的点积与矢积\label{sec.app_1_1_1}}
+				我们以常见的笛卡尔坐标系（默认为右手坐标系）为例，有矢量点积的关系
+				\begin{equation}
+					\boldsymbol{e}_{i} \cdot \boldsymbol{e}_{j}=\sigma_{ij}= \begin{cases}0 & (i \neq j) \\ 1 & (i=j)\end{cases}
+				\end{equation}
+				这里我们记\textbf{二阶对称$\sigma$ 符号为}
+					\begin{equation}
+						\delta_{i j}= \begin{cases}0 & (i \neq j) \\ 1 & (i=j)\end{cases}
+					\end{equation}
+				矢量的矢积为
+					\begin{equation}
+						\boldsymbol{e}_{i} \times \boldsymbol{e}_{j}=\sum_{k=1}^{3} \varepsilon_{i j k} \boldsymbol{e}_{k}
+					\end{equation}
+				这里有三阶完全反对称符号$\varepsilon_{ijk}$的定义为
+				\begin{equation}
+					\left\{\begin{array}{l}
+					\varepsilon_{i j k}=0 \quad(i=j \text { 或 } j=k \text { 或 } k=i) \\
+					\varepsilon_{123}=\varepsilon_{231}=\varepsilon_{312}=-\varepsilon_{213}=-\varepsilon_{132}=-\varepsilon_{321}=1
+					\end{array}\right.
+				\end{equation}
+			\subsubsection*{任意矢量的点积与矢积}
+				对于三维欧式空间的任意矢量可以表示为
+					\begin{equation}
+						\left\{\begin{array}{l}
+						\boldsymbol{a}=a_{1} \boldsymbol{e}_{1}+a_{2} \boldsymbol{e}_{2}+a_{3} \boldsymbol{e}_{3}=\sum_{i=1}^{3} a_{i} \boldsymbol{e}_{i} \\
+						\boldsymbol{b}=b_{1} \boldsymbol{e}_{1}+b_{2} \boldsymbol{e}_{2}+b_{3} \boldsymbol{e}_{3}=\sum_{i=1}^{3} b_{i} \boldsymbol{e}_{i}
+						\end{array}\right.
+					\end{equation}
+				
+				根据上节\ref{sec.app_1_1_1}可以表示出
+					\begin{equation}
+						\boldsymbol{a} \cdot \boldsymbol{b}=\sum_{i=1}^{3} \sum_{j=1}^{3} a_{i} b_{j} \boldsymbol{e}_{i} \cdot \boldsymbol{e}_{j}=\sum_{i=1}^{3} \sum_{j=1}^{3} a_{i} b_{j} \delta_{i j}
+					\end{equation}
+					\begin{equation}
+						\boldsymbol{a} \times \boldsymbol{b}=\sum_{i=1}^{3} \sum_{j=1}^{3} a_{i} b_{j} \boldsymbol{e}_{i} \times \boldsymbol{e}_{j}=\sum_{i=1}^{3} \sum_{j=1}^{3} \sum_{k=1}^{3} \varepsilon_{i j k} a_{i} b_{j} e_{k}
+					\end{equation}
+
+				上面的矢积使用更直白的分量式进行表示
+				\begin{equation}
+					(\boldsymbol{a} \times \boldsymbol{b})_{i}=\sum_{j=1}^{3} \sum_{k=1}^{3} \varepsilon_{i j k} a_{j} b_{k}
+				\end{equation}
+			\subsubsection*{赝矢量和赝标量}
+				
+
+
+
+
+
+
+
+
