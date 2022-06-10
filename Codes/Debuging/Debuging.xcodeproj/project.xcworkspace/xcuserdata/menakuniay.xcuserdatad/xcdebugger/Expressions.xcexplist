@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "GLOBAL">
+         <PersistentStrings>
+            <PersistentString
+               value = "output">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "main:main.c">
+      </ContextState>
+      <ContextState
+         contextName = "fileoutput:main.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "fopen(&quot;/Users/menakuniay/Documents/Codes/C\(workspace\)/vscode-c/Practise/0630/list.txt&quot;,&quot;w+&quot;)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "print:main.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "*n">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "readout:main.c">
+         <PersistentStrings>
+            <PersistentString
+               value = "*n">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -1,0 +1,529 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     15996,        521]
+NotebookOptionsPosition[     15187,        498]
+NotebookOutlinePosition[     15595,        515]
+CellTagsIndexPosition[     15552,        512]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Bisection", "[", 
+    RowBox[{"a0_", ",", "b0_", ",", "m_"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "}"}], ",", 
+     RowBox[{
+      RowBox[{"a", "=", 
+       RowBox[{"N", "[", "a0", "]"}]}], ";", 
+      RowBox[{"b", "=", 
+       RowBox[{"N", "[", "b0", "]"}]}], ";", 
+      RowBox[{"c", "=", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"a", "+", "b"}], ")"}], "/", "2"}]}], ";", 
+      RowBox[{"k", "=", "0"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"output", "=", 
+       RowBox[{"{", 
+        RowBox[{"{", 
+         RowBox[{"k", ",", "a", ",", "c", ",", "b", ",", 
+          RowBox[{"f", "[", "c", "]"}]}], "}"}], "}"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"While", "[", 
+       RowBox[{
+        RowBox[{"k", "<", "m"}], ",", 
+        RowBox[{
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Sign", "[", 
+             RowBox[{"f", "[", "b", "]"}], "]"}], "==", 
+            RowBox[{"Sign", "[", 
+             RowBox[{"f", "[", "c", "]"}], "]"}]}], ",", 
+           RowBox[{"b", "=", "c"}], ",", 
+           RowBox[{
+            RowBox[{"a", "=", "c"}], ";"}]}], "]"}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"c", "=", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"a", "+", "b"}], ")"}], "/", "2"}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"k", "=", 
+          RowBox[{"k", "+", "1"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"output", "=", 
+          RowBox[{"Append", "[", 
+           RowBox[{"output", ",", 
+            RowBox[{"{", 
+             RowBox[{"k", ",", "a", ",", "c", ",", "b", ",", 
+              RowBox[{"f", "[", "c", "]"}]}], "}"}]}], "]"}]}], ";"}]}], 
+       "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Print", "[", 
+       RowBox[{"NumberForm", "[", 
+        RowBox[{
+         RowBox[{"TableForm", "[", 
+          RowBox[{"output", ",", 
+           RowBox[{"TableHeadings", "->", 
+            RowBox[{"{", 
+             RowBox[{"None", ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<k\>\"", ",", "\"\<a_k\>\"", ",", "\"\<c_k\>\"", ",", 
+                "\"\<b_k\>\"", ",", "\"\<f[c_k]\>\""}], "}"}]}], "}"}]}]}], 
+          "]"}], ",", "16"}], "]"}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Print", "[", 
+       RowBox[{"\"\<  c=\>\"", ",", 
+        RowBox[{"NumberForm", "[", 
+         RowBox[{"c", ",", "16"}], "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Print", "[", 
+       RowBox[{"\"\< \[CapitalDelta]c=\[PlusMinus]\>\"", ",", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"b", "-", "a"}], ")"}], "/", "2"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Print", "[", 
+       RowBox[{"\"\<f[c]=\>\"", ",", 
+        RowBox[{"NumberForm", "[", 
+         RowBox[{
+          RowBox[{"f", "[", "c", "]"}], ",", "16"}], "]"}]}], "]"}], ";"}]}], 
+    "]"}]}], "\n", 
+  RowBox[{
+  "(*", "\:5b9a\:4e49\:5f85\:8ba1\:7b97\:65b9\:7a0b\:8868\:8fbe\:5f0f", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"f", "[", "x_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{"x", "^", "3"}], "+", "x", "-", "1"}]}], ";"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+  "(*", "\:8fd0\:884c\:4e8c\:5206\:6cd5\:7a0b\:5e8f", "*)"}]}], "\n", 
+ RowBox[{"Bisection", "[", 
+  RowBox[{"0", ",", "1", ",", "10"}], "]"}], "\[IndentingNewLine]"}], "Input",\
+
+ CellChangeTimes->{{3.843877380214332*^9, 3.843877380220902*^9}, 
+   3.843877428573613*^9, {3.843878252225761*^9, 3.843878252938344*^9}, {
+   3.843878337201877*^9, 3.843878375080003*^9}, 3.843882255286256*^9},
+ CellLabel->"In[19]:=",ExpressionUUID->"041897cb-3729-4df6-9433-72ae04eb27a3"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TagBox[
+  TagBox[
+   TagBox[GridBox[{
+      {
+       TagBox["\<\"k\"\>",
+        HoldForm], 
+       TagBox["\<\"a_k\"\>",
+        HoldForm], 
+       TagBox["\<\"c_k\"\>",
+        HoldForm], 
+       TagBox["\<\"b_k\"\>",
+        HoldForm], 
+       TagBox["\<\"f[c_k]\"\>",
+        HoldForm]},
+      {
+       InterpretationBox[
+        StyleBox["\<\"0\"\>",
+         ShowStringCharacters->False],
+        0,
+        Editable->False], 
+       InterpretationBox[
+        StyleBox["\<\"0.\"\>",
+         ShowStringCharacters->False],
+        0.,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.5\"\>",
+         ShowStringCharacters->False],
+        0.5,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"1.\"\>",
+         ShowStringCharacters->False],
+        1.,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"-0.375\"\>",
+         ShowStringCharacters->False],
+        -0.375,
+        AutoDelete->True]},
+      {
+       InterpretationBox[
+        StyleBox["\<\"1\"\>",
+         ShowStringCharacters->False],
+        1,
+        Editable->False], 
+       InterpretationBox[
+        StyleBox["\<\"0.5\"\>",
+         ShowStringCharacters->False],
+        0.5,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.75\"\>",
+         ShowStringCharacters->False],
+        0.75,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"1.\"\>",
+         ShowStringCharacters->False],
+        1.,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.171875\"\>",
+         ShowStringCharacters->False],
+        0.171875,
+        AutoDelete->True]},
+      {
+       InterpretationBox[
+        StyleBox["\<\"2\"\>",
+         ShowStringCharacters->False],
+        2,
+        Editable->False], 
+       InterpretationBox[
+        StyleBox["\<\"0.5\"\>",
+         ShowStringCharacters->False],
+        0.5,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.625\"\>",
+         ShowStringCharacters->False],
+        0.625,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.75\"\>",
+         ShowStringCharacters->False],
+        0.75,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"-0.130859375\"\>",
+         ShowStringCharacters->False],
+        -0.130859375,
+        AutoDelete->True]},
+      {
+       InterpretationBox[
+        StyleBox["\<\"3\"\>",
+         ShowStringCharacters->False],
+        3,
+        Editable->False], 
+       InterpretationBox[
+        StyleBox["\<\"0.625\"\>",
+         ShowStringCharacters->False],
+        0.625,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.6875\"\>",
+         ShowStringCharacters->False],
+        0.6875,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.75\"\>",
+         ShowStringCharacters->False],
+        0.75,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.012451171875\"\>",
+         ShowStringCharacters->False],
+        0.012451171875,
+        AutoDelete->True]},
+      {
+       InterpretationBox[
+        StyleBox["\<\"4\"\>",
+         ShowStringCharacters->False],
+        4,
+        Editable->False], 
+       InterpretationBox[
+        StyleBox["\<\"0.625\"\>",
+         ShowStringCharacters->False],
+        0.625,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.65625\"\>",
+         ShowStringCharacters->False],
+        0.65625,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.6875\"\>",
+         ShowStringCharacters->False],
+        0.6875,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"-0.061126708984375\"\>",
+         ShowStringCharacters->False],
+        -0.061126708984375,
+        AutoDelete->True]},
+      {
+       InterpretationBox[
+        StyleBox["\<\"5\"\>",
+         ShowStringCharacters->False],
+        5,
+        Editable->False], 
+       InterpretationBox[
+        StyleBox["\<\"0.65625\"\>",
+         ShowStringCharacters->False],
+        0.65625,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.671875\"\>",
+         ShowStringCharacters->False],
+        0.671875,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.6875\"\>",
+         ShowStringCharacters->False],
+        0.6875,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"-0.02482986450195312\"\>",
+         ShowStringCharacters->False],
+        -0.024829864501953125`,
+        AutoDelete->True]},
+      {
+       InterpretationBox[
+        StyleBox["\<\"6\"\>",
+         ShowStringCharacters->False],
+        6,
+        Editable->False], 
+       InterpretationBox[
+        StyleBox["\<\"0.671875\"\>",
+         ShowStringCharacters->False],
+        0.671875,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.6796875\"\>",
+         ShowStringCharacters->False],
+        0.6796875,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.6875\"\>",
+         ShowStringCharacters->False],
+        0.6875,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"-0.006313800811767578\"\>",
+         ShowStringCharacters->False],
+        -0.006313800811767578,
+        AutoDelete->True]},
+      {
+       InterpretationBox[
+        StyleBox["\<\"7\"\>",
+         ShowStringCharacters->False],
+        7,
+        Editable->False], 
+       InterpretationBox[
+        StyleBox["\<\"0.6796875\"\>",
+         ShowStringCharacters->False],
+        0.6796875,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.68359375\"\>",
+         ShowStringCharacters->False],
+        0.68359375,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.6875\"\>",
+         ShowStringCharacters->False],
+        0.6875,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.003037393093109131\"\>",
+         ShowStringCharacters->False],
+        0.003037393093109131,
+        AutoDelete->True]},
+      {
+       InterpretationBox[
+        StyleBox["\<\"8\"\>",
+         ShowStringCharacters->False],
+        8,
+        Editable->False], 
+       InterpretationBox[
+        StyleBox["\<\"0.6796875\"\>",
+         ShowStringCharacters->False],
+        0.6796875,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.681640625\"\>",
+         ShowStringCharacters->False],
+        0.681640625,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.68359375\"\>",
+         ShowStringCharacters->False],
+        0.68359375,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"-0.001646004617214203\"\>",
+         ShowStringCharacters->False],
+        -0.0016460046172142029`,
+        AutoDelete->True]},
+      {
+       InterpretationBox[
+        StyleBox["\<\"9\"\>",
+         ShowStringCharacters->False],
+        9,
+        Editable->False], 
+       InterpretationBox[
+        StyleBox["\<\"0.681640625\"\>",
+         ShowStringCharacters->False],
+        0.681640625,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.6826171875\"\>",
+         ShowStringCharacters->False],
+        0.6826171875,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.68359375\"\>",
+         ShowStringCharacters->False],
+        0.68359375,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.0006937412545084953\"\>",
+         ShowStringCharacters->False],
+        0.0006937412545084953,
+        AutoDelete->True]},
+      {
+       InterpretationBox[
+        StyleBox["\<\"10\"\>",
+         ShowStringCharacters->False],
+        10,
+        Editable->False], 
+       InterpretationBox[
+        StyleBox["\<\"0.681640625\"\>",
+         ShowStringCharacters->False],
+        0.681640625,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.68212890625\"\>",
+         ShowStringCharacters->False],
+        0.68212890625,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"0.6826171875\"\>",
+         ShowStringCharacters->False],
+        0.6826171875,
+        AutoDelete->True], 
+       InterpretationBox[
+        StyleBox["\<\"-0.0004766195779666305\"\>",
+         ShowStringCharacters->False],
+        -0.00047661957796663046`,
+        AutoDelete->True]}
+     },
+     GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+     GridBoxDividers->{
+      "Columns" -> {{False}}, "Rows" -> {False, True, {False}, False}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[2.0999999999999996`]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    {None, OutputFormsDump`HeadedColumns}],
+   Function[BoxForm`e$, 
+    TableForm[
+    BoxForm`e$, 
+     TableHeadings -> {None, {"k", "a_k", "c_k", "b_k", "f[c_k]"}}]]],
+  NumberForm[#, 16]& ]], "Print",
+ CellChangeTimes->{3.84387825378854*^9, 3.84388225622864*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[19]:=",ExpressionUUID->"33e94539-8d8c-4efb-828c-\
+11bbbe6a0cc3"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"  c=\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox[
+     StyleBox["\<\"0.68212890625\"\>",
+      ShowStringCharacters->False],
+     0.68212890625,
+     AutoDelete->True],
+    NumberForm[#, 16]& ]}],
+  SequenceForm["  c=", 
+   NumberForm[0.68212890625, 16]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.84387825378854*^9, 3.8438822562319593`*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[19]:=",ExpressionUUID->"46e01b5c-b72a-40fd-89eb-\
+9e52c80fc977"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\" \[CapitalDelta]c=\[PlusMinus]\"\>", "\[InvisibleSpace]", 
+   "0.00048828125`"}],
+  SequenceForm[" \[CapitalDelta]c=\[PlusMinus]", 0.00048828125],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.84387825378854*^9, 3.843882256234704*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[19]:=",ExpressionUUID->"0ddec8ef-0b64-445c-8c72-\
+75fc01076aad"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"f[c]=\"\>", "\[InvisibleSpace]", 
+   TagBox[
+    InterpretationBox[
+     StyleBox["\<\"-0.0004766195779666305\"\>",
+      ShowStringCharacters->False],
+     -0.00047661957796663046`,
+     AutoDelete->True],
+    NumberForm[#, 16]& ]}],
+  SequenceForm["f[c]=", 
+   NumberForm[-0.00047661957796663046`, 16]],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.84387825378854*^9, 3.843882256235806*^9},
+ CellLabel->
+  "\:6b63\:5728\:8ba1\:7b97In[19]:=",ExpressionUUID->"0f440b86-62dd-46c9-b52d-\
+394d9a56ca65"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{720, 847},
+WindowMargins->{{110, Automatic}, {Automatic, 25}},
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) \
+(2021\:5e746\:670819\:65e5)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"abc4a2c7-5eeb-496b-b604-8246d0b41391"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3776, 100, 580, "Input",ExpressionUUID->"041897cb-3729-4df6-9433-72ae04eb27a3"],
+Cell[CellGroupData[{
+Cell[4381, 126, 9294, 321, 210, "Print",ExpressionUUID->"33e94539-8d8c-4efb-828c-11bbbe6a0cc3"],
+Cell[13678, 449, 524, 16, 24, "Print",ExpressionUUID->"46e01b5c-b72a-40fd-89eb-9e52c80fc977"],
+Cell[14205, 467, 396, 9, 24, "Print",ExpressionUUID->"0ddec8ef-0b64-445c-8c72-75fc01076aad"],
+Cell[14604, 478, 555, 16, 24, "Print",ExpressionUUID->"0f440b86-62dd-46c9-b52d-394d9a56ca65"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

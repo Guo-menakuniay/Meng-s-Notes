@@ -1,0 +1,7 @@
+{
+    "jupyter.jupyterServerType": "remote",
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "FittingDemo.C": "cpp"
+    }
+}
