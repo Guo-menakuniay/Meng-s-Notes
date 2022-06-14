@@ -24,8 +24,6 @@ gunzip <filename>.hepmc.gz <filename>
 
 ```
 
-同时
-
 
 
 ## Generate Validation
@@ -88,7 +86,7 @@ TestFile
 # rm -rf W0Jet_MLM
 ```
 
-**可以使用命令 condor_q 来查看工作的进度**
+**可以使用命令 condor_q 来查看工作的进度**，更多condor命令请参见附录
 
 > 其他的工作代码参见https://gitlab.cern.ch/jixiao/genValidation/-/tree/master
 
@@ -96,7 +94,7 @@ TestFile
 
 ## **CMSSW**
 
-### Setting Up CMS environment [*](http://cms-sw.github.io/singularity.html)
+Setting Up CMS environment [*](http://cms-sw.github.io/singularity.html)
 
 ```shell
 cmssw-env <opts> # to choose specific env
@@ -120,4 +118,16 @@ cmsenv
 [you can look up more information in here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWhichRelease)
 
 ### "SCRAM"
+
+## condor命令[[*]](https://twiki.cern.ch/twiki/bin/view/CMSPublic/CompOpsGlideinWMSCondorCommands)
+
+**condor_q  查看正在运行的工作序列**
+
+> Condor_q -name <Job_name> 可以查找指定名字的工作
+
+**condor_rm <job#>  通过工作编号删除序列中的工作** 
+
+> Condor_rm -const (expr) 可以根据表达式判断需要删除的工作
+>
+> ​	condor_rm -const 'jobstatus==5' 删除所有Hold状态的任务
 
