@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  23 APR 2022 11:23
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  15 JUN 2022 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1499,35 +1499,35 @@ LaTeX Font Info:    Font shape `TU/SongtiSCLight(0)/bx/n' in size <12> not avai
 lable
 (Font)              Font shape `TU/SongtiSCLight(0)/b/n' tried instead on input
  line 198.
- [11] [12]
+ [11] [12] [13]
 Missing character: There is no 其 (U+5176) in font [lmroman10-regular]:mapping=t
 ex-text;!
 Missing character: There is no 中 (U+4E2D) in font [lmroman10-regular]:mapping=t
 ex-text;!
- [13]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 402.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\delta' on input line 402.
+(hyperref)                removing `math shift' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 402.
+(hyperref)                removing `\delta' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 411.
+(hyperref)                removing `math shift' on input line 404.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\delta' on input line 411.
+(hyperref)                removing `math shift' on input line 413.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 411.
+(hyperref)                removing `\delta' on input line 413.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 413.
 
 ) [14]
 Chapter 3.
@@ -1540,7 +1540,7 @@ Chapter 3.
 
  (./sections/PartIII_HilbertSpace.tex [16
 
-]) [17] [18]
+] [17]) [18]
 Chapter 4.
 [19
 
@@ -1561,12 +1561,12 @@ Package logreq Info: Writing requests to 'QMnotes.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26873 strings out of 476919
- 539755 string characters out of 5821841
- 1454801 words of memory out of 5000000
- 46398 multiletter control sequences out of 15000+600000
+ 26882 strings out of 476919
+ 540381 string characters out of 5821841
+ 1454802 words of memory out of 5000000
+ 46407 multiletter control sequences out of 15000+600000
  412241 words of font info for 118 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,12n,104p,740b,839s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on QMnotes.xdv (22 pages, 219352 bytes).
+Output written on QMnotes.xdv (22 pages, 228964 bytes).

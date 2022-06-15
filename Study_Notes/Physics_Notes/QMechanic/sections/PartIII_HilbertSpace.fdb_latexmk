@@ -3,7 +3,7 @@
   "PartIII_HilbertSpace.xdv" 0 -1 0 "xelatex"
   (generated)
   "PartIII_HilbertSpace.pdf"
-["xelatex"] 1650636020 "PartIII_HilbertSpace.tex" "PartIII_HilbertSpace.xdv" "PartIII_HilbertSpace" 1650636020
+["xelatex"] 1655270870 "PartIII_HilbertSpace.tex" "PartIII_HilbertSpace.xdv" "PartIII_HilbertSpace" 1655270871
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1136768653 1332 f817c21a1ba54560425663374f1b651a ""
@@ -11,8 +11,8 @@
   "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1616443989 39972 3d6bb4d9d719e93193fa020b58adf5d4 ""
   "/usr/local/texlive/2021/texmf-var/web2c/xetex/xelatex.fmt" 1631107612 5093941 61d14e002e1921a5b3190e910f7f9d50 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
-  "PartIII_HilbertSpace.aux" 1650636009 5296 eb99712b236e3533fa0e6a30dd914361 ""
-  "PartIII_HilbertSpace.tex" 1650636020 4674 cb3b49fe50e167f9b29a9c2c47a56619 ""
+  "PartIII_HilbertSpace.aux" 1655270741 5530 f6d08f7ac1c649aed54e3ec52ede6b7f ""
+  "PartIII_HilbertSpace.tex" 1655270869 6665 7905cce953b982a1fc7067b7b0416029 ""
   (generated)
   "PartIII_HilbertSpace.xdv"
   "PartIII_HilbertSpace.log"

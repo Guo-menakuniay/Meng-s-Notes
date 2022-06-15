@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  22 APR 2022 22:00
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  15 JUN 2022 13:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1029,6 +1029,47 @@ Missing character: There is no 本 ("672C) in font nullfont!
 Missing character: There is no 征 ("5F81) in font nullfont!
 Missing character: There is no 值 ("503C) in font nullfont!
 Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 一 (U+4E00) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 个 (U+4E2A) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 算 (U+7B97) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 符 (U+7B26) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 所 (U+6240) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 有 (U+6709) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 本 (U+672C) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 征 (U+5F81) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 值 (U+503C) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 集 (U+96C6) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 合 (U+5408) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 称 (U+79F0) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 为 (U+4E3A) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 这 (U+8FD9) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 个 (U+4E2A) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 算 (U+7B97) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 符 (U+7B26) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 谱 (U+8C31) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 。 ("3002) in font nullfont!
 Missing character: There is no 有 ("6709) in font nullfont!
 Missing character: There is no 时 ("65F6) in font nullfont!
 Missing character: There is no 候 ("5019) in font nullfont!
@@ -1070,8 +1111,8 @@ Missing character: There is no 简 ("7B80) in font nullfont!
 Missing character: There is no 并 ("5E76) in font nullfont!
 Missing character: There is no 。 ("3002) in font nullfont!
 
-Overfull \hbox (7.90555pt too wide) in paragraph at lines 65--67
-$[]$ 
+Overfull \hbox (63.90555pt too wide) in paragraph at lines 65--67
+$[]$\TU/lmr/bx/n/10 一个算符所有本征值的集合称为这个算符的谱 
  []
 
 ! Undefined control sequence.
@@ -1428,7 +1469,6 @@ Missing character: There is no 样 ("6837) in font nullfont!
 Missing character: There is no 移 ("79FB) in font nullfont!
 Missing character: There is no 出 ("51FA) in font nullfont!
 Missing character: There is no ) ("29) in font nullfont!
-Missing character: There is no 。 ("3002) in font nullfont!
 Missing character: There is no 但 ("4F46) in font nullfont!
 Missing character: There is no 是 ("662F) in font nullfont!
 Missing character: There is no 不 ("4E0D) in font nullfont!
@@ -1459,49 +1499,650 @@ Missing character: There is no 。 ("3002) in font nullfont!
 Missing character: There is no 证 ("8BC1) in font nullfont!
 Missing character: There is no 毕 ("6BD5) in font nullfont!
 Missing character: There is no 。 ("3002) in font nullfont!
+! Undefined control sequence.
+l.92 ^^I^^I^^I^^I^^I\paragraph
+                              *{定理2:属于不同本征值的本征函数是正交的\\}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Overfull \hbox (4.8229pt too wide) in paragraph at lines 90--92
+Missing character: There is no * ("2A) in font nullfont!
+Missing character: There is no 定 ("5B9A) in font nullfont!
+Missing character: There is no 理 ("7406) in font nullfont!
+Missing character: There is no 2 ("32) in font nullfont!
+Missing character: There is no : ("3A) in font nullfont!
+Missing character: There is no 属 ("5C5E) in font nullfont!
+Missing character: There is no 于 ("4E8E) in font nullfont!
+Missing character: There is no 不 ("4E0D) in font nullfont!
+Missing character: There is no 同 ("540C) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 征 ("5F81) in font nullfont!
+Missing character: There is no 值 ("503C) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 征 ("5F81) in font nullfont!
+Missing character: There is no 函 ("51FD) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 正 ("6B63) in font nullfont!
+Missing character: There is no 交 ("4EA4) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+
+Overfull \hbox (4.8229pt too wide) in paragraph at lines 90--93
  $\OML/cmm/m/it/10 q$
  []
 
 
-Overfull \hbox (4.8229pt too wide) in paragraph at lines 90--92
+Overfull \hbox (4.8229pt too wide) in paragraph at lines 90--93
 \OML/cmm/m/it/10 q$
  []
 
 
-Overfull \hbox (15.41666pt too wide) in paragraph at lines 90--92
+Overfull \hbox (15.41666pt too wide) in paragraph at lines 90--93
 \OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 j
  []
 
 
-Overfull \hbox (9.86116pt too wide) in paragraph at lines 90--92
+Overfull \hbox (9.86116pt too wide) in paragraph at lines 90--93
 \OML/cmm/m/it/10 f\OMS/cmsy/m/n/10 i$
  []
 
 
-Overfull \hbox (30.02084pt too wide) in paragraph at lines 90--92
+Overfull \hbox (30.02084pt too wide) in paragraph at lines 90--93
 \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) =
  []
 
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 90--92
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 90--93
 \OT1/cmr/m/n/10 0$
  []
 
 
-Overfull \hbox (15.37842pt too wide) in paragraph at lines 90--92
+Overfull \hbox (15.37842pt too wide) in paragraph at lines 90--93
 \OML/cmm/m/it/10 q \OT1/cmr/m/n/10 =
  []
 
 
-Overfull \hbox (9.42014pt too wide) in paragraph at lines 90--92
+Overfull \hbox (9.42014pt too wide) in paragraph at lines 90--93
 \OML/cmm/m/it/10 q[]$
  []
 
 
-Overfull \hbox (4.8229pt too wide) in paragraph at lines 90--92
+Overfull \hbox (4.8229pt too wide) in paragraph at lines 90--93
 \OML/cmm/m/it/10 q$
+ []
+
+Missing character: There is no 证 ("8BC1) in font nullfont!
+Missing character: There is no 明 ("660E) in font nullfont!
+Missing character: There is no ： ("FF1A) in font nullfont!
+Missing character: There is no 假 ("5047) in font nullfont!
+Missing character: There is no 设 ("8BBE) in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 94--95
+[] 
+ []
+
+
+Overfull \hbox (81.01921pt too wide) detected at line 97
+[]\OML/cmm/m/it/10 f \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 qf;  []g \OT1/cmr/m/n/1
+0 = \OML/cmm/m/it/10 q[]g
+ []
+
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 厄 ("5384) in font nullfont!
+Missing character: There is no 密 ("5BC6) in font nullfont!
+Missing character: There is no 算 ("7B97) in font nullfont!
+Missing character: There is no 符 ("7B26) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 则 ("5219) in font nullfont!
+Missing character: There is no 有 ("6709) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+Missing character: There is no 所 ("6240) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+
+Overfull \hbox (7.90555pt too wide) in paragraph at lines 97--99
+$[]$
+ []
+
+
+Overfull \hbox (15.41666pt too wide) in paragraph at lines 97--99
+\OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 j
+ []
+
+
+Overfull \hbox (27.47842pt too wide) in paragraph at lines 97--99
+[]\OML/cmm/m/it/10 g\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (23.3222pt too wide) in paragraph at lines 97--99
+\OMS/cmsy/m/n/10 h[]\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 j
+ []
+
+
+Overfull \hbox (9.01736pt too wide) in paragraph at lines 97--99
+\OML/cmm/m/it/10 g\OMS/cmsy/m/n/10 i$
+ []
+
+
+Overfull \hbox (84.80528pt too wide) detected at line 101
+\OML/cmm/m/it/10 q[]\OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 j \OM
+L/cmm/m/it/10 g\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 q[]\OMS/cm
+sy/m/n/10 h\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 g\OMS/cmsy/m/
+n/10 i
+ []
+
+Missing character: There is no ( ("28) in font nullfont!
+Missing character: There is no 再 ("518D) in font nullfont!
+Missing character: There is no 次 ("6B21) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+Missing character: There is no 内 ("5185) in font nullfont!
+Missing character: There is no 积 ("79EF) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 存 ("5B58) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 因 ("56E0) in font nullfont!
+Missing character: There is no 为 ("4E3A) in font nullfont!
+Missing character: There is no 假 ("5047) in font nullfont!
+Missing character: There is no 定 ("5B9A) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 征 ("5F81) in font nullfont!
+Missing character: There is no 函 ("51FD) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 位 ("4F4D) in font nullfont!
+Missing character: There is no 于 ("4E8E) in font nullfont!
+Missing character: There is no 希 ("5E0C) in font nullfont!
+Missing character: There is no 耳 ("8033) in font nullfont!
+Missing character: There is no 伯 ("4F2F) in font nullfont!
+Missing character: There is no 特 ("7279) in font nullfont!
+Missing character: There is no 空 ("7A7A) in font nullfont!
+Missing character: There is no 间 ("95F4) in font nullfont!
+Missing character: There is no 内 ("5185) in font nullfont!
+Missing character: There is no ) ("29) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 但 ("4F46) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 实 ("5B9E) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no ( ("28) in font nullfont!
+Missing character: There is no 由 ("7531) in font nullfont!
+Missing character: There is no 定 ("5B9A) in font nullfont!
+Missing character: There is no 理 ("7406) in font nullfont!
+Missing character: There is no 1 ("31) in font nullfont!
+Missing character: There is no ) ("29) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+Missing character: There is no 所 ("6240) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 如 ("5982) in font nullfont!
+Missing character: There is no 果 ("679C) in font nullfont!
+Missing character: There is no 那 ("90A3) in font nullfont!
+Missing character: There is no 么 ("4E48) in font nullfont!
+Missing character: There is no 必 ("5FC5) in font nullfont!
+Missing character: There is no 然 ("7136) in font nullfont!
+Missing character: There is no 有 ("6709) in font nullfont!
+Missing character: There is no . ("2E) in font nullfont!
+
+Overfull \hbox (4.8229pt too wide) in paragraph at lines 101--103
+  $\OML/cmm/m/it/10 q$
+ []
+
+
+Overfull \hbox (18.18398pt too wide) in paragraph at lines 101--103
+\OML/cmm/m/it/10 q[] \OMS/cmsy/m/n/10 6\OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (4.8229pt too wide) in paragraph at lines 101--103
+\OML/cmm/m/it/10 q$
+ []
+
+
+Overfull \hbox (15.41666pt too wide) in paragraph at lines 101--103
+\OMS/cmsy/m/n/10 h\OML/cmm/m/it/10 f \OMS/cmsy/m/n/10 j
+ []
+
+
+Overfull \hbox (19.57288pt too wide) in paragraph at lines 101--103
+\OML/cmm/m/it/10 g\OMS/cmsy/m/n/10 i \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 101--103
+\OT1/cmr/m/n/10 0$ 
+ []
+
+Missing character: There is no 补 ("8865) in font nullfont!
+Missing character: There is no 充 ("5145) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 公 ("516C) in font nullfont!
+Missing character: There is no 理 ("7406) in font nullfont!
+Missing character: There is no ： ("FF1A) in font nullfont!
+Missing character: There is no 可 (U+53EF) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 观 (U+89C2) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 测 (U+6D4B) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 量 (U+91CF) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 算 (U+7B97) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 符 (U+7B26) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 本 (U+672C) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 征 (U+5F81) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 函 (U+51FD) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 数 (U+6570) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 是 (U+662F) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 完 (U+5B8C) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 备 (U+5907) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no ， (U+FF0C) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no （ (U+FF08) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 在 (U+5728) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 希 (U+5E0C) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 尔 (U+5C14) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 伯 (U+4F2F) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 特 (U+7279) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 空 (U+7A7A) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 间 (U+95F4) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 中 (U+4E2D) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no ） (U+FF09) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 任 (U+4EFB) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 何 (U+4F55) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 函 (U+51FD) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 数 (U+6570) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 都 (U+90FD) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 可 (U+53EF) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 以 (U+4EE5) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 用 (U+7528) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 它 (U+5B83) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 们 (U+4EEC) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 的 (U+7684) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 线 (U+7EBF) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 性 (U+6027) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 迭 (U+8FED) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 加 (U+52A0) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 来 (U+6765) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 表 (U+8868) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no 达 (U+8FBE) in font [lmroman10-bold]:mapping=tex-
+text;!
+Missing character: There is no ） (U+FF09) in font [lmroman10-bold]:mapping=tex-
+text;!
+! Undefined control sequence.
+l.105 ^^I^^I^^I\subsubsection
+                             {连续谱}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 连 ("8FDE) in font nullfont!
+Missing character: There is no 续 ("7EED) in font nullfont!
+Missing character: There is no 谱 ("8C31) in font nullfont!
+! Undefined control sequence.
+l.106 ^^I^^I\subsection
+                       {广义统计诠释}^^I
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 广 ("5E7F) in font nullfont!
+Missing character: There is no 义 ("4E49) in font nullfont!
+Missing character: There is no 统 ("7EDF) in font nullfont!
+Missing character: There is no 计 ("8BA1) in font nullfont!
+Missing character: There is no 诠 ("8BE0) in font nullfont!
+Missing character: There is no 释 ("91CA) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 直 ("76F4) in font nullfont!
+Missing character: There is no 接 ("63A5) in font nullfont!
+Missing character: There is no 给 ("7ED9) in font nullfont!
+Missing character: There is no 出 ("51FA) in font nullfont!
+Missing character: There is no 广 ("5E7F) in font nullfont!
+Missing character: There is no 义 ("4E49) in font nullfont!
+Missing character: There is no 统 ("7EDF) in font nullfont!
+Missing character: There is no 计 ("8BA1) in font nullfont!
+Missing character: There is no 诠 ("8BE0) in font nullfont!
+Missing character: There is no 释 ("91CA) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 结 ("7ED3) in font nullfont!
+Missing character: There is no 论 ("8BBA) in font nullfont!
+Missing character: There is no 之 ("4E4B) in font nullfont!
+Missing character: There is no 前 ("524D) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 想 ("60F3) in font nullfont!
+Missing character: There is no 先 ("5148) in font nullfont!
+Missing character: There is no 从 ("4ECE) in font nullfont!
+Missing character: There is no 波 ("6CE2) in font nullfont!
+Missing character: There is no 函 ("51FD) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 线 ("7EBF) in font nullfont!
+Missing character: There is no 性 ("6027) in font nullfont!
+Missing character: There is no 叠 ("53E0) in font nullfont!
+Missing character: There is no 加 ("52A0) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 形 ("5F62) in font nullfont!
+Missing character: There is no 式 ("5F0F) in font nullfont!
+Missing character: There is no 引 ("5F15) in font nullfont!
+Missing character: There is no 入 ("5165) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 可 ("53EF) in font nullfont!
+Missing character: There is no 观 ("89C2) in font nullfont!
+Missing character: There is no 测 ("6D4B) in font nullfont!
+Missing character: There is no 量 ("91CF) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 征 ("5F81) in font nullfont!
+Missing character: There is no 函 ("51FD) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 完 ("5B8C) in font nullfont!
+Missing character: There is no 备 ("5907) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 所 ("6240) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 波 ("6CE2) in font nullfont!
+Missing character: There is no 函 ("51FD) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 可 ("53EF) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 写 ("5199) in font nullfont!
+Missing character: There is no 作 ("4F5C) in font nullfont!
+Missing character: There is no 它 ("5B83) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 线 ("7EBF) in font nullfont!
+Missing character: There is no 性 ("6027) in font nullfont!
+Missing character: There is no 叠 ("53E0) in font nullfont!
+Missing character: There is no 加 ("52A0) in font nullfont!
+Missing character: There is no （ ("FF08) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 这 ("8FD9) in font nullfont!
+Missing character: There is no 里 ("91CC) in font nullfont!
+Missing character: There is no 已 ("5DF2) in font nullfont!
+Missing character: There is no 经 ("7ECF) in font nullfont!
+Missing character: There is no 假 ("5047) in font nullfont!
+Missing character: There is no 设 ("8BBE) in font nullfont!
+Missing character: There is no 该 ("8BE5) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 征 ("5F81) in font nullfont!
+Missing character: There is no 函 ("51FD) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 谱 ("8C31) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 分 ("5206) in font nullfont!
+Missing character: There is no 立 ("7ACB) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no ； ("FF1B) in font nullfont!
+Missing character: There is no 尽 ("5C3D) in font nullfont!
+Missing character: There is no 管 ("7BA1) in font nullfont!
+Missing character: There is no 如 ("5982) in font nullfont!
+Missing character: There is no 此 ("6B64) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 之 ("4E4B) in font nullfont!
+Missing character: There is no 后 ("540E) in font nullfont!
+Missing character: There is no 也 ("4E5F) in font nullfont!
+Missing character: There is no 很 ("5F88) in font nullfont!
+Missing character: There is no 好 ("597D) in font nullfont!
+Missing character: There is no 推 ("63A8) in font nullfont!
+Missing character: There is no 广 ("5E7F) in font nullfont!
+Missing character: There is no 到 ("5230) in font nullfont!
+Missing character: There is no 连 ("8FDE) in font nullfont!
+Missing character: There is no 续 ("7EED) in font nullfont!
+Missing character: There is no 谱 ("8C31) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 情 ("60C5) in font nullfont!
+Missing character: There is no 况 ("51B5) in font nullfont!
+Missing character: There is no ） ("FF09) in font nullfont!
+Missing character: There is no ： ("FF1A) in font nullfont!
+
+Overfull \hbox (146.0pt too wide) in paragraph at lines 104--108
+[]\TU/lmr/bx/n/10 可观测量算符的本征函数是完备的，（在希尔伯特空间中）任何函数都可以用它们的线性迭加来表达）
+ []
+
+
+Overfull \hbox (92.37387pt too wide) detected at line 110
+\OT1/cmr/m/n/10 ^^I(\OML/cmm/m/it/10 x; t\OT1/cmr/m/n/10 ) = [] \OML/cmm/m/it/1
+0 c[]f[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )
+ []
+
+Missing character: There is no 由 ("7531) in font nullfont!
+Missing character: There is no 于 ("4E8E) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 征 ("5F81) in font nullfont!
+Missing character: There is no 函 ("51FD) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 正 ("6B63) in font nullfont!
+Missing character: There is no 交 ("4EA4) in font nullfont!
+Missing character: There is no 归 ("5F52) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 可 ("53EF) in font nullfont!
+Missing character: There is no 以 ("4EE5) in font nullfont!
+Missing character: There is no 用 ("7528) in font nullfont!
+Missing character: There is no 傅 ("5085) in font nullfont!
+Missing character: There is no 立 ("7ACB) in font nullfont!
+Missing character: There is no 叶 ("53F6) in font nullfont!
+Missing character: There is no 展 ("5C55) in font nullfont!
+Missing character: There is no 开 ("5F00) in font nullfont!
+Missing character: There is no 技 ("6280) in font nullfont!
+Missing character: There is no 巧 ("5DE7) in font nullfont!
+Missing character: There is no 得 ("5F97) in font nullfont!
+Missing character: There is no 到 ("5230) in font nullfont!
+
+Overfull \hbox (151.008pt too wide) detected at line 114
+\OML/cmm/m/it/10 c[] \OT1/cmr/m/n/10 = [] = [] \OML/cmm/m/it/10 f[]\OT1/cmr/m/n
+/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 )[]^^I(\OML/cmm/m/it/10 x; t\OT1/cmr/m/n
+/10 )\OML/cmm/m/it/10 dx
+ []
+
+Missing character: There is no 定 ("5B9A) in font nullfont!
+Missing character: There is no 性 ("6027) in font nullfont!
+Missing character: There is no 上 ("4E0A) in font nullfont!
+Missing character: There is no 来 ("6765) in font nullfont!
+Missing character: There is no 说 ("8BF4) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 告 ("544A) in font nullfont!
+Missing character: There is no 诉 ("8BC9) in font nullfont!
+Missing character: There is no 我 ("6211) in font nullfont!
+Missing character: There is no 们 ("4EEC) in font nullfont!
+Missing character: There is no " ("22) in font nullfont!
+Missing character: There is no 中 ("4E2D) in font nullfont!
+Missing character: There is no 包 ("5305) in font nullfont!
+Missing character: There is no 含 ("542B) in font nullfont!
+Missing character: There is no 有 ("6709) in font nullfont!
+Missing character: There is no 多 ("591A) in font nullfont!
+Missing character: There is no 少 ("5C11) in font nullfont!
+Missing character: There is no " ("22) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 并 ("5E76) in font nullfont!
+Missing character: There is no 且 ("4E14) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 次 ("6B21) in font nullfont!
+Missing character: There is no 测 ("6D4B) in font nullfont!
+Missing character: There is no 量 ("91CF) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 定 ("5B9A) in font nullfont!
+Missing character: There is no 给 ("7ED9) in font nullfont!
+Missing character: There is no 出 ("51FA) in font nullfont!
+Missing character: There is no 算 ("7B97) in font nullfont!
+Missing character: There is no 符 ("7B26) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 个 ("4E2A) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 征 ("5F81) in font nullfont!
+Missing character: There is no 值 ("503C) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+Missing character: There is no 它 ("5B83) in font nullfont!
+Missing character: There is no 看 ("770B) in font nullfont!
+Missing character: There is no 起 ("8D77) in font nullfont!
+Missing character: There is no 来 ("6765) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 合 ("5408) in font nullfont!
+Missing character: There is no 理 ("7406) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no , ("2C) in font nullfont!
+Missing character: There is no 得 ("5F97) in font nullfont!
+Missing character: There is no 到 ("5230) in font nullfont!
+Missing character: There is no 某 ("67D0) in font nullfont!
+Missing character: There is no 一 ("4E00) in font nullfont!
+Missing character: There is no 特 ("7279) in font nullfont!
+Missing character: There is no 定 ("5B9A) in font nullfont!
+Missing character: There is no 本 ("672C) in font nullfont!
+Missing character: There is no 征 ("5F81) in font nullfont!
+Missing character: There is no 值 ("503C) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 几 ("51E0) in font nullfont!
+Missing character: There is no 率 ("7387) in font nullfont!
+Missing character: There is no 应 ("5E94) in font nullfont!
+Missing character: There is no 该 ("8BE5) in font nullfont!
+Missing character: There is no 取 ("53D6) in font nullfont!
+Missing character: There is no 决 ("51B3) in font nullfont!
+Missing character: There is no 于 ("4E8E) in font nullfont!
+Missing character: There is no 中 ("4E2D) in font nullfont!
+Missing character: There is no “ ("201C) in font nullfont!
+Missing character: There is no 包 ("5305) in font nullfont!
+Missing character: There is no 含 ("542B) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 量 ("91CF) in font nullfont!
+Missing character: There is no ” ("201D) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+Missing character: There is no 但 ("4F46) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 广 ("5E7F) in font nullfont!
+Missing character: There is no 义 ("4E49) in font nullfont!
+Missing character: There is no 统 ("7EDF) in font nullfont!
+Missing character: There is no 计 ("8BA1) in font nullfont!
+Missing character: There is no 诠 ("8BE0) in font nullfont!
+Missing character: There is no 释 ("91CA) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 精 ("7CBE) in font nullfont!
+Missing character: There is no 髓 ("9AD3) in font nullfont!
+Missing character: There is no 就 ("5C31) in font nullfont!
+Missing character: There is no 在 ("5728) in font nullfont!
+Missing character: There is no 于 ("4E8E) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 因 ("56E0) in font nullfont!
+Missing character: There is no 为 ("4E3A) in font nullfont!
+Missing character: There is no 几 ("51E0) in font nullfont!
+Missing character: There is no 率 ("7387) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 由 ("7531) in font nullfont!
+Missing character: There is no 波 ("6CE2) in font nullfont!
+Missing character: There is no 函 ("51FD) in font nullfont!
+Missing character: There is no 数 ("6570) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no 模 ("6A21) in font nullfont!
+Missing character: There is no 平 ("5E73) in font nullfont!
+Missing character: There is no 方 ("65B9) in font nullfont!
+Missing character: There is no 决 ("51B3) in font nullfont!
+Missing character: There is no 定 ("5B9A) in font nullfont!
+Missing character: There is no 的 ("7684) in font nullfont!
+Missing character: There is no ， ("FF0C) in font nullfont!
+Missing character: There is no 其 ("5176) in font nullfont!
+Missing character: There is no 精 ("7CBE) in font nullfont!
+Missing character: There is no 确 ("786E) in font nullfont!
+Missing character: There is no 度 ("5EA6) in font nullfont!
+Missing character: There is no 量 ("91CF) in font nullfont!
+Missing character: There is no 实 ("5B9E) in font nullfont!
+Missing character: There is no 际 ("9645) in font nullfont!
+Missing character: There is no 上 ("4E0A) in font nullfont!
+Missing character: There is no 是 ("662F) in font nullfont!
+Missing character: There is no 。 ("3002) in font nullfont!
+
+Overfull \hbox (9.77089pt too wide) in paragraph at lines 114--116
+$\OML/cmm/m/it/10 c[]$
+ []
+
+
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 114--116
+\OT1/cmr/m/n/10 ^^I$
+ []
+
+
+Overfull \hbox (10.33919pt too wide) in paragraph at lines 114--116
+\OML/cmm/m/it/10 f[]$
+ []
+
+
+Overfull \hbox (7.90555pt too wide) in paragraph at lines 114--116
+[]$
+ []
+
+
+Overfull \hbox (9.90746pt too wide) in paragraph at lines 114--116
+\OML/cmm/m/it/10 q[]$
+ []
+
+
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 114--116
+\OT1/cmr/m/n/10 ^^I$
+ []
+
+
+Overfull \hbox (10.33919pt too wide) in paragraph at lines 114--116
+\OML/cmm/m/it/10 f[]$
+ []
+
+
+Overfull \hbox (19.81259pt too wide) in paragraph at lines 114--116
+[][]$ 
  []
 
 )
@@ -1514,7 +2155,7 @@ Overfull \hbox (4.8229pt too wide) in paragraph at lines 90--92
 Here is how much of TeX's memory you used:
  35 strings out of 476919
  709 string characters out of 5821841
- 298912 words of memory out of 5000000
+ 299912 words of memory out of 5000000
  20130 multiletter control sequences out of 15000+600000
  404381 words of font info for 33 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

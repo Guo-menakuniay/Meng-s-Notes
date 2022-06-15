@@ -63,7 +63,7 @@
 		\begin{equation}
 			\hat{Q} \Psi=q \Psi
 		\end{equation}
-		称为算符$\hat{Q}$的本征值方程，q是对应的本征值。有时候两个（或者多个）线性独立的本征函数具有相同的本征值，这种情况称为谱的简并。
+		称为算符$\hat{Q}$的本征值方程，q是对应的本征值。\textbf{一个算符所有本征值的集合称为这个算符的谱}。有时候两个（或者多个）线性独立的本征函数具有相同的本征值，这种情况称为谱的简并。
 
 	\subsection{Hermitian算符的本征函数}
 		对于厄密算符的本征函数（也即可观测的定值态）分成两类情况
@@ -104,7 +104,34 @@
 				补充一个公理：\textbf{可观测量算符的本征函数是完备的，（在希尔伯特空间中）任何函数都可以用它们的线性迭加来表达）}
 			\subsubsection{连续谱}
 		\subsection{广义统计诠释}	
+			在直接给出广义统计诠释的结论之前，我想先从波函数线性叠加的形式引入。一个可观测量的本征函数是完备的，所以波函数可以写作它们的线性叠加（在这里已经假设该本征函数的谱是分立的；尽管如此，之后也很好推广到连续谱的情况）：
+				\begin{equation}
+					\Psi(x, t)=\sum c_{n} f_{n}(x)
+				\end{equation}
+			由于本征函数是正交归一的，可以用傅立叶展开技巧得到
+				\begin{equation}
+					c_{n}=\left\langle f_{n} \mid \Psi\right\rangle=\int f_{n}(x)^{*} \Psi(x, t) d x
+				\end{equation}
 			
+			定性上来说。$c_{n}$ 告诉我们"$\Psi$ 中包含有多少 $f_{n}$"，并且一次测量一定给出算符 $\hat{Q}$ 的一个本征值, 它看起来是合理的, 得到某一特定本征值 $q_{n}$ 的几率应该取决于 $\Psi$ 中 “包含 $f_{n}$ 的量”。但是，广义统计诠释的精髓就在于，因为几率是由波函数的模平方决定的，其精确度量实际上是 $\left|c_{n}\right|^{2}$，我们可以马上证明这一点，利用关系$\hat{Q} f_{n}=q_{n} f_{n}$，我们可以得到：
+			\begin{equation}
+				\langle Q\rangle=\sum_{n^{\prime}} \sum_{n} c_{n^{\prime}}^{*} c_{n} q_{n}\left\langle f_{n^{\prime}} \mid f_{n}\right\rangle=\sum_{n^{\prime}} \sum_{n} c_{n^{\prime}}^{*}, c_{n} q_{n} \delta_{n^{\prime} n}=\sum_{n} q_{n}\left|c_{n}\right|^{2} .
+			\end{equation}
+
+			可以看见概率确实是和$|c_{n}|^2$有关，而且相应的满足归一化条件\footnote{这也可以从波函数归一化得出:
+				$$
+				\begin{aligned}
+				1 &=\langle\Psi \mid \Psi\rangle=\left\langle\left(\sum_{n^{\prime}} c_{n^{\prime}} f_{n^{\prime}}\right) \mid\left(\sum_{n} c_{n} f_{n}\right)\right\rangle=\sum_{n^{\prime}} \sum_{n} c_{n^{\prime}}^{*} c_{n}\left\langle f_{n^{\prime}} \mid f_{n}\right\rangle \\
+				&=\sum_{n^{\prime}} \sum_{n} c_{n^{\prime}}^{*} c_{n} \delta_{n^{\prime} n}=\sum_{n} c_{n}^{*} c_{n}=\sum_{n}\left|c_{n}\right|^{2} .
+				\end{aligned}
+				$$}
+				\begin{equation}
+					\sum_{n}\left|c_{n}\right|^{2}=1
+				\end{equation}
+
+			为了验证这一结论，我们可以用现在的语言作用在前文对位置测量的统计诠释上
+
+
 
 
 
