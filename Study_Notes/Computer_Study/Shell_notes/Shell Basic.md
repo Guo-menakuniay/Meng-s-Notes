@@ -192,6 +192,7 @@ Man后跟名称用来**查询参考手册**
 - 一般使用命令`du -sh`来查看当前文件的文件大小
 - 使用`du -h --max-depth=1`可以指定当前文件夹的文件深度
 - `du -sh |sort -rh |head`可以按文件夹大小排序
+- 查看quota大小` quota -uvs <username>`
 
 ### 批量更改文件文本
 
