@@ -12,6 +12,28 @@
         \end{equation}
 
         先讨论在真空情形中$\boldsymbol{D}=\varepsilon_{0} \boldsymbol{E}, \boldsymbol{B}=\mu_{0} \mathbf{H}$的情况，联立上述两式，并结合式\ref{eq.4_1}可以得到
-        
+            \begin{equation}
+                \label{eq.4_2}
+                \mu_0 \frac{\partial \boldsymbol{H}}{\partial t} = \frac{\partial \boldsymbol{B}}{\partial t} = - \nabla \times \boldsymbol{E}
+            \end{equation}
+        上式两边同时取旋度得到
+            \begin{equation}
+                \nabla \times (\mu_0 \frac{\partial \boldsymbol{H}}{\partial t}) = \mu_0 \frac{ \partial }{\partial t}(\nabla \times \boldsymbol{H}) = \nabla \times (\nabla \times \boldsymbol{E})
+            \end{equation}
+            \begin{equation}
+                -\mu_0 \varepsilon_0 \frac{\partial^2 \boldsymbol{E}}{\partial^2 t} = \nabla \times (\nabla \times \boldsymbol{E}) = \nabla(\nabla \cdot \boldsymbol{E})-\nabla^2 \boldsymbol{E}
+            \end{equation}
+        根据式\ref{eq.4_1}第三项和第四项可以得到$\nabla \cdot \boldsymbol{E}=0$，整理上式得
+            \begin{equation}
+                \label{eq.4_5}
+                \nabla^2 \boldsymbol{E} - \mu_0 \varepsilon_0 \frac{\partial^2 \boldsymbol{E}}{\partial^2 t} = \nabla^2 \boldsymbol{E} - \frac{1}{c^2} \frac{\partial^2 \boldsymbol{E}}{\partial^2 t}= 0
+            \end{equation}
+        同理，如果对磁场进行相应的操作可以得到
+        \begin{equation}
+            \label{eq.4_6}
+            \nabla^2 \boldsymbol{H} - \frac{1}{c^2} \frac{\partial^2 \boldsymbol{H}}{\partial^2 t}= 0
+        \end{equation}
 
+        式\ref{eq.4_5}和\ref{eq.4_6}统称为波动方程，c是电磁波在真空中的传播速度。请务必明确上面是在没有自由电荷分布的自由空间或均匀绝缘介质中才成立。\footnote{对于介质中的传播形式，我们在这里不赘述，详细请翻阅教材}
+    \subsection{时谐电磁波}
         

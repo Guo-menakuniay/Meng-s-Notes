@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  16 JUN 2022 21:48
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  17 JUN 2022 00:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1381,26 +1381,17 @@ Chapter 4.
  (./sections/S4/PartIV.tex) [13
 
 ] (./ElectronDynamics.aux (./sections/S1/PartI_.aux) (./sections/S4/PartIV.aux))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `ElectronDynamics.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ElectronDynamics.out':
-(rerunfilecheck)             Before: F5D860294E3C4E126AA593018BD81FAA;2830
-(rerunfilecheck)             After:  7AE47FBE97E170981AB6CFA6669FB7C9;2966.
+Package rerunfilecheck Info: File `ElectronDynamics.out' has not changed.
+(rerunfilecheck)             Checksum: 7AE47FBE97E170981AB6CFA6669FB7C9;2966.
 Package logreq Info: Writing requests to 'ElectronDynamics.run.xml'.
 \openout1 = `ElectronDynamics.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26845 strings out of 476919
- 532559 string characters out of 5821841
- 1448575 words of memory out of 5000000
- 46359 multiletter control sequences out of 15000+600000
+ 26848 strings out of 476919
+ 532583 string characters out of 5821841
+ 1448915 words of memory out of 5000000
+ 46362 multiletter control sequences out of 15000+600000
  414442 words of font info for 127 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,14n,104p,745b,839s stack positions out of 5000i,500n,10000p,200000b,80000s
