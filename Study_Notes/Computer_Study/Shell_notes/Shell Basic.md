@@ -289,3 +289,15 @@ sed -e 4a\newLine testfile   #在testfile文件的第四行后添加一行，并
   > - /usr/bin 存放的是应用程序
 
   
+
+# Appendix
+
+## ssh-keygen生成密钥
+
+```shell
+ssh-keygen -t rsa -f <filename> -C "<annote>"
+```
+
+-f后面跟密钥的文件名
+
+-C后面跟密钥的注释
