@@ -7,8 +7,9 @@ Record daily problems and computer related configurations
 ## TO-DOs
 
 - ED：章节电磁波的传播
+  - 时谐电磁波和平面电磁波
 - QM：全同粒子体系
-
+- CMS：尝试在cmsconncet上运行genval_run
 ## Agenda
 
 1. 介质中电磁波传播的色散关系
