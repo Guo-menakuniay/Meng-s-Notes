@@ -17,6 +17,11 @@
 \contentsline {subsection}{\numberline {1.4.1}介质的极化}{6}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}介质的磁化}{7}{subsection.1.4.2}%
 \contentsline {subsection}{\numberline {1.4.3}介质中的Maxwell方程组}{8}{subsection.1.4.3}%
-\contentsline {subsection}{\numberline {1.4.4}电磁场边值关系}{8}{subsection.1.4.4}%
-\contentsline {subsection}{\numberline {1.4.5}法向分量的关系}{8}{subsection.1.4.5}%
+\contentsline {subsection}{\numberline {1.4.4}电磁场边值关系}{9}{subsection.1.4.4}%
+\contentsline {subsection}{\numberline {1.4.5}法向分量的关系}{9}{subsection.1.4.5}%
 \contentsline {subsection}{\numberline {1.4.6}切向分量的关系}{9}{subsection.1.4.6}%
+\contentsline {chapter}{\numberline {2}静电场}{10}{chapter.2}%
+\contentsline {chapter}{\numberline {3}静磁场}{11}{chapter.3}%
+\contentsline {chapter}{\numberline {4}电磁波的传播}{12}{chapter.4}%
+\contentsline {section}{\numberline {4.1}平面电磁波}{13}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}电磁场波动方程的导出}{13}{subsection.4.1.1}%
