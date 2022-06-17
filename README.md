@@ -14,3 +14,4 @@ Record daily problems and computer related configurations
 
 1. 介质中电磁波传播的色散关系
 2. 相速度和群速度的关系，相速度是被允许超过光速的，因为其不传播能量
+3. 能量密度和能流密度
