@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  17 JUN 2022 00:26
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  17 JUN 2022 13:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1381,8 +1381,14 @@ Chapter 4.
  (./sections/S4/PartIV.tex) [13
 
 ] (./ElectronDynamics.aux (./sections/S1/PartI_.aux) (./sections/S4/PartIV.aux))
-Package rerunfilecheck Info: File `ElectronDynamics.out' has not changed.
-(rerunfilecheck)             Checksum: 7AE47FBE97E170981AB6CFA6669FB7C9;2966.
+
+Package rerunfilecheck Warning: File `ElectronDynamics.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ElectronDynamics.out':
+(rerunfilecheck)             Before: 7AE47FBE97E170981AB6CFA6669FB7C9;2966
+(rerunfilecheck)             After:  82EBB07565E463A29A4A322ADA283FF8;3068.
 Package logreq Info: Writing requests to 'ElectronDynamics.run.xml'.
 \openout1 = `ElectronDynamics.run.xml'.
 

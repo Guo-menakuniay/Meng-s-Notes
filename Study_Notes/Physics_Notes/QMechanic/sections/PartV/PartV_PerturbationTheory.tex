@@ -1,0 +1,95 @@
+\section{非简并微扰理论}
+    \subsection{微扰的概念和一般表达形式}
+        对于之前一些简单的势场（如一维无限深势阱），我们已经可以求出精确解，并且得到相应的能量本征值。记作
+            \begin{equation}
+                H^0 \psi_n^0 =E_n^0 \psi_n^0
+            \end{equation}
+
+        现在如果我们对这个势进行微小扰动（比如在势阱底部加入一个小的突起），我们期望可以找到一个新的本征函数和本征值：
+            \begin{equation}
+                \label{eq.6_1_2}
+                H^0 \psi_n =E_n \psi_n^0
+            \end{equation}
+
+        微扰理论即是这样一套理论：它可以利用无微扰是的精确解去求出有微扰时候的近似解。
+
+        我们可以将加入微扰项之后的哈密顿量表示为
+            \begin{equation}
+                \label{eq.6_1_3}
+                H = H^0 + \lambda H'
+            \end{equation}
+
+        相应的，我们可以将能量和波函数也相应的展开\footnote{你可能对于这里$\lambda$的引入抱有疑问，事实上它也完全不是必须要引入的——它只是作为一个标定来提示我们各物理量的展开分别对应在多少幂次，具体例子可以参见https://www.zhihu.com/question/480216895/answer/2066207326，我们将会在后文给出不引入$\lambda$的推导方案}
+        \begin{equation}
+            \label{eq.6_1_4}
+            \begin{aligned}
+            \psi_{n} &=\psi_{n}^{0}+\lambda \psi_{n}^{1}+\lambda^{2} \psi_{n}^{2}+\cdots \\
+            E_{n} &=E_{n}^{0}+\lambda E_{n}^{1}+\lambda^{2} \dot{E}_{n}^{2}+\cdots
+            \end{aligned}
+        \end{equation}
+        
+        将式\ref{eq.6_1_4}和\ref{eq.6_1_3}代入式\ref{eq.6_1_2}并合并同类项能够得到
+        \begin{equation}    
+            \label{eq.6_1_5}
+            \begin{gathered}
+            H^{0} \psi_{n}^{0}+\lambda\left(H^{0} \psi_{n}^{1}+H^{\prime} \psi_{n}^{0}\right)+\lambda^{2}\left(H^{0} \psi_{n}^{2}+H^{\prime} \psi_{n}^{1}\right)+\cdots \\
+            =E_{n}^{0} \psi_{n}^{0}+\lambda\left(E_{n}^{0} \psi_{n}^{1}+E_{n}^{1} \psi_{n}^{0}\right)+\lambda^{2}\left(E_{n}^{0} \psi_{n}^{2}+E_{n}^{1} \psi_{n}^{1}+E_{n}^{2} \psi_{n}^{0}\right)+\cdots
+            \end{gathered}
+        \end{equation}
+
+        由此可以推导出直到n次幂满足的等式关系
+    \subsection{一级近似理论}
+        由上节的式\ref{eq.6_1_5}可以得到
+        \begin{equation}
+            \label{eq.6_1_6}
+            H^{0} \psi_{n}^{1}+H^{\prime} \psi_{n}^{0}=E_{n}^{0} \psi_{n}^{1}+E_{n}^{1} \psi_{n}^{0}
+        \end{equation}
+
+        将等式两端同时对$\psi_n^0$做内积运算，可以得到\footnote{虽然我们没有对算符H做出特殊的标注，但是请时刻记住算符的各项性质，在这里由于E是常数，所以它可以直接提出barket外面}
+        \begin{equation}
+            \left\langle\psi_{n}^{0} \mid H^{0} \psi_{n}^{1}\right\rangle+\left\langle\psi_{n}^{0} \mid H^{\prime} \psi_{n}^{0}\right\rangle=E_{n}^{0}\left\langle\psi_{n}^{0} \mid \psi_{n}^{1}\right\rangle+E_{n}^{1}\left\langle\psi_{n}^{0} \mid \psi_{n}^{0}\right\rangle
+        \end{equation}
+        注意其中的$H^0$和$E^0_n$项，经过简单的变换它们可以抵消掉，又根据$\left\langle\psi_{n}^{0} \mid \psi_{n}^{0}\right\rangle=1$可以得到
+        \begin{equation}
+            \label{eq.6_1_8}
+            \boxed{E_{n}^{1}=\left\langle\psi_{n}^{0}\left|H^{\prime}\right| \psi_{n}^{0}\right\rangle}
+        \end{equation}
+        这是一级近似理论中的一个基本结果：在实际中也是量子力学最重要的方程。\textbf{它说明能量的一级修正就是微扰在非微扰态中的期待值}
+
+        为更加直观的理解这个结论，我们以无微扰的无限深势阱波函数作为例子应用这个结论\footnote{Unfinished}
+
+        下面我们着手解决波函数的一级修正，将式\ref{eq.6_1_6}重写
+        \begin{equation}
+            \label{eq.6_1_9}
+            \left(H^{0}-E_{n}^{0}\right) \psi_{n}^{1}=-\left(H^{\prime}-E_{n}^{1}\right) \psi_{n}^{0}
+        \end{equation}
+        方程右边已经是已知函数，整个方程是关于$\psi^1_n$的非齐次微分方程。由于无微扰的波函数式完备的，可以表示出同一矢量空间内的任一波函数，我们就将$\psi^1_n$写为$\psi^0_n$的线性组合
+        \begin{equation}
+            \label{eq.6_1_10}
+            \psi_{n}^{1}=\sum_{m \neq n} c_{m}^{(n)} \psi_{m}^{0}
+        \end{equation}
+        在求和时没有包含$m=n$项，因为当$\psi^1_n$满足式\ref{eq.6_1_9}时，由于$\psi^1_n$已经由$\psi^0_n$线性表出，则$\psi^0_n$显然成立，这样可以让我们简化$\psi^0_n$项。这样一来，只要我们求解出系数$c_m^n$，我们就可以得到波函数的一级近似值。
+
+        将式\ref{eq.6_1_10}代入式\ref{eq.6_1_9}可以得到
+        \begin{equation}
+            \sum_{m \neq n}\left(E_{m}^{0}-E_{n}^{0}\right) c_{m}^{(n)} \psi_{m}^{0}=-\left(H^{\prime}-E_{n}^{1}\right) \psi_{n}^{0}
+        \end{equation}
+        同对能量的处理方式一样，我们将上式两边同时取$\psi_l^0$的内积，可以得到
+        \begin{equation}
+            \sum_{m \neq n}\left(E_{m}^{0}-E_{n}^{0}\right) c_{m}^{(n)}\left\langle\psi_{l}^{0} \mid \psi_{m}^{0}\right\rangle=-\left\langle\psi_{l}^{0}\left|H^{\prime}\right| \psi_{n}^{0}\right\rangle+E_{n}^{1}\left\langle\psi_{l}^{0} \mid \psi_{n}^{0}\right\rangle
+        \end{equation}
+        取$l=n$的时候上式左边等于零，会退化到式\ref{eq.6_1_8}，当我们取$l\neq n$时，可以得到
+        \begin{equation}
+            \left(E_{l}^{0}-E_{n}^{0}\right) c_{l}^{(n)}=-\left\langle\psi_{l}^{0}\left|H^{\prime}\right| \psi_{n}^{0}\right\rangle
+        \end{equation}
+        可以表示出系数
+        \begin{equation}
+            c_{m}^{(n)}=\frac{\left\langle\psi_{m}^{0}\left|H^{\prime}\right| \psi_{n}^{0}\right\rangle}{E_{n}^{0}-E_{m}^{0}}
+        \end{equation}
+        所以，
+        \begin{equation}
+        \label{eq.6_15}
+            \boxed{\psi_{n}^{1}=\sum_{m \neq n} \frac{\left\langle\psi_{m}^{0}\left|H^{\prime}\right| \psi_{n}^{0}\right\rangle}{\left(E_{n}^{0}-E_{m}^{0}\right)} \psi_{m}^{0}}
+        \end{equation}
+
+

@@ -25,5 +25,12 @@
 \contentsline {subsubsection}{分立谱}{17}{Item.13}%
 \contentsline {subsubsection}{连续谱}{18}{equation.3.2.8}%
 \contentsline {subsection}{\numberline {3.2.4}广义统计诠释}{18}{subsection.3.2.4}%
-\contentsline {chapter}{\numberline {4}习题}{19}{chapter.4}%
-\contentsline {section}{\numberline {4.1}波函数习题}{20}{section.4.1}%
+\contentsline {chapter}{\numberline {4}三维空间中的量子力学}{19}{chapter.4}%
+\contentsline {chapter}{\numberline {5}全同粒子}{20}{chapter.5}%
+\contentsline {chapter}{\numberline {6}不含时微扰理论}{21}{chapter.6}%
+\contentsline {section}{\numberline {6.1}非简并微扰理论}{22}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}微扰的概念和一般表达形式}{22}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}一级近似理论}{22}{subsection.6.1.2}%
+\contentsline {chapter}{\numberline {7}含时微扰理论}{24}{chapter.7}%
+\contentsline {chapter}{\numberline {8}习题}{25}{chapter.8}%
+\contentsline {section}{\numberline {8.1}波函数习题}{26}{section.8.1}%

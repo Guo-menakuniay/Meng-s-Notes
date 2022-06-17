@@ -25,3 +25,4 @@
 \contentsline {chapter}{\numberline {4}电磁波的传播}{12}{chapter.4}%
 \contentsline {section}{\numberline {4.1}平面电磁波}{13}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}电磁场波动方程的导出}{13}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}时谐电磁波}{13}{subsection.4.1.2}%
