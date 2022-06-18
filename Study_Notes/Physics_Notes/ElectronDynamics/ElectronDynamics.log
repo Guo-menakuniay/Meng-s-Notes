@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  18 JUN 2022 15:38
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  18 JUN 2022 16:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1363,39 +1363,39 @@ File: figs/磁化面电流示意图.jpg Graphic file (type bmp)
 <figs/磁化面电流示意图.jpg>
 File: figs/切向分量边值关系示意图.jpg Graphic file (type bmp)
 <figs/切向分量边值关系示意图.jpg>
- [9]) [10]
+ [9] [10]) [11]
 Chapter 2.
-[11
+[12
 
 
 
 ]
 Chapter 3.
-[12
+[13
 
 ]
 Chapter 4.
-[13
+[14
 
 ]
 \openout2 = `sections/S4/PartIV.aux'.
 
- (./sections/S4/PartIV.tex) [14
+ (./sections/S4/PartIV.tex [15
 
-] (./ElectronDynamics.aux (./sections/S1/PartI_.aux) (./sections/S4/PartIV.aux))
+]) [16] (./ElectronDynamics.aux (./sections/S1/PartI_.aux) (./sections/S4/PartIV.aux))
 Package rerunfilecheck Info: File `ElectronDynamics.out' has not changed.
-(rerunfilecheck)             Checksum: D7EF3E5B529C4BD3FE000F9E1EE9A769;3061.
+(rerunfilecheck)             Checksum: 67C5F407096BF2CBEEEE10F2EFF961A4;3544.
 Package logreq Info: Writing requests to 'ElectronDynamics.run.xml'.
 \openout1 = `ElectronDynamics.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26857 strings out of 476919
- 532749 string characters out of 5821841
- 1449105 words of memory out of 5000000
- 46370 multiletter control sequences out of 15000+600000
- 414442 words of font info for 127 fonts, out of 8000000 for 9000
+ 26887 strings out of 476919
+ 534237 string characters out of 5821841
+ 1449670 words of memory out of 5000000
+ 46398 multiletter control sequences out of 15000+600000
+ 416286 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,14n,104p,745b,839s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ElectronDynamics.pdf (16 pages).
+Output written on ElectronDynamics.pdf (18 pages).

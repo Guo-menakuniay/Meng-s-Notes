@@ -36,4 +36,45 @@
 
         式\ref{eq.4_5}和\ref{eq.4_6}统称为波动方程，c是电磁波在真空中的传播速度。请务必明确上面是在没有自由电荷分布的自由空间或均匀绝缘介质中才成立。\footnote{对于介质中的传播形式，我们在这里不赘述，详细请翻阅教材}
     \subsection{时谐电磁波}
+        时谐电磁波，即电磁波的激发源以一定频率正弦振荡激发的电磁波称为时谐电磁波，亦称为单色波。一个非时谐的电磁波也可以使用傅立叶分析转化为时谐电磁波的叠加。
+
+        我们讨论一定频率的电磁波，设角频率为$\omega$，电磁场方程就可以写为
+        \begin{equation}
+            \begin{aligned}
+            &\boldsymbol{E}(\boldsymbol{x}, t)=\boldsymbol{E}(\boldsymbol{x}) \mathrm{e}^{-\mathrm{i} \omega t} \\
+            &\boldsymbol{B}(\boldsymbol{x}, t)=\boldsymbol{B}(\boldsymbol{x}) \mathrm{e}^{-\mathrm{i} \omega t}
+            \end{aligned}
+        \end{equation}
+
+        代入麦克斯韦方程组可以直接消去共同因子$e^{i \omega t}$得到\footnote{在$\omega \neq 0$的情况下，这四个方程不是独立的，有第一式可以推导第二式，第三式可以推导第四式}
+        \begin{equation}
+            \begin{gathered}
+            \boldsymbol{\nabla} \times \boldsymbol{E}=\mathrm{i} \omega \mu \boldsymbol{H} \\
+            \boldsymbol{\nabla} \times \boldsymbol{H}=-\mathrm{i} \omega \varepsilon \boldsymbol{E} \\
+            \boldsymbol{\nabla} \cdot \boldsymbol{E}=0 \\
+            \boldsymbol{\nabla} \cdot \mathbf{H}=0
+            \end{gathered}
+            \end{equation}
+        
+        上一节推导真空电磁场波动方程的流程依然适用，
+        \begin{equation}
+            \boxed{\nabla \times (\nabla \times \boldsymbol{E}) = \nabla(\nabla \cdot \boldsymbol{E})-\nabla^2 \boldsymbol{E}=-\nabla^2 \boldsymbol{E} = \omega^2 \mu \varepsilon \boldsymbol{E}}
+        \end{equation}
+        
+        得到\footnote{在假定了条件$\nabla \cdot \boldsymbol{E}$之后才能够直接写成这种形式}，该式称为Helmholtz方程，是一定频率电磁波的基本方程，其解$\boldsymbol{E}(x)$是电磁波场强在空间中的分布情况，每一种可能的形式称为一种波模。
+        \begin{equation}
+            \begin{gathered}
+            \nabla^{2} \boldsymbol{E}+k^{2} \boldsymbol{E}=0 \\
+            k=\omega \sqrt{\mu \varepsilon}
+            \end{gathered}
+            \end{equation} 
+        代入麦氏方程可以得到磁场\footnote{如果用磁场的方式给出这个方程，则为\[\begin{aligned}
+            \nabla^{2} \boldsymbol{B}+k^{2} \boldsymbol{B} &=0 \\
+            \nabla \cdot \boldsymbol{B} &=0 \\
+            \boldsymbol{E}=\frac{\mathrm{i}}{\omega \mu \varepsilon} \nabla \times \boldsymbol{B} &=\frac{\mathrm{i}}{k \sqrt{\mu \varepsilon}} \nabla \times \boldsymbol{B}
+            \end{aligned}\]
+            为保证文本的连贯性，不在正文中直接给出}
+        \begin{equation}
+            \boldsymbol{B}=-\frac{\mathrm{i}}{\omega} \nabla \times \boldsymbol{E}=-\frac{\mathrm{i}}{k} \sqrt{\mu \varepsilon} \nabla \times \boldsymbol{E}
+        \end{equation}
         

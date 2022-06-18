@@ -435,3 +435,65 @@
 				&\boldsymbol{e}_{\mathrm{n}} \cdot\left(\boldsymbol{B}_{2}-\boldsymbol{B}_{1}\right)=0
 				\end{aligned}
 				\end{equation}
+	\section{电磁场的能量和能流}
+		\subsection{场与电荷系统的能量守恒关系}
+			由于场的运动能量具有方向性，在不同方向相同距离测量场源发射的强度可能会得到不同的结果，所以对于场的能量的描述，需要两个物理量
+				\begin{enumerate}
+					\item 场的能量密度$\omega$，它代表场内单位体积的能量，与空间位置和时间有关
+					\item 场的能流密度$\boldsymbol{S}$，它代表能量在场内的传播，在数值上等于单位时间垂直流过单位横截面的能量，其方向代表能量传输的方向
+				\end{enumerate}
+			
+			对于空间中某区域V，我们考虑外界流入能量、区域内场和电荷相互作用引起的能量改变、区域内场的总能量的变化这三者之间的关系。首先以$\boldsymbol{f}$	表示场对电荷作用力的密度，$\boldsymbol{v}$表示电荷运动的速度，则场对电荷作用的功率为
+			% 本Latex文稿从这里开始不再对临时使用的解释型方程编号
+				\begin{equation*}
+					\int_V \boldsymbol{f} \cdot \boldsymbol{v} 
+				\end{equation*}
+			
+			同样给出区域内场的能量增加率
+				\begin{equation*}
+					\frac{d}{dt}\int_V \omega dV
+				\end{equation*}
+			以上的两个量都可以视作区域内场和电荷体系的“内能”，通过界面S进入区域的能量为
+				\begin{equation*}
+					-\oint_S \boldsymbol{S} \cdot d \boldsymbol{\sigma}
+				\end{equation*}
+			
+			由能量守恒定律，内部能量变化等于与外界进行的能量交换
+				\begin{equation}
+					-\oint_S \boldsymbol{S} \cdot d \boldsymbol{\sigma} = \frac{d}{dt}\int_V \omega dV +\int_V \boldsymbol{f} \cdot \boldsymbol{v} 
+				\end{equation}
+			给出微分形式
+				\begin{equation}
+					\label{eq.1_68}
+					\nabla \cdot \boldsymbol{S}+\frac{\partial \omega}{\partial t}= -\boldsymbol{f} \cdot	\boldsymbol{v}
+				\end{equation}
+			特别的，如果我们选取的是全空间作为区域，则不存在与外部的能量交换$\nabla \cdot \boldsymbol{S}=0$。这样就代表场对电荷作用的功率等于场自身的能量变化，证明了场和电荷组成的体系能量守恒。
+
+			\subsection{电磁场能量密度和能流密度的表达式}
+				由麦克斯韦方程组和洛伦兹力公式进行推导，用洛伦兹力公式表示场对电荷的功率
+					\begin{equation}
+						\boldsymbol{f} \cdot \boldsymbol{v}=(\rho \boldsymbol{E} + \rho \boldsymbol{v} \times \boldsymbol{B})\cdot \boldsymbol{v} = \rho \boldsymbol{E} \cdot \boldsymbol{v}=\boldsymbol{J} \cdot \boldsymbol{E}
+					\end{equation}
+				将上式整理为与电磁场场量相关的物理量表示即可
+					\begin{equation*}
+						\boldsymbol{J} \cdot \boldsymbol{E} = (\nabla \times \boldsymbol{H}-\frac{\partial \boldsymbol{D}}{\partial t})\cdot \boldsymbol{E} = \boldsymbol{E} \cdot (\nabla \times \boldsymbol{H})- \boldsymbol{E} \cdot \frac{\partial \boldsymbol{D}}{\partial t}
+					\end{equation*}
+				用矢量分析公式得到
+					\begin{equation*}
+						\begin{aligned}
+						\boldsymbol{E} \cdot(\boldsymbol{\nabla} \times \boldsymbol{H}) &=-\nabla \cdot(\boldsymbol{E} \times \boldsymbol{H})+\boldsymbol{H} \cdot(\boldsymbol{\nabla} \times \boldsymbol{E}) \\
+						&=-\nabla \cdot(\boldsymbol{E} \times \boldsymbol{H})-\boldsymbol{E} \cdot \frac{\partial \boldsymbol{B}}{\partial t}
+						\end{aligned}
+					\end{equation*}
+				代入上式得到关系
+				\begin{equation}
+					\boldsymbol{J} \cdot \boldsymbol{E}=-\boldsymbol{\nabla} \cdot(\boldsymbol{E} \times \boldsymbol{H})-\boldsymbol{E} \cdot \frac{\partial \boldsymbol{D}}{\partial t}-\boldsymbol{H} \cdot \frac{\partial \boldsymbol{B}}{\partial t}
+				\end{equation}
+
+				对比式\ref{eq.1_68}可以找到能量密度和能流密度。其中能流密度也称为Poynting矢量。
+				\begin{equation}
+					\boxed{\begin{gathered}
+					\boldsymbol{S}=\boldsymbol{E} \times \boldsymbol{H} \\
+					\frac{\partial w}{\partial t}=\boldsymbol{E} \cdot \frac{\partial \boldsymbol{D}}{\partial t}+\boldsymbol{H} \cdot \frac{\partial \boldsymbol{B}}{\partial t}
+					\end{gathered}}
+				\end{equation}
