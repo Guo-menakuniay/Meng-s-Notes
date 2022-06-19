@@ -77,4 +77,25 @@
         \begin{equation}
             \boldsymbol{B}=-\frac{\mathrm{i}}{\omega} \nabla \times \boldsymbol{E}=-\frac{\mathrm{i}}{k} \sqrt{\mu \varepsilon} \nabla \times \boldsymbol{E}
         \end{equation}
+    \subsection{平面电磁波}      
+        我们假设一种最基本的解，它是平面波。设电磁波沿x轴方向传播，其场强在与x轴正交的平面上各点具有相同的值。这种情况下Helmholtz方程退化为
+        \begin{equation}
+            \frac{\mathrm{d}^{2}}{\mathrm{~d} x^{2}} \boldsymbol{E}(\boldsymbol{x})+k^{2} \boldsymbol{E}(\boldsymbol{x})=0
+        \end{equation}
+        求解上式并加上时谐项可以得到
+        \begin{equation}
+            \boldsymbol{E}(\boldsymbol{x}, t)=\boldsymbol{E}_{0} \mathrm{e}^{\mathrm{i}(k x-\omega t)} = \boldsymbol{E}(\cos(kx-\omega t)+i \sin(kx-\omega t))
+        \end{equation}
+
+        对于实际存在的场强应该理解为上式只取实数部分\footnote{对于此处笔者也带有一些疑问，在之后的内容里面我们可以知道复数项对于计算电磁场的瞬时能量是有影响的，在这里可以暂时将它理解为作用电磁场旋转的一个因子，在我们直接讨论场强的时候是不需要考虑的}
+        \begin{equation}
+            \boldsymbol{E}(\boldsymbol{x}, t)= \boldsymbol{E} \cos(kx-\omega t)
+        \end{equation}
+
+        我们直接考虑相位因子$\cos (kx - \omega t)$的意义，它给出了电磁场随位置和时间变化的关系；考虑t=0的情况时，有波峰在x=0处，在$t=1/\omega$时，这一波峰移到$x=1/k$，我们可以计算得到相速度
+        \begin{equation}
+            v=\frac{\omega}{k}=\frac{1}{\sqrt{\mu \varepsilon}}
+        \end{equation}    
+        
+
         
