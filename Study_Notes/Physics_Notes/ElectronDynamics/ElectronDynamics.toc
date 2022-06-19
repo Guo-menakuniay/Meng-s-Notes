@@ -31,3 +31,6 @@
 \contentsline {subsection}{\numberline {4.1.2}时谐电磁波}{16}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}平面电磁波}{17}{subsection.4.1.3}%
 \contentsline {subsection}{\numberline {4.1.4}电磁场的能量和能流}{18}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}电磁波在介质界面上的反射和折射}{19}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}反射和折射定律}{19}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}振幅关系与菲涅尔公式}{20}{subsection.4.2.2}%

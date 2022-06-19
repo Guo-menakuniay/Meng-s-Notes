@@ -102,6 +102,7 @@
 
         我们直接考虑相位因子$\cos (kx - \omega t)$的意义，它给出了电磁场随位置和时间变化的关系；考虑t=0的情况时，有波峰在x=0处，在$t=1/\omega$时，这一波峰移到$x=1/k$，我们可以计算得到相速度
         \begin{equation}
+            \label{eq.4_16}
             v=\frac{\omega}{k}=\frac{1}{\sqrt{\mu \varepsilon}}
         \end{equation}    
 
@@ -161,3 +162,67 @@
             \langle\boldsymbol{S}\rangle &=\frac{1}{2} c \varepsilon_{0} E_{0}^{2} \boldsymbol{e}_k
             \end{aligned}}
         \end{equation}
+\section{电磁波在介质界面上的反射和折射}
+    本节的主要内容可以看作是对\ref{sec.1_5}节在电磁波具体方程形式下的拓展
+    \subsection{反射和折射定律}
+        式\ref{eq.1_66}给出了电磁场的边值关系
+        \begin{equation}
+            \begin{aligned}
+            &\boldsymbol{e}_{\mathrm{n}} \times\left(\boldsymbol{E}_{2}-\boldsymbol{E}_{1}\right)=0 \\
+            &\boldsymbol{e}_{\mathrm{n}} \times\left(\boldsymbol{H}_{2}-\boldsymbol{H}_{1}\right)=\boldsymbol{\alpha} \\
+            &\boldsymbol{e}_{\mathrm{n}} \cdot\left(\boldsymbol{D}_{2}-\boldsymbol{D}_{1}\right)=\sigma \\
+            &\boldsymbol{e}_{\mathrm{n}} \cdot\left(\boldsymbol{B}_{2}-\boldsymbol{B}_{1}\right)=0
+            \end{aligned}
+        \end{equation}
+        
+        由于对于时谐电磁波而言麦氏方程只有两个方程独立，则只需要用到\footnote{在介质的表述中$\boldsymbol{H}$直接和表面电流相关，更为方便}
+        \begin{equation}
+            \label{eq.4_28}
+            \begin{aligned}
+            &\boldsymbol{e}_{\mathrm{n}} \times\left(\boldsymbol{E}_{2}-\boldsymbol{E}_{1}\right)=0 \\
+            &\boldsymbol{e}_{\mathrm{n}} \times\left(\boldsymbol{H}_{2}-\boldsymbol{H}_{1}\right)=\boldsymbol{\alpha} \\
+            \end{aligned}
+        \end{equation}
+
+        设反射波和折射波也是平面波(由下面所得结果可知这假定是正确的). 设入射波、反射波和折射波的频率相同, 电场强度分别为 $E 、 E^{\prime}$ 和 $E^{\prime \prime}$, 波矢量分别为 $k 、 k^{\prime}$ 和 $k^{\prime \prime}$. 它们的平面波表示式分别为
+        \[
+        \begin{aligned}
+        &\boldsymbol{E}=\boldsymbol{E}_{0} \mathrm{e}^{\mathrm{i}\left(\boldsymbol{k}^{\prime} \cdot x-\omega t\right)} \\
+        &\boldsymbol{E}^{\prime}=\boldsymbol{E}_{0}^{\prime} \mathrm{e}^{\mathrm{i}\left(\boldsymbol{k}^{\prime} \cdot x-\omega t\right)} \\
+        &\boldsymbol{E}^{\prime \prime}=\boldsymbol{E}_{0}^{\prime \prime} \mathrm{e}^{\mathrm{i}\left(\boldsymbol{k}^{\prime} \cdot x-\omega t\right)}
+        \end{aligned}
+        \]
+
+        代入式\ref{eq.4_28}第一项，得到
+        \begin{equation*}
+            \boldsymbol{e}_{\mathrm{n}} \times\left(\boldsymbol{E}_{0} \mathrm{e}^{\mathrm{i} \boldsymbol{i} \cdot x}+\boldsymbol{E}^{\prime}{ }_{0} \mathrm{e}^{\mathrm{i} \mathbf{k}^{\prime} \cdot x}\right)=\boldsymbol{e}_{\mathrm{n}} \times \boldsymbol{E}_{0}^{\prime \prime} \mathrm{e}^{\mathrm{i} \boldsymbol{k}^{\prime} \cdot x}
+        \end{equation*}
+
+        若分界面取在$z=0$，这个分界面上的任意x和y都应该满足上式
+        \begin{equation*}
+            \vec{n} \times \vec{E}_{0} e^{i\left(k_{x} x+k_{y} y\right)}+\vec{n} \times \vec{E}_{0}^{\prime} e^{i\left(k_{x}^{\prime} x+k_{y}^{\prime} y\right)}=\vec{n} \times \vec{E}_{0}^{\prime \prime} e^{i\left(k_{x}^{\prime \prime} x+k_{y}^{\prime \prime} y\right)}
+        \end{equation*}
+        两边同时除以\[\boldsymbol{e}^{i{(k_x^{\prime \prime}x+k_y^{\prime \prime}y)}}\]可以得到
+        \begin{equation*}
+            \vec{n} \times \vec{E}_{0} e^{i\left[\left(k_{x}-k_{x}^{\prime \prime}\right) x+\left(k_{y}-k_{y}^{\prime\prime}\right) y\right]}+\vec{n} \times \vec{E}_{0}^{\prime} e^{i\left[\left(k_{x}^{\prime}-k_{x}^{\prime\prime}\right) x+\left(k_{y}^{\prime}-k_{y}^{\prime\prime}\right) y\right]}=\vec{n} \times \vec{E}_{0}^{\prime \prime}
+        \end{equation*}
+        对任意x、y都成立，只能满足\[k_{x}=k_{x}^{\prime}=k_{x}^{\prime \prime} \quad k_{y}=k_{y}^{\prime}=k_{y}^{\prime \prime}\]结合相速度关系式\ref{eq.4_16}并将分量写成矢量乘角度的形式，得到\footnote{除铁磁质以外，一般的介质都满足$\mu \approx \mu_0$}
+        \begin{equation}
+            \frac{\sin \theta}{\sin \theta^{\prime \prime}}=\frac{k^{\prime \prime}}{k^{\prime}}=\frac{\sqrt{\varepsilon_{2} \mu_{2}}}{\sqrt{\varepsilon_{1} \mu_{1}}} \approx \sqrt{\frac{\varepsilon_{2}}{\varepsilon_{1}}}=n_{21}=\frac{n_{2}}{n_{1}}
+        \end{equation}
+        即
+        \begin{equation}
+            \boxed{n_{1} \sin \theta=n_{2} \sin \theta^{\prime \prime} \quad\left(\mu=\mu_{0}\right)}
+        \end{equation}
+    \subsection{振幅关系与菲涅尔公式}
+        分为电场垂直于入射面和平行于入射面射入的情况
+        \begin{figure}[H]
+            % centering使图片居中
+            \centering  % width栏调节相对行宽的大小
+            \includegraphics[width=0.8\linewidth]{figs/电场入射情况.jpg}
+            \caption{电场入射方向} % 图片添加注释
+            \end{figure}
+        \begin{enumerate}[(1)]
+            \item 电场垂直于入射面
+                
+        \end{enumerate}
