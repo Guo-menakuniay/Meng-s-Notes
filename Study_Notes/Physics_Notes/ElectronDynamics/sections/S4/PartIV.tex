@@ -38,12 +38,18 @@
     \subsection{时谐电磁波}
         时谐电磁波，即电磁波的激发源以一定频率正弦振荡激发的电磁波称为时谐电磁波，亦称为单色波。一个非时谐的电磁波也可以使用傅立叶分析转化为时谐电磁波的叠加。
 
-        我们讨论一定频率的电磁波，设角频率为$\omega$，电磁场方程就可以写为
+        我们讨论一定频率的电磁波，设角频率为$\omega$，电磁场对时间的依赖关系就是$\cos \omega t$，或者以复数的形式代为表示以简化之后的计算量\footnote{我们可以发现转换为复数形式之后其实相较于原来的物理意义多出了$i \sin \omega t$项，国内的大多数教材对于这里的解释是不够清晰的。其实两者在物理意义上是不相等的。这里主要强调的是一种对应关系，以复数形式代为进行计算以简化计算的难度，对应关系和相等关系是有区别的，更为严谨的写法应该是$\boldsymbol{E}(\boldsymbol{x}, t)=\boldsymbol{Re}[\boldsymbol{E}(\boldsymbol{x}) \mathrm{e}^{-\mathrm{i} \omega t}]$。在之后涉及到瞬时能流密度计算的时候会变回实部，我们在那时给出相应的理解。   }
         \begin{equation}
             \begin{aligned}
             &\boldsymbol{E}(\boldsymbol{x}, t)=\boldsymbol{E}(\boldsymbol{x}) \mathrm{e}^{-\mathrm{i} \omega t} \\
             &\boldsymbol{B}(\boldsymbol{x}, t)=\boldsymbol{B}(\boldsymbol{x}) \mathrm{e}^{-\mathrm{i} \omega t}
             \end{aligned}
+        \end{equation}
+        \begin{equation}
+            \begin{gathered}
+                e^{-i \omega t}  \\
+                cos(\omega t)
+            \end{gathered}
         \end{equation}
 
         代入麦克斯韦方程组可以直接消去共同因子$e^{i \omega t}$得到\footnote{在$\omega \neq 0$的情况下，这四个方程不是独立的，有第一式可以推导第二式，第三式可以推导第四式}
@@ -61,7 +67,7 @@
             \boxed{\nabla \times (\nabla \times \boldsymbol{E}) = \nabla(\nabla \cdot \boldsymbol{E})-\nabla^2 \boldsymbol{E}=-\nabla^2 \boldsymbol{E} = \omega^2 \mu \varepsilon \boldsymbol{E}}
         \end{equation}
         
-        得到\footnote{在假定了条件$\nabla \cdot \boldsymbol{E}$之后才能够直接写成这种形式}，该式称为Helmholtz方程，是一定频率电磁波的基本方程，其解$\boldsymbol{E}(x)$是电磁波场强在空间中的分布情况，每一种可能的形式称为一种波模。
+        得到\footnote{\label{ft.4_1_3}在假定了条件$\nabla \cdot \boldsymbol{E}=0$之后才能够直接写成这种形式}，该式称为Helmholtz方程，是一定频率电磁波的基本方程，其解$\boldsymbol{E}(x)$是电磁波场强在空间中的分布情况，每一种可能的形式称为一种波模。
         \begin{equation}
             \begin{gathered}
             \nabla^{2} \boldsymbol{E}+k^{2} \boldsymbol{E}=0 \\
@@ -75,6 +81,7 @@
             \end{aligned}\]
             为保证文本的连贯性，不在正文中直接给出}
         \begin{equation}
+            \label{eq.4.11}
             \boldsymbol{B}=-\frac{\mathrm{i}}{\omega} \nabla \times \boldsymbol{E}=-\frac{\mathrm{i}}{k} \sqrt{\mu \varepsilon} \nabla \times \boldsymbol{E}
         \end{equation}
     \subsection{平面电磁波}      
@@ -87,8 +94,9 @@
             \boldsymbol{E}(\boldsymbol{x}, t)=\boldsymbol{E}_{0} \mathrm{e}^{\mathrm{i}(k x-\omega t)} = \boldsymbol{E}(\cos(kx-\omega t)+i \sin(kx-\omega t))
         \end{equation}
 
-        对于实际存在的场强应该理解为上式只取实数部分\footnote{对于此处笔者也带有一些疑问，在之后的内容里面我们可以知道复数项对于计算电磁场的瞬时能量是有影响的，在这里可以暂时将它理解为作用电磁场旋转的一个因子，在我们直接讨论场强的时候是不需要考虑的}
+        对于实际存在的场强应该理解为上式只取实数部分
         \begin{equation}
+            \label{eq.4_14}
             \boldsymbol{E}(\boldsymbol{x}, t)= \boldsymbol{E} \cos(kx-\omega t)
         \end{equation}
 
@@ -96,6 +104,60 @@
         \begin{equation}
             v=\frac{\omega}{k}=\frac{1}{\sqrt{\mu \varepsilon}}
         \end{equation}    
-        
 
+        我们已经知道在真空中这一速度是光速，相应的在介质中就可以表示为
+        \begin{equation}
+            v=\frac{c}{\mu_r \varepsilon_r}
+        \end{equation}
+
+        上述的计算是由于我们选择了情况最简单的一个坐标系——波矢量刚好和x轴的方向平行，对于一般的情况波矢量和空间上任意一个位矢应该表示为$\boldsymbol{k} \cdot \boldsymbol{x}$，或者用位矢在波矢量方向上的投影x'，记作$k x'$\footnote{这里的k已经退化成一个标量，我们一般称为波数，等于\[k= \frac{2 \pi}{\lambda}\]}。如果我们以x’作垂直于波矢量的平面，就可以得到一个等相位的平面。
         
+        在求解式\ref{eq.4_14}之前，我们要明确该式的得出需要满足\ref{ft.4_1_3}，我们直接对式\ref{eq.4_14}取散度得到
+        \begin{equation}
+            \boldsymbol{\nabla} \cdot \boldsymbol{E}=\boldsymbol{E}_{0} \cdot \boldsymbol{\nabla} \mathrm{e}^{\mathrm{i}(\boldsymbol{k} \cdot \boldsymbol{x}-\omega t)}=\mathrm{i} \boldsymbol{k} \cdot \boldsymbol{E}_{0} \mathrm{e}^{\mathrm{i}(\boldsymbol{k} \cdot \boldsymbol{x}-\omega t)}=\mathrm{i} \boldsymbol{k} \cdot \boldsymbol{E}=0
+        \end{equation} 
+        即
+        \begin{equation}
+            \boldsymbol{k} \cdot \boldsymbol{E} = 0
+        \end{equation}
+
+        表示电场的波动是横波，$\boldsymbol{E}$的取向称为电磁波的偏振方向。如果我们选垂直于$\boldsymbol{k}$的两个相互正交的方向作为偏振方向，我们可以称对于每一个$\boldsymbol{k}$都有两个独立的偏振波。
+
+        下面考虑磁场，根据式\ref{eq.4.11}
+        \begin{equation}
+            \boldsymbol{B} = -\frac{\mathrm{i}}{k} \sqrt{\mu \varepsilon} [\nabla \mathrm{e}^{\mathrm{i}(\boldsymbol{k} \cdot \boldsymbol{x}-\omega t)}] \times \boldsymbol{E} = \sqrt{\mu \varepsilon}\boldsymbol{e}_k \times \boldsymbol{E}
+        \end{equation}
+        可以看出同样是横波。且和相位项无关，电场波和磁场波同相。
+        \begin{equation}
+            \label{eq.4_20}
+            \left|\frac{\boldsymbol{E}}{\boldsymbol{B}}\right|=\frac{1}{\sqrt{\mu \varepsilon}}=v
+        \end{equation}
+        v为当前介质下的光速。
+    \subsection{电磁场的能量和能流}      
+        由式\ref{eq.1_74}可以得到线性介质中能量密度的表达式。在平面电磁波中有$\varepsilon E^2 =\frac{1}{\mu}B^2$，即平面电磁波中电场和磁场的能量相等，即
+        \begin{equation}
+            \omega = \varepsilon E^2 =\frac{1}{\mu}B^2
+        \end{equation}
+
+        根据式\ref{eq.4_20}，可以计算能流密度
+        \begin{equation}
+            \boldsymbol{S}=\boldsymbol{E} \times \boldsymbol{H}=\sqrt{\frac{\varepsilon}{\mu}} \boldsymbol{E} \times\left(\boldsymbol{e}_{k} \times \boldsymbol{E}\right)=\sqrt{\frac{\varepsilon}{\mu}} E^{2} \boldsymbol{e}_{k}
+        \end{equation}
+        可以直接写作与能量密度相关的形式
+        \begin{equation}
+            \boxed{\boldsymbol{S}=\frac{1}{\sqrt{\mu \varepsilon}} w \boldsymbol{e}_{k}=v w \boldsymbol{e}_{k}}
+        \end{equation}
+        $v$为电磁波的相速度。现在形式下能量密度和能流密度的关系就十分的明显，更像是“力”与“功率”之间的关系。
+
+        下面计算能量密度和能流密度的瞬时值，这时候不能把场强中的复数项直接代入计算，只能取实数项\footnote{因为在之前的平均强度计算中，是$|\boldsymbol{E}|^2$，取模之后复数项是不会计算结果的，在瞬时值计算的时候，复数项就不能纳入考虑了}。
+        \begin{equation}
+            w=\varepsilon E_{0}^{2} \cos ^{2}(\boldsymbol{k} \cdot \boldsymbol{x}-\omega t)=\frac{1}{2} \varepsilon E_{0}^{2}[1+\cos 2(\boldsymbol{k} \cdot \boldsymbol{x}-\omega t)]
+        \end{equation}
+        
+        相较于上面这个瞬时值的式子，我们更在意的是一个周期内它的平均值，我们知道余弦函数在一个周期内的平均值是1/2\footnote{这里有个计算技巧，因为有关系$\sin^2 x + \cos^2 x =1 $，在一个完整周期内两者的地位对称，则一个完整周期内$\cos^2 x$的平均值为1/2。更严格来说有\[\frac{1}{T} \int_{0}^{T} \cos ^{2}(k z-2 \pi t / T+\delta) d t=\frac{1}{2}\]}，我们就可以直接得到它们的平均值
+        \begin{equation}
+            \boxed{\begin{aligned}
+            \langle \omega \rangle &=\frac{1}{2} \varepsilon_{0} E_{0}^{2} \\
+            \langle\boldsymbol{S}\rangle &=\frac{1}{2} c \varepsilon_{0} E_{0}^{2} \boldsymbol{e}_k
+            \end{aligned}}
+        \end{equation}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  18 JUN 2022 20:44
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  19 JUN 2022 20:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1363,39 +1363,39 @@ File: figs/磁化面电流示意图.jpg Graphic file (type bmp)
 <figs/磁化面电流示意图.jpg>
 File: figs/切向分量边值关系示意图.jpg Graphic file (type bmp)
 <figs/切向分量边值关系示意图.jpg>
- [9] [10]) [11]
+ [9] [10] [11]) [12]
 Chapter 2.
-[12
+[13
 
 
 
 ]
 Chapter 3.
-[13
+[14
 
 ]
 Chapter 4.
-[14
+[15
 
 ]
 \openout2 = `sections/S4/PartIV.aux'.
 
- (./sections/S4/PartIV.tex [15
+ (./sections/S4/PartIV.tex [16
 
-]) [16] (./ElectronDynamics.aux (./sections/S1/PartI_.aux) (./sections/S4/PartIV.aux))
+] [17] [18]) [19] (./ElectronDynamics.aux (./sections/S1/PartI_.aux) (./sections/S4/PartIV.aux))
 Package rerunfilecheck Info: File `ElectronDynamics.out' has not changed.
-(rerunfilecheck)             Checksum: E3BA39866AD751D81C2E76837EB3CB73;3646.
+(rerunfilecheck)             Checksum: D8C5B812B07BFA1D5049F2DB94A6932D;3780.
 Package logreq Info: Writing requests to 'ElectronDynamics.run.xml'.
 \openout1 = `ElectronDynamics.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26887 strings out of 476919
- 534237 string characters out of 5821841
- 1449781 words of memory out of 5000000
- 46398 multiletter control sequences out of 15000+600000
+ 26916 strings out of 476919
+ 535801 string characters out of 5821841
+ 1453163 words of memory out of 5000000
+ 46427 multiletter control sequences out of 15000+600000
  416286 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 101i,14n,104p,745b,839s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,15n,104p,745b,839s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ElectronDynamics.pdf (18 pages).
+Output written on ElectronDynamics.pdf (21 pages).

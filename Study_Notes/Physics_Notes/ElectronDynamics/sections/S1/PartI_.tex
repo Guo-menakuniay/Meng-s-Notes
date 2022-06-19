@@ -492,8 +492,38 @@
 
 				对比式\ref{eq.1_68}可以找到能量密度和能流密度。其中能流密度也称为Poynting矢量。
 				\begin{equation}
+					\label{eq.1_71}
 					\boxed{\begin{gathered}
 					\boldsymbol{S}=\boldsymbol{E} \times \boldsymbol{H} \\
 					\frac{\partial w}{\partial t}=\boldsymbol{E} \cdot \frac{\partial \boldsymbol{D}}{\partial t}+\boldsymbol{H} \cdot \frac{\partial \boldsymbol{B}}{\partial t}
 					\end{gathered}}
 				\end{equation}
+
+				我们在两种最常见的情况下讨论我们的结果
+				\begin{enumerate}[I.]
+					\item 真空中电荷分布的情形
+							\begin{equation*}
+								\boldsymbol{H}=\frac{1}{\mu_0}\boldsymbol{B}, \qquad \boldsymbol{D}=\varepsilon_0 \boldsymbol{E}
+							\end{equation*}
+						直接代入式\ref{eq.1_68}，可以得到
+							\begin{eqnarray}
+								\begin{gathered}
+									\boldsymbol{S} =\frac{1}{\mu_0} \boldsymbol{E} \times \boldsymbol{B} \\
+									\omega = \frac{1}{2}(\varepsilon_0 E^2+\frac{1}{\mu_0} B^2)
+								\end{gathered}
+							\end{eqnarray}
+					\item 介质中分布的情形。在介质中，原本场和自由电荷之间的关系增加了一个与介质的关系，这时候磁化能和极化能需要一起归入考虑。一般的，可以写作
+						\begin{equation}
+							\delta \omega = \boldsymbol{E}\cdot \delta \boldsymbol{D}+ \boldsymbol{H}\cdot \delta \boldsymbol{B}
+						\end{equation}
+
+					特别的，在线性介质中我们可以和真空的情况一起考虑
+					\begin{equation*}
+						\boldsymbol{H}=\frac{1}{\mu}\boldsymbol{B}, \qquad \boldsymbol{D}=\varepsilon \boldsymbol{E}
+					\end{equation*}
+					代表电导率和磁导率与空间位置无关，这种情况下取微分就等于
+					\begin{equation}
+						\label{eq.1_74}
+						w=\frac{1}{2}(\boldsymbol{E} \cdot \boldsymbol{D}+\boldsymbol{H} \cdot \boldsymbol{B})=\frac{1}{2}\left(\varepsilon E^{2}+\frac{1}{\mu} B^{2} \cdot\right)
+					\end{equation}
+				\end{enumerate}
