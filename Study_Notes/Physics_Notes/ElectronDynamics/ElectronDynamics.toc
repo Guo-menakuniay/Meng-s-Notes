@@ -35,3 +35,8 @@
 \contentsline {subsection}{\numberline {4.2.1}反射和折射定律}{19}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}振幅关系与菲涅尔公式}{20}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}全反射关系}{21}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}电磁波在导体内的传播}{22}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}导体内的自由电荷的分布}{22}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}导体内的电磁波}{23}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}趋肤效应和穿透深度}{24}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}在导体表面的反射}{24}{subsection.4.3.4}%

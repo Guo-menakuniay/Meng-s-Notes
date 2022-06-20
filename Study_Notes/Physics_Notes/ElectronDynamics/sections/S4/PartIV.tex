@@ -131,7 +131,7 @@
         \end{equation}
         可以看出同样是横波。且和相位项无关，电场波和磁场波同相。
         \begin{equation}
-            \label{eq.4_20}
+            \label{eq.4_21}
             \left|\frac{\boldsymbol{E}}{\boldsymbol{B}}\right|=\frac{1}{\sqrt{\mu \varepsilon}}=v
         \end{equation}
         v为当前介质下的光速。
@@ -316,4 +316,114 @@
 \section{电磁波在导体内的传播}
     导体内的自由电子会收到电磁波的作用运动，反过来衰减电磁波的传播。在这个过程中，电磁能量不断转化为热量。
     \subsection{导体内的自由电荷的分布}
-        
+        我们首先来考虑导体中自由电荷运动满足的规律，我们可以知道电荷相对更聚集的地方就会自发的向周围流动，用数学语言表示为
+        \begin{equation}
+            \nabla \cdot \boldsymbol{J} = \sigma (\nabla \cdot \boldsymbol{E}) = \frac{\sigma}{\varepsilon}\rho
+        \end{equation}
+        由电荷守恒定律\[\frac{\partial \rho}{\partial t}=-\nabla \boldsymbol{J}=-\frac{\sigma}{\varepsilon}\rho\]可以解得
+        \begin{equation}
+            \rho(t) = \rho_0 e^{(-\frac{\sigma}{\varepsilon}t)}
+        \end{equation}
+
+        可以发现电荷密度随时间衰减，衰减的特征时间为
+        \begin{equation}
+            \tau =\frac{\varepsilon}{\sigma}
+        \end{equation}
+
+        如果入射电磁波的频率满足$\omega \ll \tau^{-1}$，电磁波就会在介质电荷变化不大的时候快速通过，可以认为这时候\[\rho(t)=0\]或者表示为
+        \begin{equation}
+            \frac{\sigma}{\varepsilon \omega} \ll 1
+        \end{equation}
+        我们称为\textbf{良导体条件}。如果电磁波的频率不太高，一般金属导体都可以视作良导体，良导体内部没有净的自由电荷积聚，电荷都分布在导体表面上。
+    \subsection{导体内的电磁波}
+        相较于介质中的电磁波，我们只需要加入一个电流引起的变化项，直接给出对于一定频率的电磁波在导体内的麦克斯韦方程
+        \begin{equation}
+            \begin{gathered}
+            \boldsymbol{\nabla} \times \boldsymbol{E}=\mathrm{i} \omega \mu \boldsymbol{H} \\
+            \boldsymbol{\nabla} \times \boldsymbol{H}=-\mathrm{i} \omega \varepsilon\boldsymbol{E}+\sigma \boldsymbol{E} \\
+            \boldsymbol{\nabla} \cdot \boldsymbol{E}=0 \\
+            \boldsymbol{\nabla} \cdot \boldsymbol{H}=0
+            \end{gathered}
+        \end{equation}
+        我们也可以直接把由导体电荷分布引起的这一项和之前的介电常数合并写作“复电容率”，记为
+        \begin{equation}
+            \varepsilon^\prime = \varepsilon + i \frac{\sigma}{\omega}
+        \end{equation}
+        则麦氏方程的第二项写作\[\boldsymbol{\nabla} \times \boldsymbol{H}=-\mathrm{i} \omega \varepsilon^\prime \boldsymbol{E}\]方程其他项完全一致，只需要将介质中的解的$\varepsilon$项改为复电容率就可以得到介质中的解。 
+
+        简单介绍一下复电容率各项的物理意义，其实数项代表位移电流的作用，不消耗电场的功率；复数项为传导电流的作用，会引起能量耗散\footnote{其实对于介质而言，我们将电磁场在介质中耗散的情况，介质的电容率也是一个复数}。
+
+        引入复电容率后我们就可以直接写出Helmholtz公式
+        \begin{equation}
+            \begin{gathered}
+                \nabla^2 \boldsymbol{E} + k^2 \boldsymbol{E} = 0 \\
+                k = \omega \sqrt{\mu \varepsilon^\prime}
+            \end{gathered}
+        \end{equation}
+        为进一步考虑k变为复数对整个电磁波解的影响，我们将k写作实部和虚部的分量形式\footnote{其实可能你已经发现了，在上一节讨论全反射关系的时候就已经考虑到k为复数的情况了——这会给电磁波解带来一个衰减项}
+        \begin{equation}
+            k = \boldsymbol{\beta}+ i \boldsymbol{\alpha}
+        \end{equation}
+        则还是考虑最简单的平面电磁波的情况，其电磁波可以表示为
+        \begin{equation}
+            \label{eq.4_49}
+            \boldsymbol{E} = \boldsymbol{E_0}e^{i \boldsymbol{k}\cdot x} = \boldsymbol{E_0} e^{- \boldsymbol{\alpha} \cdot x} e^{i(\boldsymbol{\beta} \cdot x - \omega t)}
+        \end{equation}
+        很明显，虚部$\boldsymbol{\alpha}$是一个衰减常数。
+
+        我们希望能够用具体的物理量表示出$\alpha$和$\beta$。代入复电容率的关系得到\[k^{2}=\beta^{2}-\alpha^{2}+2 \mathrm{i} \boldsymbol{\alpha} \cdot \boldsymbol{\beta}=\omega^{2} \mu\left(\varepsilon+\mathrm{i} \frac{\sigma}{\omega}\right)\]比较实部和虚部就可以得到
+        \begin{equation}
+            \label{eq.4_50}
+            \begin{gathered}
+                \beta^2 - \alpha^2 = \omega^2 \mu \varepsilon \\
+                \boldsymbol{\alpha} \cdot \boldsymbol{\beta}= \frac{1}{2}\omega \mu \sigma
+            \end{gathered}
+        \end{equation}
+        由于$\boldsymbol{\alpha}$和$\boldsymbol{\beta}$的方向还不确定，只靠上式还不能具体给出其表达式，需结合边界条件给出\footnote{郭硕鸿先生的教材中举了一个简单的例子，有兴趣可自行翻阅}。
+    \subsection{趋肤效应和穿透深度}
+        我们简述一下电磁波在导体内传播的规律：电磁波一般只在介质中和导体之外的地方传播。在导体界面上，电磁波和导体的自由电荷作用形成传导电流，电流的存在使电磁波向外反射，一部分电磁能量透入导体内，随传导电流的作用逐渐转换为焦耳热。
+
+        我们考虑最简单的垂直入射的情况，因为这样就只需要考虑z方向的分量。可以将式\ref{eq.4_49}写为\[\boldsymbol{E} =\boldsymbol{E_0} e^{- \alpha z} e^{i(\beta z - \omega t)}\]确定$\alpha$和$\beta$的方向之后就可以根据式\ref{eq.4_50}可以解出$\alpha$和$\beta$：
+        \begin{equation}
+            \begin{aligned}
+            &\beta=\omega \sqrt{\mu \varepsilon}\left[\frac{1}{2}\left(\sqrt{1+\frac{\sigma^{2}}{\varepsilon^{2} \omega^{2}}}+1\right)\right]^{\frac{1}{2}} \\
+            &\alpha=\omega \sqrt{\mu \varepsilon}\left[\frac{1}{2}\left(\sqrt{1+\frac{\sigma^{2}}{\varepsilon^{2} \omega^{2}}}-1\right)\right]^{\frac{1}{2}}
+            \end{aligned}
+            \end{equation}
+        这个式子还是显得有些繁琐，对于良导体的情形，$k^2$的实部可以忽略，有近似关系式
+        \begin{equation}
+            \begin{gathered}
+            k^{2} \approx \mathrm{i} \omega \mu \sigma \\
+            k \approx \sqrt{\mathrm{i} \omega \mu \sigma} \approx \beta+\mathrm{i} \alpha
+            \end{gathered}
+        \end{equation}
+        可以得到\footnote{为方便记忆你可以认为由\ref{eq.4_50}直接拆开得到}
+        \begin{equation}
+            \alpha \approx \beta \approx \sqrt{\frac{\omega \mu \sigma}{2}}
+        \end{equation}
+
+        还记得我们最开始的目的就是试图表达电磁波在导体的穿透深度。我们\textbf{将波幅降至导体表面原值的$1/e$时的传播距离称为穿透深度$\sigma$}，很显然就是$\alpha$的平方
+        \begin{equation}
+            \boxed{\delta = \frac{1}{\alpha} = \sqrt{\frac{2}{\omega \mu \sigma}}}
+        \end{equation}
+        可以看到穿透深度的平方和电导率以及电磁波的频率成反比。我们想要知道电场和磁场谁在导体中的传播更加重要，同样给出两者的比值
+        \begin{equation}
+            \label{eq.4_55}
+            \begin{gathered}
+                \boldsymbol{H}=\frac{1}{\omega \mu} \boldsymbol{k} \times \boldsymbol{E}=\frac{1}{\omega \mu}(\beta+\mathrm{i} \alpha) \boldsymbol{e}_{\mathrm{n}} \times \boldsymbol{E} \\
+                \boldsymbol{H} \approx \sqrt{\frac{\sigma}{\omega \mu}} \mathrm{e}^{\mathrm{i} \frac{\mathrm{\pi}}{4}} \boldsymbol{e}_{\mathrm{n}} \times \boldsymbol{E} \\
+                \sqrt{\frac{\mu}{\varepsilon}}\left|\frac{\boldsymbol{H}}{\boldsymbol{E}}\right|=\sqrt{\frac{\sigma}{\omega \varepsilon}} \gg>1
+            \end{gathered}
+        \end{equation}
+        可以看到在良导体中，电磁波的能量主要是磁场能量\footnote{\textcolor[RGB]{143,143,143}{Question：在一般单位制下可以直接理解为磁场要比电场强吗，这样的话由式\ref{eq.4_21}可以说在真空中电磁场的主要能量是电场能量？}}
+    \subsection{在导体表面的反射}
+        只考虑垂直入射的情况，我们有关系\[E - E^\prime = E^{\prime \prime}, \quad H- H^\prime=H^{\prime \prime}\]分别结果真空和介质中磁场的关系可以（参见式\ref{eq.4_20}和\ref{eq.4_55}）转化为电场写出第二式\[E-E^{\prime}=\sqrt{\frac{\sigma}{2 \omega \varepsilon_{0}}}(1+\mathrm{i}) E^{\prime \prime}\]就可以连立写出电场的比值为
+        \begin{equation}
+            \frac{E^\prime}{E} = -\frac{1+i-\sqrt{\frac{2 \omega \varepsilon_0}{\sigma}}}{1+i+\sqrt{\frac{2 \omega \varepsilon_0}{\sigma}}}
+        \end{equation}
+        更常用的是反射系数
+        \begin{equation}
+            R=\left|\frac{E^{\prime}}{E}\right|^{2}=\frac{\left(1-\sqrt{\frac{2 \omega \varepsilon_{0}}{\sigma}}\right)^{2}+1}{\left(1+\sqrt{\frac{2 \omega \varepsilon_{0}}{\sigma}}\right)^{2}+1} \approx 1-2 \sqrt{\frac{2 \omega \varepsilon_{0}}{\sigma}}
+        \end{equation}
+
+        从上式可以看出，电导率越高越容易反射，波长越长的电磁波越容易被反射。
