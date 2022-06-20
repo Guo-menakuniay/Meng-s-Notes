@@ -126,6 +126,7 @@
 
         下面考虑磁场，根据式\ref{eq.4.11}
         \begin{equation}
+            \label{eq.4_20}
             \boldsymbol{B} = -\frac{\mathrm{i}}{k} \sqrt{\mu \varepsilon} [\nabla \mathrm{e}^{\mathrm{i}(\boldsymbol{k} \cdot \boldsymbol{x}-\omega t)}] \times \boldsymbol{E} = \sqrt{\mu \varepsilon}\boldsymbol{e}_k \times \boldsymbol{E}
         \end{equation}
         可以看出同样是横波。且和相位项无关，电场波和磁场波同相。
@@ -160,6 +161,7 @@
         相较于上面这个瞬时值的式子，我们更在意的是一个周期内它的平均值，我们知道余弦函数在一个周期内的平均值是1/2\footnote{这里有个计算技巧，因为有关系$\sin^2 x + \cos^2 x =1 $，在一个完整周期内两者的地位对称，则一个完整周期内$\cos^2 x$的平均值为1/2。更严格来说有\[\frac{1}{T} \int_{0}^{T} \cos ^{2}(k z-2 \pi t / T+\delta) d t=\frac{1}{2}\]}，我们就可以直接得到它们的平均值\footnote{\textcolor[RGB]{143,143,143}{Question：在这里笔者仍保有疑惑，格里菲斯教材对\ref{eq.4_23}和\ref{eq.4_24}的理解是宏观情况下电磁波包含许多个周期，而考虑一个周期的平均能流的时候就只取1/2，是否有些牵强？}}
         % Note=22/6/20引入143灰色作为Question注解
         \begin{equation}
+            \label{eq.4_26}
             \boxed{\begin{aligned}
             \langle \omega \rangle &=\frac{1}{2} \varepsilon_{0} E_{0}^{2} \\
             \langle\boldsymbol{S}\rangle &=\frac{1}{2} c \varepsilon_{0} E_{0}^{2} \boldsymbol{e}_k
@@ -264,5 +266,54 @@
         上式\ref{eq.4_32}和式\ref{eq.4_34}称为菲涅尔公式，阐述了入射波、反射波和折射波的强度关系。对于正常的电磁波，有各个方向偏振的成分，但是我们可以看到电场偏振方向的不同会有不同的反折射关系。恰好对于$\theta + \theta^{\prime}=90^\circ$的情况，根据式\ref{eq.4_34}可知，平行于边界面入射的电场反射波为零，即这时的反射波全部为垂直偏振的偏振光。\textbf{这是光学中的布儒斯特定律，满足$\theta + \theta^{\prime}=90^\circ$的角称为布儒斯特角}。
 
         菲涅尔公式也同样可以得出半波损失的结论——当$\varepsilon_2 > \varepsilon_1$时有$\theta > \theta^\prime$，则$E^\prime/E$为负数，反射波电场和入射波电场反相。
-    \subsection{全反射关系}  
-        由于全反射涉及到上节没有纳入考虑的一个新的波模，故另起一节做记录
+
+        我们经常用到反射系数R和投射系数T，分别代表光波强度的比值
+        \begin{equation}
+            \begin{gathered}
+            R \equiv \frac{I_{\mathrm{R}}}{I_{1}}=\left(\frac{E_{0 \mathrm{R}}}{E_{01}}\right)^{2}=\left(\frac{n_{1}-n_{2}}{n_{1}+n_{2}}\right)^{2} \\
+            T \equiv \frac{I_{\mathrm{T}}}{I_{1}}=\frac{\varepsilon_{2} v_{2}}{\varepsilon_{1} v_{1}}\left(\frac{E_{0 \mathrm{~T}}}{E_{01}}\right)^{2}=\frac{4 n_{1} n_{2}}{\left(n_{1}+n_{2}\right)^{2}}
+            \end{gathered}
+        \end{equation}
+
+        \subsection{全反射关系}  
+        由于全反射涉及到上节没有纳入考虑的一个新的波模，故另起一节做记录。由于折射角大于90$^\circ$之后就没有实数值能够表达了，我们需要另外寻找一个满足条件的波模。
+
+        之前折射的关系仍然成立\[k^{\prime\prime}_x =k_x=k \sin \theta \]且根据振幅关系\[k^{\prime\prime}= k \frac{v_1}{v_2}=k n_{21}\]可以表达出z轴方向的波矢量分量，其已经表示为了一个虚数
+        \begin{equation}
+            k_{z}^{\prime \prime}=\sqrt{k^{\prime \prime 2}-k_{x}^{\prime \prime 2}}=\mathrm{i} k \sqrt{\sin ^{2} \theta-n_{21}^{2}}
+        \end{equation}
+        简记\[ \kappa=k \sqrt{\sin ^{2} \theta-n_{21}^{2}}\]则表示折射波电场
+        \begin{equation}
+            \boldsymbol{E}^{\prime \prime}=\boldsymbol{E}_{0}^{\prime \prime} \mathrm{e}^{-\kappa z} \mathrm{e}^{\mathrm{i}\left(k_{x}^{\prime \prime} x-\omega t\right)}
+        \end{equation}
+        注意这个波模在之前没有纳入考虑是因为在$z \to -\infty$的时候$ \boldsymbol{E^{\prime \prime} \to \infty}$，所以只出现在上半平面。相较于之前的波，它多了一个衰减项，该衰减层的厚度为
+        \begin{equation}
+            \kappa^{-1} = \frac{1}{k\sqrt{\sin ^2 \theta - n_{21}^2}}= \frac{\lambda_1}{2 \pi \sqrt{\sin ^2 \theta - n_{21}^2}}
+        \end{equation}
+        \begin{wrapfigure}{r}{6cm}%靠文字内容的右侧
+            \centering
+            \includegraphics[width=0.34\textwidth]{figs/电磁场折射示意图.jpg}
+            \caption*{\footnotesize 电磁场折射示意图}
+            \end{wrapfigure}
+
+        这种情况下菲涅尔公式依然适用，只是需要把$\sin \theta$的定义改变为
+        \begin{equation}
+            \begin{aligned}
+            &\sin \theta^{\prime \prime} \rightarrow \frac{k_{x}^{\prime \prime}}{k^{\prime \prime}}=\frac{\sin \theta}{n_{21}} \\
+            &\cos \theta^{\prime \prime} \rightarrow \frac{k_{z}^{\prime \prime}}{k^{\prime \prime}}=\mathrm{i} \sqrt{\frac{\sin ^{2} \theta}{n_{21}^{2}}-1}
+            \end{aligned}
+        \end{equation}
+        就可以直接代入进行计算
+
+        在全反射过程中，介质二是起到作用了的，在半个周期的时候，电磁能量透过第二介质并在界面的薄层储存起来，在另一个半周这些能量都释放出来变为反射能量。我们可以从折射层的能流密度看出，结合式\ref{eq.4_20}计算$\boldsymbol{H}$并由能流密度平均值公式\ref{eq.4_26}可以分别计算出x，z方向上的能流密度
+        \begin{equation}
+            \begin{aligned}
+            &\bar{S}_{x}^{\prime \prime}=\frac{1}{2} \operatorname{Re}\left(E_{y}^{\prime \prime *} H_{z}^{\prime \prime}\right)=\frac{1}{2} \sqrt{\frac{\varepsilon_{2}}{\mu_{2}}} \mid E_{0}^{\prime \prime}{ }^{2} \mathrm{e}^{-2 kz} \frac{\sin \theta}{n_{21}} \\
+            &\bar{S}_{z}^{\prime \prime}=-\frac{1}{2} \operatorname{Re}\left(E_{y}^{\prime \prime *} H_{x}^{\prime \prime}\right)=0
+            \end{aligned}
+        \end{equation}
+        即进入介质层二的能流密度全都沿着x传播\footnote{\textcolor[RGB]{143,143,143}{Question：在z方向没有能流密度的话为什么该衰减层还有厚度呢？}}
+\section{电磁波在导体内的传播}
+    导体内的自由电子会收到电磁波的作用运动，反过来衰减电磁波的传播。在这个过程中，电磁能量不断转化为热量。
+    \subsection{导体内的自由电荷的分布}
+        
