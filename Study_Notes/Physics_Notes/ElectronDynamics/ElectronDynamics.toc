@@ -34,3 +34,4 @@
 \contentsline {section}{\numberline {4.2}电磁波在介质界面上的反射和折射}{19}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}反射和折射定律}{19}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}振幅关系与菲涅尔公式}{20}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}全反射关系}{21}{subsection.4.2.3}%

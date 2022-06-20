@@ -1,4 +1,4 @@
-y0=[1;1;0];
+y0=[0.1;0.1;0];
 tspan=[0,1e3];
 [t1,y1]=rk4(@lorenz,tspan,y0,1e5);
 [t2,y2]=ode45(@lorenz,tspan,y0);
@@ -9,7 +9,7 @@ setP.Color('g','m','b');     % 线条颜色
 setP.LineStyle('-','-','-'); % 线条样式
 setP.LineWidth(1.,1.,1.); % 线条粗细
 xlabel('x axis');ylabel('y axis');zlabel('z axis');
-title('极限环数值仿真示意图')
+title('极限环情况数值仿真示意图')
 
 
 function [t,y]=rk4(f,tspan,y0,n)
@@ -32,12 +32,11 @@ end
 
 function dy_dt=lorenz(t,y)
 %y=[x,y,z]储存三个变量的矩阵
-p=10;
-r=0;
-b=8/3;
-dx_dt=p*(y(2)-y(1));
-dy_dt=r*y(1)-y(2)-y(1)*y(3);
-dz_dt=y(1)*y(2)-b*y(3);
+a=1;
+b=100/3;
+dx_dt=a*(y(2)-y(1))-(-1.7*y(1)+0.1*(abs(y(1)-1)-abs(y(1)+1)));
+dy_dt=y(1)-y(2)+y(3);
+dz_dt=-b*y(2);
 dy_dt=[dx_dt;dy_dt;dz_dt];
 end
 

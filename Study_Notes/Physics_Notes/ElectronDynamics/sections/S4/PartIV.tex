@@ -142,10 +142,12 @@
 
         根据式\ref{eq.4_20}，可以计算能流密度
         \begin{equation}
+            \label{eq.4_23}
             \boldsymbol{S}=\boldsymbol{E} \times \boldsymbol{H}=\sqrt{\frac{\varepsilon}{\mu}} \boldsymbol{E} \times\left(\boldsymbol{e}_{k} \times \boldsymbol{E}\right)=\sqrt{\frac{\varepsilon}{\mu}} E^{2} \boldsymbol{e}_{k}
         \end{equation}
         可以直接写作与能量密度相关的形式
         \begin{equation}
+            \label{eq.4_24}
             \boxed{\boldsymbol{S}=\frac{1}{\sqrt{\mu \varepsilon}} w \boldsymbol{e}_{k}=v w \boldsymbol{e}_{k}}
         \end{equation}
         $v$为电磁波的相速度。现在形式下能量密度和能流密度的关系就十分的明显，更像是“力”与“功率”之间的关系。
@@ -155,7 +157,8 @@
             w=\varepsilon E_{0}^{2} \cos ^{2}(\boldsymbol{k} \cdot \boldsymbol{x}-\omega t)=\frac{1}{2} \varepsilon E_{0}^{2}[1+\cos 2(\boldsymbol{k} \cdot \boldsymbol{x}-\omega t)]
         \end{equation}
         
-        相较于上面这个瞬时值的式子，我们更在意的是一个周期内它的平均值，我们知道余弦函数在一个周期内的平均值是1/2\footnote{这里有个计算技巧，因为有关系$\sin^2 x + \cos^2 x =1 $，在一个完整周期内两者的地位对称，则一个完整周期内$\cos^2 x$的平均值为1/2。更严格来说有\[\frac{1}{T} \int_{0}^{T} \cos ^{2}(k z-2 \pi t / T+\delta) d t=\frac{1}{2}\]}，我们就可以直接得到它们的平均值
+        相较于上面这个瞬时值的式子，我们更在意的是一个周期内它的平均值，我们知道余弦函数在一个周期内的平均值是1/2\footnote{这里有个计算技巧，因为有关系$\sin^2 x + \cos^2 x =1 $，在一个完整周期内两者的地位对称，则一个完整周期内$\cos^2 x$的平均值为1/2。更严格来说有\[\frac{1}{T} \int_{0}^{T} \cos ^{2}(k z-2 \pi t / T+\delta) d t=\frac{1}{2}\]}，我们就可以直接得到它们的平均值\footnote{\textcolor[RGB]{143,143,143}{Question：在这里笔者仍保有疑惑，格里菲斯教材对\ref{eq.4_23}和\ref{eq.4_24}的理解是宏观情况下电磁波包含许多个周期，而考虑一个周期的平均能流的时候就只取1/2，是否有些牵强？}}
+        % Note=22/6/20引入143灰色作为Question注解
         \begin{equation}
             \boxed{\begin{aligned}
             \langle \omega \rangle &=\frac{1}{2} \varepsilon_{0} E_{0}^{2} \\
@@ -223,6 +226,43 @@
             \caption{电场入射方向} % 图片添加注释
             \end{figure}
         \begin{enumerate}[(1)]
-            \item 电场垂直于入射面
-                
+            \item 电场垂直于入射面。直接根据边值关系写出
+                    \begin{equation}
+                        \begin{gathered}
+                            E + E^{\prime} = E^{\prime\prime} \\
+                            H \cos \theta - H^{\prime} \cos \theta^{\prime} =H^{\prime\prime} \cos \theta^{\prime\prime}
+                        \end{gathered}
+                    \end{equation}
+                    
+                    利用关系$H=\sqrt{\frac{\varepsilon}{\mu}}E$和$\mu= \mu_0$，并利用折射定律化简可以得到
+                    \begin{equation}
+                        \label{eq.4_32}
+                        \boxed{\begin{aligned}
+                        &\frac{E^{\prime}}{E}=\frac{\sqrt{\varepsilon_{1}} \cos \theta-\sqrt{\varepsilon_{2}} \cos \theta^{\prime \prime}}{\sqrt{\varepsilon_{1}} \cos \theta+\sqrt{\varepsilon_{2}} \cos \theta^{\prime \prime}}=-\frac{\sin \left(\theta-\theta^{\prime \prime}\right)}{\sin \left(\theta+\theta^{\prime \prime}\right)} \\
+                        &\frac{E^{\prime \prime}}{E}=\frac{2 \sqrt{\varepsilon_{1}} \cos \theta}{\sqrt{\varepsilon_{1}} \cos \theta+\sqrt{\varepsilon_{2}} \cos \theta^{\prime \prime}}=\frac{2 \cos \theta \sin \theta^{\prime \prime}}{\sin \left(\theta+\theta^{\prime \prime}\right)}
+                        \end{aligned}}
+                    \end{equation}
+            \item 电场平行于入射面。同理
+            \begin{equation}
+                \begin{gathered}
+                    H + H^{\prime} = H^{\prime\prime} \\
+                    E \cos \theta - E^{\prime} \cos \theta^{\prime} =E^{\prime\prime} \cos \theta^{\prime\prime}
+                \end{gathered}
+            \end{equation}
+
+            同样代换电场和磁场可以得到
+            \begin{equation}
+                \label{eq.4_34}
+                \boxed{\begin{gathered}
+                \frac{E^{\prime}}{E}=\frac{\tan \left(\theta-\theta^{\prime \prime}\right)}{\tan \left(\theta+\theta^{\prime \prime}\right)} \\
+                \frac{E^{\prime \prime}}{E}=\frac{2 \cos \theta \sin \theta^{\prime \prime}}{\sin \left(\theta+\theta^{\prime \prime}\right) \cos \left(\theta-\theta^{\prime \prime}\right)}
+                \end{gathered}}
+            \end{equation}
         \end{enumerate}
+        \vspace*{2em}
+        
+        上式\ref{eq.4_32}和式\ref{eq.4_34}称为菲涅尔公式，阐述了入射波、反射波和折射波的强度关系。对于正常的电磁波，有各个方向偏振的成分，但是我们可以看到电场偏振方向的不同会有不同的反折射关系。恰好对于$\theta + \theta^{\prime}=90^\circ$的情况，根据式\ref{eq.4_34}可知，平行于边界面入射的电场反射波为零，即这时的反射波全部为垂直偏振的偏振光。\textbf{这是光学中的布儒斯特定律，满足$\theta + \theta^{\prime}=90^\circ$的角称为布儒斯特角}。
+
+        菲涅尔公式也同样可以得出半波损失的结论——当$\varepsilon_2 > \varepsilon_1$时有$\theta > \theta^\prime$，则$E^\prime/E$为负数，反射波电场和入射波电场反相。
+    \subsection{全反射关系}  
+        由于全反射涉及到上节没有纳入考虑的一个新的波模，故另起一节做记录
