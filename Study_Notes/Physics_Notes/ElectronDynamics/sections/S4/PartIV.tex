@@ -45,12 +45,6 @@
             &\boldsymbol{B}(\boldsymbol{x}, t)=\boldsymbol{B}(\boldsymbol{x}) \mathrm{e}^{-\mathrm{i} \omega t}
             \end{aligned}
         \end{equation}
-        \begin{equation}
-            \begin{gathered}
-                e^{-i \omega t}  \\
-                cos(\omega t)
-            \end{gathered}
-        \end{equation}
 
         代入麦克斯韦方程组可以直接消去共同因子$e^{i \omega t}$得到\footnote{在$\omega \neq 0$的情况下，这四个方程不是独立的，有第一式可以推导第二式，第三式可以推导第四式}
         \begin{equation}
@@ -427,3 +421,48 @@
         \end{equation}
 
         从上式可以看出，电导率越高越容易反射，波长越长的电磁波越容易被反射。
+\section{谐振腔和波导}
+    \subsection{有界空间空间中的电磁波}
+        由上一节得到的结果可知，电磁波主要是在导体以外的空间或绝缘介质内传播的，只有很小一部分电磁能量透入导体表面。因此导体表面自然构成电磁波存在的边界，故可以利用金属材料来约束一定频率的电磁波。
+
+        这类有界空间中的电磁波传播问题属于边值问题，对于时谐电磁波我们已知只有两个独立的麦克斯韦方程
+        \begin{equation}
+            \begin{aligned}
+            &\boldsymbol{e}_{\mathrm{n}} \times \boldsymbol{E}=0 \\
+            &\boldsymbol{e}_{\mathrm{n}} \times \boldsymbol{H}=\boldsymbol{\alpha}
+            \end{aligned}
+        \end{equation}
+        加上电磁波的边值条件\ref{eq.1_66}就可以得到电磁波的基本传播方式。当然对具体的波模我们还有一个条件\[\nabla \times \boldsymbol{E}=0\]一般而言可以先看是否满足这个条件。
+    \subsection{谐振腔}
+        \begin{wrapfigure}{r}{4.5cm}%靠文字内容的右侧
+        \centering
+        \includegraphics[width=0.34\textwidth]{figs/谐振腔示意图.jpg}
+        \caption*{\footnotesize 谐振腔示意图}
+        \end{wrapfigure}
+        我们分析最一般的矩形谐振腔，其各点的坐标标注如下图所示，腔内的电磁波满足Helmholtz方程，且在正交方向上两两独立，有\[\nabla^2 u + k^2 u =0\]可以分离变量为\[u(x,y,z)=X(x)Y(y)Z(z)\]有
+            \begin{equation}
+                \left.\begin{array}{l}
+                \frac{\mathrm{d}^{2} X}{\mathrm{~d} x^{2}}+k_{x}^{2} X=0 \\
+                \frac{\mathrm{d}^{2} Y}{\mathrm{~d} y^{2}}+k_{y}^{2} Y=0 \\
+                \frac{\mathrm{d}^{2} Z}{\mathrm{~d} z^{2}}+k_{z}^{2} Z=0
+                \end{array}\right\}
+            \end{equation}
+            \begin{equation}
+                k_{x}^{2}+k_{y}^{2}+k_{z}^{2}=\omega^{2} \mu \varepsilon
+            \end{equation}
+        每一个式都可以得到一个驻波解\[\begin{gathered}
+            u(x, y, z)=\left(C_{1} \cos k_{x} x+D_{1} \sin k_{x} x\right)\left(C_{2} \cos k_{y} y+D_{2} \sin k_{y} y\right) \\
+            \cdot\left(C_{3} \cos k_{z} z+D_{3} \sin k_{z} z\right)
+            \end{gathered}\]我们可以从边值关系非常简单的给出具体解的形式：以x方向的解为例，因为要求满足\[ \frac{\partial \boldsymbol{E}_x}{\partial x}=0\]则在关于x解的表达式中没有$\sin k_x x$项；因为要求满足\[ \frac{\partial \boldsymbol{E}}{\partial n}=0\]则在关于x解的表达式中没有$\cos k_y y$和$\cos k_z z$项
+        
+        综上，可以依次写出各自的解为
+        \begin{equation}
+            \left.\begin{array}{l}
+            E_{x}=A_{1} \cos k_{x} x \sin k_{y} y \sin k_{z} z \\
+            E_{y}=A_{2} \sin k_{x} x \cos k_{y} y \sin k_{z} z \\
+            E_{z}=A_{3} \sin k_{x} x \sin k_{y} y \cos k_{z} z
+            \end{array}\right\}
+            \end{equation}
+            
+            
+   

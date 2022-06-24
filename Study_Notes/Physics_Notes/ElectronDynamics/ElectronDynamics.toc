@@ -40,3 +40,16 @@
 \contentsline {subsection}{\numberline {4.3.2}导体内的电磁波}{23}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}趋肤效应和穿透深度}{24}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}在导体表面的反射}{24}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}谐振腔和波导}{25}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}有界空间空间中的电磁波}{25}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}谐振腔}{25}{subsection.4.4.2}%
+\contentsline {chapter}{\numberline {5}电磁波的辐射}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}电磁场的矢势和标势}{28}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}用势描述电磁场}{28}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}达朗贝尔方程}{28}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}推迟势}{29}{section.5.2}%
+\contentsline {section}{\numberline {5.3}几种常见的辐射形式}{30}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}计算辐射场的一般公式}{30}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}电偶极辐射}{30}{subsection.5.3.2}%
+\contentsline {subsubsection}{辐射能流、功率与角分布}{31}{equation.5.3.17}%
+\contentsline {subsubsection}{短天线辐射和辐射电阻}{31}{equation.5.3.19}%

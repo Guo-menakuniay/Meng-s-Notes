@@ -1,0 +1,152 @@
+\section{电磁场的矢势和标势}
+    \subsection{用势描述电磁场}
+        我们对电磁场也引入矢势和标势，我们从之前引入的磁场矢势入手\[\nabla \times \boldsymbol{B} \]在一般的情况下，磁场依然保持无源场的性质，但是在电磁波中电场同时具有有源和有旋场的性质，这意味着电场关系式中也会出现磁矢势
+            \begin{equation}
+                \nabla \times (\boldsymbol{E} +\frac{\partial \boldsymbol{A}}{\partial t})=0
+            \end{equation}
+        上面的式子可以用一个标势的负梯度描述：
+            \begin{equation}
+                \boldsymbol{E} + \frac{\partial \boldsymbol{A}}{\partial t} = -\nabla \varphi
+            \end{equation}
+        因而得到电场表达式\footnote{这一项是满足规范变换的，即\textbf{势做规范变换时，所有物理量和物理规律都应该保持不变，这种不变性称为规范不变性。}}
+            \begin{equation}
+                \boldsymbol{E} = -\frac{\partial \boldsymbol{A}}{\partial t} -\nabla \varphi
+            \end{equation}
+    \subsection{达朗贝尔方程}
+        我们用麦克斯韦方程和上面的电磁场势进行推导，首先有关系
+        \begin{equation*}
+            \begin{gathered}
+                \frac{\partial \boldsymbol{D}}{\partial t} = \varepsilon ( \frac{\partial \boldsymbol{E}}{\partial t}) = \varepsilon  \frac{\partial }{\partial t}(-\nabla \varphi -  \frac{\partial \boldsymbol{A}}{\partial t}) \\
+                \nabla \times \boldsymbol{H} =  \frac{\partial \boldsymbol{D}}{\partial t} + \boldsymbol{J}
+            \end{gathered}
+        \end{equation*}
+        可以得到
+        \begin{equation}
+            \nabla \times(\nabla \times \boldsymbol{A})= \mu_{0} \boldsymbol{J}-\mu_{0} \varepsilon_{0} \frac{\partial}{\partial t} \nabla \varphi-\mu_{0} \varepsilon_{0} \frac{\partial^{2} \boldsymbol{A}}{\partial t^{2}}-\nabla^{2} \varphi-\frac{\partial}{\partial t} \nabla \cdot \boldsymbol{A}=\frac{\rho}{\varepsilon_{0}}
+        \end{equation}
+        将真空光速的定义式代入进行化简可以得到
+        \begin{equation}
+            \begin{gathered}
+            \nabla^{2} \boldsymbol{A}-\frac{1}{c^{2}} \frac{\partial^{2} \boldsymbol{A}}{\partial t^{2}}-\nabla\left(\nabla \cdot \boldsymbol{A}+\frac{1}{c^{2}} \frac{\partial \varphi}{\partial t}\right)=-\mu_{0} \boldsymbol{J} \\
+            \nabla^{2} \varphi+\frac{\partial}{\partial t} \nabla \cdot \boldsymbol{A}=-\frac{\rho}{\varepsilon_{n}}
+            \end{gathered}
+        \end{equation}
+        为保证电磁场的矢势和标势的形式是对称的，在这里不采用库伦规范，我们采用洛伦兹规范：
+        \begin{equation}
+            \nabla \cdot \boldsymbol{A} + \frac{1}{c^2} \frac{\partial \varphi}{\partial t}=0
+        \end{equation}
+        则达朗贝尔方程即为
+        \begin{equation}
+            \label{eq.5_7}
+            \boxed{\begin{gathered}
+            \nabla^{2} \boldsymbol{A}-\frac{1}{c^{2}} \frac{\partial^{2} \boldsymbol{A}}{\partial t^{2}}=-\mu_{0} J \\
+            \nabla^{2} \varphi-\frac{1}{c^{2}} \frac{\partial^{2} \varphi}{\partial t^{2}}=-\frac{\rho}{\varepsilon_{0}} 
+            \end{gathered}}
+        \end{equation}
+        
+        方程在形式上可以看出，电荷产生标势波动，电流产生矢势波动。离开电荷电流分布区域之后，两者都以波动的形式在空间中传播。
+\section{推迟势}
+    由达朗贝尔导出，对于静态情形\footnote{这一节采用了格里菲斯教材的思路，回避了对达朗贝尔方程求解的具体过程，求解过程部分详细可参见郭硕鸿先生教材}
+    \begin{equation}
+        \begin{gathered}
+            \nabla^2 \boldsymbol{\varphi} = -\frac{\rho}{\varepsilon_0} \\
+            \nabla^2 \boldsymbol{\boldsymbol{A}} = -\mu_0 \boldsymbol{J}
+        \end{gathered}
+    \end{equation}
+    有两个熟知的解
+    \begin{equation}
+        \begin{gathered}
+            V(\boldsymbol{r}) = \frac{1}{4 \pi \varepsilon_0} \int \frac{\rho(\boldsymbol{r}^\prime)}{r}dV \\
+            V(\boldsymbol{r}) = \frac{\mu_0}{4 \pi} \int \frac{\rho(\boldsymbol{J}^\prime)}{r}dV
+        \end{gathered}
+    \end{equation}
+    其中r为源点到场点的距离。而在非静止的情况下，由于电磁波益光速传播，当一个事件从源点传到场点的时候，中间应该经过了一段推迟的时间$r/c$，或者我们可以理解成在t时刻场点受到的作用实际上来自$t-r/c$时刻的源点，我们将它称为推迟势。
+
+    我们直接由静态情况下的解猜测推迟势的解为
+    \begin{equation}
+        \boxed{V(\boldsymbol{r}, t)=\frac{1}{4 \pi \varepsilon_{0}} \int \frac{\rho\left(\boldsymbol{r}^{\prime}, t_{\mathrm{r}}\right)}{r} \mathrm{~d} \tau^{\prime}, \quad \boldsymbol{A}(\boldsymbol{r}, t)=\frac{\mu_{0}}{4 \pi} \int \frac{\boldsymbol{J}\left(\boldsymbol{r}^{\prime}, t_{r}\right)}{r} \mathrm{~d} \tau^{\prime}}
+    \end{equation}
+    其中$t_r=t-r/c$
+    
+    下面我们来验证这一假设解确实是达朗贝尔方程的解\footnote{笔者更喜欢把大段的数学推导放在脚注以保持物理图像的连贯性。在计算 $V(\boldsymbol{r}, t)$ 的拉普拉斯算子时, 特别要注意的是积分在两处依赖 $r$ : 显含在分母中的 $\left(r=\left|\boldsymbol{r}-\boldsymbol{r}^{\prime}\right|\right)$ 和隐含在分子中的 $t_{\mathrm{r}} \equiv t-r / c$$$\nabla V=\frac{1}{4 \pi \varepsilon_{0}} \int\left[(\nabla \rho) \frac{1}{2}+\rho \nabla\left(\frac{1}{r}\right)\right] \mathrm{d} \tau^{\prime}$$和$$\nabla \rho=\dot{\rho} \nabla t_{r}=-\frac{1}{c} \dot{\rho} \nabla r$$(式中的点表示对时间的微分)现在有 $\nabla r=\hat{r}$ 和 $\nabla(1 / r)=-\hat{r} / r^{2}$ , 故$$\nabla V=\frac{1}{4 \pi \varepsilon_{0}} \int\left[-\frac{\dot{\rho}}{c} \frac{\hat{r}}{r}-\rho \frac{\hat{r}}{r}\right] \mathrm{d} \tau^{\prime}$$取散度,$$\nabla^{2} V=\frac{1}{4 \pi \varepsilon_{0}} \int\left\{-\frac{1}{c}\left[\frac{\hat{r}}{r} \cdot(\nabla \dot{\rho})+\dot{\rho} \nabla \cdot\left(\frac{\hat{r}}{r}\right)\right]-\left[\frac{\hat{r}}{r^{2}} \cdot(\nabla \rho)+\rho \nabla \cdot\left(\frac{\hat{r}}{r^{2}}\right)\right]\right\} \mathrm{d} \tau^{\prime}$$但$$\nabla \dot{\rho}=-\frac{1}{c} \ddot{\rho} \nabla r=-\frac{1}{c} \ddot{\rho} \hat{r}$$这同式 (10.21) 中的一样, 并且$$\nabla \cdot\left(\frac{\hat{r}}{r}\right)=\frac{1}{r^{2}}$$和$$\nabla \cdot\left(\frac{\hat{r}}{r^{2}}\right)=4 \pi \delta^{3}(r)$$故有\[\nabla^{2} V=\frac{1}{4 \pi \varepsilon_{0}} \int\left[\frac{1}{c^{2}} \frac{\ddot{\rho}}{2}-4 \pi \rho \delta^{3}(\boldsymbol{r})\right] \mathrm{d} \tau^{\prime}=\frac{1}{c^{2}} \frac{\partial^{2} V}{\partial t^{2}}-\frac{1}{\varepsilon_{0}} \rho(\boldsymbol{r}, t)\]证明了推迟势确实是达朗贝尔方程的解}
+
+    根据推迟势公式，当$\rho$和$\boldsymbol{J}$给定之后就可以得到势，而根据下式可以算出电磁场
+    \begin{equation}
+        \begin{gathered}
+            \boldsymbol{B} = \nabla \times \boldsymbol{A} \\
+            \boldsymbol{E} = - \frac{\partial \boldsymbol{A}}{\partial t} - \nabla \varphi
+        \end{gathered}
+    \end{equation}
+    事实上场会反作用于电荷电流分布，故激发区的电荷电流不能随意分布，我们之后为详细介绍这一点。
+\section{几种常见的辐射形式}
+    \footnote{本段内容来自格里菲斯版电动力学内容}我们已知球壳的面积是$4 \pi r^2$，即能流密度的减少量不能快于$1/r^2$：因为如果它以$1/r^3$的速度减少，则无限远处能流密度的积分应该是零——这是不符合常理的，因为能流密度在任意远的地方积分都应该相等。下面我们以静止的电荷为例，由库伦定律可知电场以$1/r^2$减少，由毕奥-萨法尔定律可知磁场也以$1/r^2$（或更快）的方式减少，则能流密度以$1/r^4$的速度减少，故\textbf{静止的源不产生辐射}。但与时间相关的场，包含一些以$1/r$变化的项，正是这些项导致了电磁辐射。
+    \subsection{计算辐射场的一般公式}
+        \textbf{计算辐射场的基本是推迟势公式}
+
+        对于推迟势公式，以矢势为例\[\quad \boldsymbol{A}(\boldsymbol{r}, t)=\frac{\mu_{0}}{4 \pi} \int \frac{\boldsymbol{J}\left(\boldsymbol{r}^{\prime}, t_{r}\right)}{r} \mathrm{~d} \tau^{\prime}\]计算得到电磁场的矢势之后，就可以经过下式计算电磁场量
+        \begin{equation}
+            \boxed{\begin{gathered}
+                \boldsymbol{B} = \nabla \times \boldsymbol{A} \\
+                \boldsymbol{E} = \frac{i c}{k} \nabla \times \boldsymbol{B}
+            \end{gathered}}
+        \end{equation}
+
+        在矢势公式中有三个距离的线度需要纳入考虑：电荷分布区域的线度$l$，波长$\lambda$，电荷到场点的距离$r$。本节中我们都研究的是小区域内电荷产生的辐射，即满足\[l \ll \lambda, \quad l \ll r\]而对于后两个量同样可以按照线度的大小关系分为：
+        \begin{enumerate}[(1).]
+            \item 近区 （$r \ll \lambda$），在近区内电磁场保持着恒定场的主要特点
+            \item 感应区 （$r ~ \lambda$），性质介于两者之间
+            \item 辐射区 （$r \gg \lambda$），在辐射区内电磁场变为横向的辐射场
+        \end{enumerate}
+        
+        我们对矢势中的$r$展开得到\footnote{Unfinished.啊啊啊啊复习不完了复习不完了，这里跳过了展开步骤，以后有空补上}
+        \begin{equation}
+            \label{eq.5_13}
+            \boldsymbol{A}(x) = \frac{\mu_0 e^{ikR}}{4 \pi R}\int_V \boldsymbol{J}(x^\prime)(1-ik\mathbf{e}_R \cdot x^\prime + \cdots)dV^\prime
+        \end{equation}
+    \subsection{电偶极辐射}
+        电偶极辐射来源于\ref{eq.5_13}展开式中的第一项
+        \begin{equation}
+            \boldsymbol{A} = \frac{\mu_0 e^{ikR}}{4 \pi R}\int_V \boldsymbol{J}(x^\prime) dV^\prime
+        \end{equation}
+        其中积分项就是电偶极矩对时间的偏导数\[\int_V \boldsymbol{J}(x^\prime)dV^\prime= \sum q \boldsymbol{v}=\frac{d}{d t}\sum q \boldsymbol{x}=\frac{d \boldsymbol{p}}{d t}=\boldsymbol{\dot{p}}\]可以直接写出电偶极辐射的公式
+        \begin{equation}
+            \boldsymbol{A}(x) = \frac{\mu_0 e^{i k R}}{4 \pi R}\boldsymbol{\dot{p}}
+        \end{equation}
+        根据势的公式计算电磁场的时候，因为分母中的R是我们专门展开需要的，故$\nabla$项就只需要作用在相因子上，意味着对于以下算符可以代换为
+        \begin{equation}
+            \label{eq.5_17}
+            \boxed{\begin{gathered}
+                \nabla \to i k \boldsymbol{e}_R \\
+                \frac{\partial }{\partial t} \to -i \omega 
+            \end{gathered}}
+        \end{equation}
+
+        可以计算得到辐射场\footnote{我们都将结果写作只含$\varepsilon_0$和k的形式，用关系代换掉$\mu_0$}
+        \begin{equation}
+            \begin{aligned}
+            \boldsymbol{B} &=\boldsymbol{\nabla} \times \boldsymbol{A}=\frac{\mathrm{i} \mu_{0} k}{4 \pi R} \mathrm{e}^{i k R} \boldsymbol{e}_{R} \times \dot{\boldsymbol{p}}=\frac{1}{4 \pi \varepsilon_{0} c^{3} R} \mathrm{e}^{\mathrm{i} k R} \ddot{\boldsymbol{p}} \times \boldsymbol{e}_{R} \\
+            \boldsymbol{E} &=\frac{\mathrm{i} c}{k} \boldsymbol{\nabla} \times \boldsymbol{B}=c \boldsymbol{B} \times \boldsymbol{e}_{R}=\frac{\mathrm{e}^{\mathrm{i} k R}}{4 \pi \varepsilon_{0} c^{2} R}\left(\ddot{\boldsymbol{p}} \times \boldsymbol{e}_{R}\right) \times \boldsymbol{e}_{R}
+            \end{aligned}
+        \end{equation}
+        在这种情况下，辐射区的电磁场$~1/R$，能流密度$~1/R^2$，对球面积分之后总功率与球的半径无关，保证了电磁能量可以传播到任意远处，和之前的理论吻合。
+        
+        \subsubsection{辐射能流、功率与角分布}
+            电偶极辐射的平均能流密度可以计算得
+            \begin{equation}
+                \begin{aligned}
+                \overline{\boldsymbol{S}} &=\frac{1}{2} \operatorname{Re}\left(\boldsymbol{E}^{*} \times \boldsymbol{H}\right)=\frac{c}{2 \mu_{0}} \operatorname{Re}\left[\left(\boldsymbol{B}^{*} \times \boldsymbol{e}_{R}\right) \times \boldsymbol{B}\right] \\
+                &=\frac{c}{2 \mu_{0}}|\boldsymbol{B}|^{2} \boldsymbol{e}_{R}=\frac{|\ddot{p}|^{2}}{32 \pi^{2} \varepsilon_{0} c^{3} R^{2}} \sin ^{2} \theta \boldsymbol{e}_{R} 
+                \end{aligned}
+                \end{equation}
+            式中$\sin^2$项即体现了辐射的角分布，可以用平均能流密度对球面积分可以得到总辐射功率\footnote{可以用整个球的立体角定义来记忆立体角的积分公式\[\frac{d S}{d\Omega}=\frac{S}{\Omega}=\frac{4 \pi R^2}{4 \pi}=R^2\]}
+            \begin{equation}
+                \begin{aligned}
+                P &=\oint|\overline{\boldsymbol{S}}| R^{2} \mathrm{~d} \Omega \\
+                &=\frac{|\ddot{\boldsymbol{p}}|^{2}}{32 \pi^{2} \varepsilon_{0} c^{3}} \oint \sin ^{2} \theta \mathrm{d} \Omega \\
+                &=\frac{1}{4 \pi \varepsilon_{0}} \frac{|\ddot{\boldsymbol{p}}|^{2}}{3 c^{3}}
+                \end{aligned}
+            \end{equation}
+            
+            结合关系式\ref{eq.5_17}可以得到，总辐射功率正比于$\omega^4$，当电偶极子振荡频率增高的时候辐射功率迅速增加。
+        
+        \subsubsection{短天线辐射和辐射电阻}
