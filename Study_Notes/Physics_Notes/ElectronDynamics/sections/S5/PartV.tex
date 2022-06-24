@@ -149,4 +149,51 @@
             
             结合关系式\ref{eq.5_17}可以得到，总辐射功率正比于$\omega^4$，当电偶极子振荡频率增高的时候辐射功率迅速增加。
         
-        \subsubsection{短天线辐射和辐射电阻}
+        \subsubsection{短天线辐射和辐射电阻}\footnote{Unfinished:留坑}
+    \subsection{高频电流分布的磁偶极矩和电四极矩}
+        \textcolor[RGB]{143,143,143}{笔者还没搞明白对称张量分离的办法，格里菲斯上的推导办法还没来得及看，这里先直接给出公式和结论}
+        
+        现在我们计算矢势展开的第二项
+        \begin{equation}
+            \boldsymbol{A} = \frac{- i k \mu_0 e^{ikR}}{4 \pi R}\int_V \boldsymbol{J}(x^\prime)(\mathrm{e}_R \cdot x^\prime) dV^\prime
+        \end{equation}
+        直接给出结果
+        \begin{equation}
+            \boldsymbol{A}(\boldsymbol{x})=-\frac{\mathrm{i} k \mu_{0} \mathrm{e}^{\mathrm{i} k R}}{4 \pi R}\left(-\boldsymbol{e}_{R} \times m+\frac{1}{6} \boldsymbol{e}_{R} \cdot \dot{\mathscr{D}_{ij}}\right)
+        \end{equation}
+        其中$\mathscr{D_{ij}}$为体系的电四极矩\[\mathscr{D}_{ij}=\sum3q\boldsymbol{x^\prime}\boldsymbol{x^\prime}\]
+
+        式中括号第一项为磁偶极辐射势，第二项为电四极辐射势。他们在电磁矢势的同一级展开式中体现。
+    \subsection{磁偶极辐射}
+        我们考虑磁偶极辐射的性质，即
+        \begin{equation}
+            \boldsymbol{A}(x) = \frac{ik \mu_0 e^{ik R}}{4 \pi R}\boldsymbol{e}_R \times \boldsymbol{m}
+        \end{equation}
+        计算电磁场\footnote{这里和之前一样，都使用了\[( \frac{\partial }{\partial t})^2=(-i \omega)^2=-\omega^2\]结合$k$的定义来化简，其中负号吸收进了矢积改变了乘积方向}
+        \begin{equation}
+            \begin{aligned}
+            \boldsymbol{B} &=\boldsymbol{\nabla} \times \boldsymbol{A}=\mathrm{i} k \boldsymbol{e}_{R} \times \boldsymbol{A} \\
+            &=k^{2} \frac{\mu_{0} \mathrm{e}^{\mathrm{i} k R}}{4 \pi R}\left(\boldsymbol{e}_{R} \times \boldsymbol{m}\right) \times \boldsymbol{e}_{R} \\
+            &=\frac{\mu_{0} \mathrm{e}^{\mathrm{i} k R}}{4 \pi c^{2} R}\left(\ddot{\boldsymbol{m}} \times \boldsymbol{e}_{R}\right) \times \boldsymbol{e}_{R} \\
+            \boldsymbol{E} &=\frac{i c}{k} \nabla \times \boldsymbol{B} =-\frac{\mu_{0} \mathrm{e}^{\mathrm{i} k R}}{4 \pi c R}\left(\ddot{\boldsymbol{m}} \times \boldsymbol{e}_{R}\right)
+            \end{aligned}
+        \end{equation}
+
+        我们知道电场和磁场在真空中有良好的对称性，我们比较上式和\ref{eq.5_17}可以发现只需以下代换就可以使两者等价
+        \begin{equation}
+            \begin{gathered}
+                \boldsymbol{p} \to \frac{\boldsymbol{m}}{c} \\
+                \boldsymbol{E} \to c \boldsymbol{B} \\
+                c \boldsymbol{B} \to - \boldsymbol{E}
+            \end{gathered}
+        \end{equation}
+        在对称性的体现上，即得在自由空间中, 麦氏方程组对变换 $\boldsymbol{E} \rightarrow c \boldsymbol{B}, c \boldsymbol{B} \rightarrow-\boldsymbol{E}$ 是对称的。若电磁场 $\boldsymbol{E}(\boldsymbol{x}, \boldsymbol{t}), \boldsymbol{B}(\boldsymbol{x}, \boldsymbol{t})$ 是麦克斯韦方程组的解,则代换后的电磁场也是麦克斯韦方程组的解。
+
+        可以用代换直接得到磁偶极辐射的能流密度
+        \begin{equation}
+            \boldsymbol{S}=\frac{\mu_{0} \omega^{4}|m|^{2}}{32 \pi^{2} c^{3} R^{2}} \sin ^{2} \theta \boldsymbol{e}_{R}
+        \end{equation}
+        总辐射功率
+        \begin{equation}
+            P =\frac{\mu_0 \omega^4 |\boldsymbol{m}|^2}{12 \pi c^3}
+        \end{equation}
