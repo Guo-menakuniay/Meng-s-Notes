@@ -197,3 +197,69 @@
         \begin{equation}
             P =\frac{\mu_0 \omega^4 |\boldsymbol{m}|^2}{12 \pi c^3}
         \end{equation}
+    \subsection{电四极辐射}
+        对于第二个展开项
+        \begin{equation}
+            \boldsymbol{A}(\boldsymbol{x})=-\frac{\mathrm{i} k \mu_{0} \mathrm{e}^{\mathrm{i} k R}}{24 \pi R}\boldsymbol{e}_{R} \cdot \dot{\mathscr{D}_{ij}}
+        \end{equation}
+        本节也直接给出结果，定义矢量\[\mathscr{D}_{ij}^\prime = \boldsymbol{e}_R \cdot \mathscr{D}_{ij}\]则辐射区的电磁场为
+        \begin{equation}
+            \begin{gathered}
+                \boldsymbol{B}=\mathrm{i} k \boldsymbol{e}_{R} \times \boldsymbol{A}=\frac{\mathrm{e}^{\mathrm{i} k R}}{24 \pi \varepsilon_{0} c^{4} R} \dddot{\mathscr{D}_{ij}^\prime} \times \boldsymbol{e}_{R} \\
+                \boldsymbol{E}=c \boldsymbol{B} \times \boldsymbol{e}_{R}=\frac{\mathrm{e}^{\mathrm{i} k R}}{24 \pi \varepsilon_{0} c^{3} R}\left(\dddot{\mathscr{D}_{ij}^\prime} \times \boldsymbol{e}_{R}\right) \times \boldsymbol{e}_{R}
+            \end{gathered}
+        \end{equation}
+        辐射平均能流密度暂且不表。直接给出结论：电四极辐射和磁偶极辐射的功率是同数量级的。
+\section{电磁波的衍射}
+    \subsection{基尔霍夫公式}
+        电磁场任一分量都满足亥姆霍兹方程，即\[\nabla^2 \psi +k^2 \psi =0\]如果我们忽略其他电磁场分量的影响，把$\psi$看作一个标量场，用边界上的$\psi$$ \frac{\partial \psi}{\partial n}$表出边界条件，这种理论就是标量衍射理论。
+
+        可以用格林函数变形得到
+        \begin{equation}
+            \begin{aligned}
+            \phi(\boldsymbol{x}) &=-\frac{1}{4 \pi} \oint_{S}\left[\psi\left(\boldsymbol{x}^{\prime}\right) \boldsymbol{\nabla}^{\prime} \frac{\mathrm{e}^{\mathrm{i} k r}}{r}-\frac{\mathrm{e}^{\mathrm{i} k r}}{r} \nabla^{\prime} \psi\left(\boldsymbol{x}^{\prime}\right)\right] \cdot \mathrm{d} \boldsymbol{S}^{\prime} \\
+            &=-\frac{1}{4 \pi} \oint_{S} \frac{\mathrm{e}^{\mathrm{i} k r}}{r} \boldsymbol{e}_{\mathrm{n}} \cdot\left[\nabla^{\prime} \psi+\left(\mathrm{i} k-\frac{1}{r}\right) \frac{\boldsymbol{r}}{r} \psi\right] \mathrm{d} S^{\prime}
+            \end{aligned}
+            \end{equation}
+        上式为\textbf{基尔霍夫公式}，是惠更斯原理的数学表示。
+    \subsection{夫琅和费衍射}
+        碍于记录的时间原因，这里直接给出结果\footnote{Unfinished}
+        \begin{equation}
+            \begin{aligned}
+            \psi(\boldsymbol{x}) &=-\frac{\mathrm{i} \psi_{0} \mathrm{e}^{\mathrm{i} k R}}{4 \pi R} \int_{S_{0}} \mathrm{e}^{\mathrm{i}\left(\boldsymbol{k}_{1}-\boldsymbol{k}_{2}\right) \cdot x^{\prime}}\left(\boldsymbol{k}_{1}+\boldsymbol{k}_{2}\right) \cdot \boldsymbol{e}_{\mathrm{n}} \mathrm{d} S^{\prime} \\
+            &=-\frac{\mathrm{i} \psi_{0} \mathrm{e}^{\mathrm{i} k R}}{4 \pi R} \int_{S_{0}} \mathrm{e}^{\mathrm{i}\left(\boldsymbol{k}_{1}-\boldsymbol{k}_{2}\right) \cdot x^{\prime}}\left(\cos \theta_{1}+\cos \theta_{2}\right) \mathrm{d} S^{\prime}
+            \end{aligned}
+            \end{equation}
+        式中 $\theta_{1}$ 为入射波矢 $\boldsymbol{k}_{1}$ 与法线方向 $\boldsymbol{e}_{\mathrm{n}}$ 的夹角, $\theta_{2}$为衍射波矢 $\boldsymbol{k}_{2}$ 与 $\boldsymbol{e}_{\mathrm{n}}$ 的夹角. $\cos \theta_{1}+\cos \theta_{2}$ 称为倾斜因子。
+\section{电磁场的动量}
+    \subsection{麦克斯韦应力张量}
+        我们已知单位体积电荷收到的力可以表示为
+        \begin{equation}
+            \boldsymbol{f} = \rho \boldsymbol{E} + \boldsymbol{J} \times \boldsymbol{B}
+        \end{equation}
+        用麦克斯韦方程组展开并且加入一项$(\nabla \cdot \boldsymbol{B})\boldsymbol{B}$以保持结果中电场和磁场形式的对称（因为$\nabla \cdot \boldsymbol{B}$等于零，对结果没有任何影响），这样就有
+        \begin{equation}
+            \boldsymbol{f}=\varepsilon_{0}[(\nabla \cdot \boldsymbol{E}) \boldsymbol{E}+(\boldsymbol{E} \cdot \nabla) \boldsymbol{E}]+\frac{1}{\mu_{0}}[(\nabla \cdot \boldsymbol{B}) \boldsymbol{B}+(\boldsymbol{B} \cdot \nabla) \boldsymbol{B}]- \frac{1}{2} \nabla\left(\varepsilon_{0} E^{2}+\frac{1}{\mu_{0}} B^{2}\right)-\varepsilon_{0} \frac{\partial}{\partial t}(\boldsymbol{E} \times \boldsymbol{B})
+        \end{equation}
+        引入\textbf{麦克斯韦应力张量\footnote{一般二阶张量可以用双箭头表示\[\overleftrightarrow{T}\]}}可以大幅简化上式的形式\footnote{其是一个对称张量，或者直接用一个矩阵表示为\[T_{i j}=\left(\begin{array}{ccc}
+            \epsilon_{0}\left(E_{x}^{2}-E^{2} / 2\right)+\frac{1}{\mu_{0}}\left(B_{x}^{2}-B^{2} / 2\right) & \epsilon_{0} E_{x} E_{y}+\frac{1}{\mu_{0}}\left(B_{x} B_{y}\right) & \epsilon_{0} E_{x} E_{z}+\frac{1}{\mu_{0}}\left(B_{x} B_{z}\right) \\
+            \epsilon_{0} E_{x} E_{y}+\frac{1}{\mu_{0}}\left(B_{x} B_{y}\right) & \epsilon_{0}\left(E_{y}^{2}-E^{2} / 2\right)+\frac{1}{\mu_{0}}\left(B_{y}^{2}-B^{2} / 2\right) & \epsilon_{0} E_{y} E_{z}+\frac{1}{\mu_{0}}\left(B_{y} B_{z}\right) \\
+            \epsilon_{0} E_{x} E_{z}+\frac{1}{\mu_{0}}\left(B_{x} B_{z}\right) & \epsilon_{0} E_{y} E_{z}+\frac{1}{\mu_{0}}\left(B_{y} B_{z}\right) & \epsilon_{0}\left(E_{z}^{2}-E^{2} / 2\right)+\frac{1}{\mu_{0}}\left(B_{z}^{2}-B^{2} / 2\right)
+            \end{array}\right)\]张量中的ij元素诠释为，朝著i-轴方向，施加于j-轴的垂直平面，单位面积的作用力\\ \textcolor[RGB]{143,143,143}{Unfinished.这里矩阵的间距太窄不够美观，有时间修复}}：
+        \begin{equation}
+            T_{i j} \equiv \varepsilon_{0}\left(E_{i} E_{j}-\frac{1}{2} \delta_{i j} E^{2}\right)+\frac{1}{\mu_{0}}\left(B_{i} B_{j}-\frac{1}{2} \delta_{i j} B^{2}\right)
+        \end{equation}
+        麦克斯韦应力张量矢量写法和标量写法之间有关系
+        \begin{equation}
+            (a \cdot \overleftrightarrow{T})_{j}=\sum_{i=x, y, z} a_{i} T_{i j}
+        \end{equation}
+        特别的，对于$\overleftrightarrow{T}$散度的第j个分量可以表示为
+        \begin{equation}
+            (\nabla \cdot \stackrel{\leftrightarrow}{\boldsymbol{T}})_{j}=\varepsilon_{0}\left[(\nabla \cdot \boldsymbol{E}) E_{j}+(\boldsymbol{E} \cdot \nabla) E_{j}-\frac{1}{2} \nabla_{j} E^{2}\right]+\frac{1}{\mu_{0}}\left[(\nabla \cdot \boldsymbol{B}) B_{j}+(\boldsymbol{B} \cdot \nabla) B_{j}-\frac{1}{2} \nabla_{j} B^{2}\right]
+        \end{equation}
+        这恰恰和$\boldsymbol{f}$中的形式一致，则力密度可以用很简洁的形式表示
+        \begin{equation}
+            f=\nabla \cdot \stackrel{\leftrightarrow}{T}-\varepsilon_{0} \mu_{0} \frac{\partial S}{\partial t}
+        \end{equation}
+    \subsection{动量守恒}  
+        

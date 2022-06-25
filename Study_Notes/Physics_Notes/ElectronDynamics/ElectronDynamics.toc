@@ -55,3 +55,10 @@
 \contentsline {subsubsection}{短天线辐射和辐射电阻}{31}{equation.5.3.19}%
 \contentsline {subsection}{\numberline {5.3.3}高频电流分布的磁偶极矩和电四极矩}{31}{subsection.5.3.3}%
 \contentsline {subsection}{\numberline {5.3.4}磁偶极辐射}{32}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}电四极辐射}{32}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}电磁波的衍射}{33}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}基尔霍夫公式}{33}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}夫琅和费衍射}{33}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}电磁场的动量}{33}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}麦克斯韦应力张量}{33}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}动量守恒}{34}{subsection.5.5.2}%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  24 JUN 2022 20:53
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  25 JUN 2022 16:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1413,20 +1413,26 @@ Chapter 5.
 ] [29] [30] [31]
 Missing character: There is no i ("69) in font rsfs7!
 Missing character: There is no j ("6A) in font rsfs7!
-) [32] (./ElectronDynamics.aux (./sections/S1/PartI_.aux) (./sections/S4/PartIV.aux) (./sections/S5/PartV.aux))
-Package rerunfilecheck Info: File `ElectronDynamics.out' has not changed.
-(rerunfilecheck)             Checksum: 567F201104E5535E0680F51ABEC5D085;6508.
+ [32] [33]) [34] (./ElectronDynamics.aux (./sections/S1/PartI_.aux) (./sections/S4/PartIV.aux) (./sections/S5/PartV.aux))
+
+Package rerunfilecheck Warning: File `ElectronDynamics.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ElectronDynamics.out':
+(rerunfilecheck)             Before: CF7735F095AF6A14243D4947720AEDCF;7162
+(rerunfilecheck)             After:  438274A28F57CE4E59723F64B94146B6;7256.
 Package logreq Info: Writing requests to 'ElectronDynamics.run.xml'.
 \openout1 = `ElectronDynamics.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27051 strings out of 476919
- 541841 string characters out of 5821841
- 1462687 words of memory out of 5000000
- 46548 multiletter control sequences out of 15000+600000
+ 27053 strings out of 476919
+ 541867 string characters out of 5821841
+ 1463406 words of memory out of 5000000
+ 46550 multiletter control sequences out of 15000+600000
  416302 words of font info for 135 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,15n,104p,1663b,839s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ElectronDynamics.pdf (35 pages).
+Output written on ElectronDynamics.pdf (37 pages).
