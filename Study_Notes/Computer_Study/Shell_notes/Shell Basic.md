@@ -253,6 +253,13 @@ sed -e 4a\newLine testfile   #在testfile文件的第四行后添加一行，并
     >
     > 提取文件并装载在一个目录中：`tar -xvf tset.tar`
 
+### 建立软链接
+
+```bash
+ln -s <originfile> <targetfile>
+```
+
+
 
 # Linux文件权限与目录配置
 
