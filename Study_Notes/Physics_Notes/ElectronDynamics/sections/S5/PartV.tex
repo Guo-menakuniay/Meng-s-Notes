@@ -20,9 +20,13 @@
                 \nabla \times \boldsymbol{H} =  \frac{\partial \boldsymbol{D}}{\partial t} + \boldsymbol{J}
             \end{gathered}
         \end{equation*}
-        可以得到
+        可以得到电磁场矢势和标势满足下面这两个关系
         \begin{equation}
-            \nabla \times(\nabla \times \boldsymbol{A})= \mu_{0} \boldsymbol{J}-\mu_{0} \varepsilon_{0} \frac{\partial}{\partial t} \nabla \varphi-\mu_{0} \varepsilon_{0} \frac{\partial^{2} \boldsymbol{A}}{\partial t^{2}}-\nabla^{2} \varphi-\frac{\partial}{\partial t} \nabla \cdot \boldsymbol{A}=\frac{\rho}{\varepsilon_{0}}
+            \begin{aligned}
+                \nabla \times(\nabla \times \boldsymbol{A}) &= \nabla \times \boldsymbol{B} =\mu_0(\nabla \times \boldsymbol{H}) \\
+                &= \mu_{0} \boldsymbol{J}-\mu_{0} \varepsilon_{0} \frac{\partial}{\partial t} \nabla \varphi-\mu_{0} \varepsilon_{0} \frac{\partial^{2} \boldsymbol{A}}{\partial t^{2}}\\
+                \nabla \cdot \boldsymbol{E} &= -\nabla^{2} \varphi-\frac{\partial}{\partial t} \nabla \cdot \boldsymbol{A}=\frac{\rho}{\varepsilon_{0}}
+            \end{aligned}
         \end{equation}
         将真空光速的定义式代入进行化简可以得到
         \begin{equation}
@@ -262,4 +266,6 @@
             f=\nabla \cdot \stackrel{\leftrightarrow}{T}-\varepsilon_{0} \mu_{0} \frac{\partial S}{\partial t}
         \end{equation}
     \subsection{动量守恒}  
-        
+\section{切连科夫辐射}
+    在真空中匀速运动的粒子不产生辐射电磁场，但是在介质中会产生诱导电流激发次波，当带电粒子超过介质中光速时这些次波与运动粒子的电磁场相互干涉，可以形成辐射电磁场，称为\textbf{切连科夫辐射}
+     

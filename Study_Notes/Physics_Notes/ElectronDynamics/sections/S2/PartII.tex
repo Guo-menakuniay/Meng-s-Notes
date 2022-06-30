@@ -1,0 +1,86 @@
+\section{静电场的标势和微分方程}
+    \subsection{静电场的标势}
+        静电场满足
+            \begin{equation}
+                \begin{gathered}
+                    \nabla \times \boldsymbol{E} = 0 \\
+                    \nabla \cdot \boldsymbol{D} = \rho
+                \end{gathered}
+            \end{equation}
+            可以得到静电场的无旋性，意味着我们可以直接引入一个标势来描述静电场，直接给出定义
+            \begin{equation}
+                \varphi\left(P_{2}\right)-\varphi\left(P_{1}\right)=-\int_{P_{1}}^{P_{2}} \boldsymbol{E} \cdot \mathrm{d} \boldsymbol{l}
+            \end{equation}
+            有两点之间的电势差为
+            \begin{equation}
+                d \varphi = - \boldsymbol{E} \cdot d \boldsymbol{l}
+            \end{equation}
+            显然电场强度可以用势表示
+            \begin{equation}
+                \boldsymbol{E} = -\nabla \varphi
+            \end{equation}
+            注意电势是一个相对值而非一个绝对值，必须给出一个电势基准才有实际的意义，一般选取无穷远处为电势零点。当然对于包含无穷远电荷分布的时候不能这样取。
+
+            我们也很容易可以从电场的公式得到电势的公式
+            \begin{equation}
+                \varphi(P)=\int_{r}^{\infty} \frac{Q}{4 \pi \varepsilon_{0} r^{\prime 2}} \mathrm{~d} r^{\prime}=\frac{Q}{4 \pi \varepsilon_{0} r}=\int_V \frac{\rho(x^\prime) dV^\prime}{4 \pi \varepsilon_0 r}
+                \end{equation}
+    \subsection{静电势的微分方程和边值关系}
+        在均匀各向同性线性介质中，$\boldsymbol{D}= \varepsilon \boldsymbol{E}$，可以通过麦氏方程得到静电势满足的基本微分方程—\textbf{Poisson方程}
+        \begin{equation}
+            \boxed{\nabla^2 \varphi = - \frac{\rho}{\varepsilon}}
+        \end{equation}
+        有边值关系
+        \begin{equation}
+            \begin{aligned}
+            &\boldsymbol{e}_{\mathrm{n}} \times\left(\boldsymbol{E}_{2}-\boldsymbol{E}_{1}\right)=0 \\
+            &\boldsymbol{e}_{\mathrm{n}} \cdot\left(\boldsymbol{D}_{2}-\boldsymbol{D}_{1}\right)=\sigma
+            \end{aligned}
+        \end{equation}
+        可以分别导出电势的边值关系
+        \begin{equation}
+            \begin{gathered}
+                \varphi_1 = \varphi_2 \\
+                \varepsilon_2 \frac{\partial \varphi_2}{\partial n} - \varepsilon_1 \frac{\partial \varphi_1}{\partial n} = -\sigma
+            \end{gathered}
+        \end{equation}
+        $\sigma$为介质分界面自由电荷面密度。
+        
+        可以由此发现，在导体问题中，导体内部有自由电子就会在电场的作用中运动。因此在静止的情况下，导体内部的电场必须为零，且表面上的电场分布切向分量为零。由此可以总结出导体的静电条件：
+        \begin{enumerate}
+            \item 导体内部不带净电荷，电荷值分布于表面上
+            \item 导体内部电场为零
+            \item 导体表面的电场一定沿着法线方向，整个导体的电势相等
+        \end{enumerate}
+    \subsection{静电场能量}
+        由式\ref{eq.1_74}可以用电势写出静电场的总能量\[\boldsymbol{E} \cdot \boldsymbol{H} = -\nabla \varphi \cdot \boldsymbol{D} = - \nabla \cdot (\varphi \boldsymbol{D}) + \varphi \nabla \cdot \boldsymbol{D}= -\nabla \cdot (\varphi \boldsymbol{D}) + \rho \varphi\]对于化简后的第一个式子可以求积分得到\[\int_V \nabla \cdot (\varphi \boldsymbol{D})dV = \oint_S \varphi \boldsymbol{D} \cdot d\boldsymbol{S}\]该式在无穷远处为零，则在$r \to \infty$时，静电场的总能量\footnotetext{这一式仅在电荷分布的区域内才不等于零，故不能代表能量密度}
+        \begin{equation}
+            W = \frac{1}{2} \int_V \rho \varphi dV
+        \end{equation}
+\section{唯一性定理}
+    本节只直接给出唯一性定理的结论而不证明，关于证明请详细翻阅教材
+    \subsection{静电问题的唯一性定理}
+    唯一性定理: 设区域 $V$ 内给定自由电荷分布 $\rho(\boldsymbol{x})$, 在 $V$ 的边界 $S$ 上给定\textbf{其中任意一个}
+        \begin{enumerate}[(1)]
+            \item 电势 $\left.\varphi\right|_{s}$
+            \item 电势的法线方向偏导数 $\left.\frac{\partial \varphi}{\partial n}\right|_{s}$
+        \end{enumerate}
+        则V内的电场唯一确定。
+    \subsection{有导体存在时的唯一性定理}
+        相应的条件变为—
+        \begin{enumerate}[(1)]
+            \item 给定每个导体上的电势
+            \item 给定每个导体上的总电荷Q
+        \end{enumerate}
+\section{Laplace方程与分离变量法}
+    \begin{equation}
+    \begin{aligned}
+    \varphi(R, \theta, \phi)=& \sum_{n, m}\left(a_{r m} R^{n}+\frac{b_{n m}}{R^{n+1}}\right) \mathrm{P}_{n}^{m}(\cos \theta) \cos m \phi \\
+    &+\sum_{n, m}\left(c_{n m} R^{n}+\frac{d_{n m}}{R^{n+1}}\right) \mathrm{P}_{n}^{m}(\cos \theta) \sin m \phi
+    \end{aligned}
+    \end{equation}
+\section{镜像法}
+\section{格林函数}
+    \subsection{格林函数的定义}
+\section{电多极矩}
+    

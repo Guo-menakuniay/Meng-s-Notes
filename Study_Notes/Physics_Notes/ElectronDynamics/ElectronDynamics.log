@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  25 JUN 2022 16:48
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  30 JUN 2022 13:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1104,7 +1104,7 @@ Package geometry Warning: Over-specification in `v'-direction.
 
 \@quotelevel=\count494
 \@quotereset=\count495
-(./ElectronDynamics.aux (./sections/S1/PartI_.aux) (./sections/S4/PartIV.aux) (./sections/S5/PartV.aux))
+(./ElectronDynamics.aux (./sections/S1/PartI_.aux) (./sections/S2/PartII.aux) (./sections/S4/PartIV.aux) (./sections/S5/PartV.aux))
 \openout1 = `ElectronDynamics.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -1370,28 +1370,35 @@ Chapter 2.
 
 
 ]
+\openout2 = `sections/S2/PartII.aux'.
+
+ (./sections/S2/PartII.tex [14
+
+]) [15] [16]
 Chapter 3.
-[14
+[17
+
+
 
 ]
 Chapter 4.
-[15
+[18
 
 ]
 \openout2 = `sections/S4/PartIV.aux'.
 
- (./sections/S4/PartIV.tex [16
+ (./sections/S4/PartIV.tex [19
 
-] [17] [18]
+] [20] [21]
 Missing character: There is no 、 (U+3001) in font [lmroman10-regular]:mapping=tex-text;!
 Missing character: There is no 、 (U+3001) in font [lmroman10-regular]:mapping=tex-text;!
- [19]
+ [22]
 File: figs/电场入射情况.jpg Graphic file (type bmp)
 <figs/电场入射情况.jpg>
- [20]
+ [23]
 File: figs/电磁场折射示意图.jpg Graphic file (type bmp)
 <figs/电磁场折射示意图.jpg>
- [21] [22] [23] [24]
+ [24] [25] [26] [27]
 File: figs/谐振腔示意图.jpg Graphic file (type bmp)
 <figs/谐振腔示意图.jpg>
 
@@ -1399,40 +1406,34 @@ Overfull \hbox (26.74393pt too wide) in paragraph at lines 439--440
  [][] 
  []
 
-[25]) [26]
+[28]) [29]
 Chapter 5.
-[27
+[30
 
 
 
 ]
 \openout2 = `sections/S5/PartV.aux'.
 
- (./sections/S5/PartV.tex [28
+ (./sections/S5/PartV.tex [31
 
-] [29] [30] [31]
+] [32] [33] [34]
 Missing character: There is no i ("69) in font rsfs7!
 Missing character: There is no j ("6A) in font rsfs7!
- [32] [33]) [34] (./ElectronDynamics.aux (./sections/S1/PartI_.aux) (./sections/S4/PartIV.aux) (./sections/S5/PartV.aux))
-
-Package rerunfilecheck Warning: File `ElectronDynamics.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ElectronDynamics.out':
-(rerunfilecheck)             Before: CF7735F095AF6A14243D4947720AEDCF;7162
-(rerunfilecheck)             After:  438274A28F57CE4E59723F64B94146B6;7256.
+ [35] [36]) [37] (./ElectronDynamics.aux (./sections/S1/PartI_.aux) (./sections/S2/PartII.aux) (./sections/S4/PartIV.aux) (./sections/S5/PartV.aux))
+Package rerunfilecheck Info: File `ElectronDynamics.out' has not changed.
+(rerunfilecheck)             Checksum: 197E054C7752BA9AA64E094F0A197F4F;8800.
 Package logreq Info: Writing requests to 'ElectronDynamics.run.xml'.
 \openout1 = `ElectronDynamics.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27053 strings out of 476919
- 541867 string characters out of 5821841
- 1463406 words of memory out of 5000000
- 46550 multiletter control sequences out of 15000+600000
+ 27068 strings out of 476919
+ 542138 string characters out of 5821841
+ 1466088 words of memory out of 5000000
+ 46557 multiletter control sequences out of 15000+600000
  416302 words of font info for 135 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,15n,104p,1663b,839s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ElectronDynamics.pdf (37 pages).
+Output written on ElectronDynamics.pdf (40 pages).
