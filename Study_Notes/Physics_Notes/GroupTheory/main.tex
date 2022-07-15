@@ -1,0 +1,49 @@
+%!TEX program = xelatex
+
+%-----------------------------导言区---------------------------%
+\documentclass[10pt,oneside,UTF8]{book}
+\usepackage[fontset=mac]{ctex}
+\usepackage[shortlabels]{enumitem}
+\usepackage{graphicx,subfigure,booktabs,multirow,caption,setspace,listings,amsmath,amsfonts,lineno,multicol,float,stfloats}  % 直接导入常用包
+\usepackage{xcolor,colortbl,rotating,bigstrut}
+\usepackage{hyperref} % 生成书签和超链接
+\usepackage{ulem} %解决文字下划线无法自动换行的问题(暂时无用)
+\usepackage[hyperref=true,backend=biber,bibstyle=gb7714-2015,citestyle=numeric-comp,sorting=none,backref=true]{biblatex}
+\usepackage{titlesec}
+    %改变section、subsection里面字体的样式。中文黑体，英文TNR。
+    \newfontfamily\sectionef{Times New Roman}
+    \newcommand{\sectioncf}{\CJKfamily{FZHeiTi}}
+    \titleformat*{\section}{\Large\bfseries\sectioncf\sectionef}
+    \titleformat*{\subsection}{\large\bfseries\sectioncf\sectionef}
+\usepackage{fancyhdr}
+\usepackage{geometry} % 用于纸张格式的设置
+\geometry{a4paper,scale=0.85,top=2cm,bottom=1.5cm,left=2.5cm,right=2.5cm}
+    %定义公式编码格式
+\numberwithin{equation}{section} %每次的NewSection都重置equation的ji shu
+\renewcommand\theequation{\thesection.\arabic{equation}}
+%----------------------标题与分栏线----------------------------%
+\title{\fontsize{30pt}{30pt}\textbf{群论}}
+% 对于空格有 \! \, \: \ \quad \qquad几种形式，间隔逐渐增大
+\author
+{\kaishu 郭蒙 \\
+\kaishu 中山大学物理学院，广东，广州，510275} % \quad表示单个空格
+\date{}
+
+\setlength\columnsep{1cm} %设置分栏之后的栏间间距
+\setlength{\columnseprule}{0.5pt} % 设置分栏之后的分割线宽度
+%---------------------正文--------------------------%
+\begin{document}
+\maketitle  % 将前文的标题进行创建
+\newpage
+\pagenumbering{Roman}  %对目录使用罗马字体单独计算页数
+\setcounter{page}{1}
+\tableofcontents
+\newpage
+\setcounter{page}{1}	%重置对常规页面的阿拉伯级数
+\pagenumbering{arabic}
+
+\chapter{群的基本概念} %具体的笔记大纲暂时还无法确定 先以第一本教材 A.W.Joshi所著的大纲作为基本框架
+    \include{sections/PartI/SectionI.tex}
+
+
+\end{document}

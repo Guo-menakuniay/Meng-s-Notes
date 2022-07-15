@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  1 JUL 2022 17:42
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.9.8)  15 JUL 2022 18:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**QMnotes
-(./QMnotes.tex
+**main
+(./main.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
@@ -1094,8 +1094,8 @@ Package geometry Warning: Over-specification in `v'-direction.
 
 \@quotelevel=\count493
 \@quotereset=\count494
-(./QMnotes.aux (./sections/PartI_WaveFunction.aux) (./sections/PartII_ShrodingerFunction.aux) (./sections/PartIII_HilbertSpace.aux) (./sections/PartV/PartV_PerturbationTheory.aux) (./sections/Parctise.aux))
-\openout1 = `QMnotes.aux'.
+(./main.aux (./sections/PartI/SectionI.aux))
+\openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
@@ -1195,9 +1195,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 35.
 LaTeX Info: Redefining \pageref on input line 35.
 LaTeX Info: Redefining \nameref on input line 35.
- (./QMnotes.out) (./QMnotes.out)
+ (./main.out) (./main.out)
 \@outlinefile=\write4
-\openout4 = `QMnotes.out'.
+\openout4 = `main.out'.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -1208,12 +1208,12 @@ Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `QMnotes.bcf'.
+\openout3 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'QMnotes.bbl' not found.
+Package biblatex Info: ... file 'main.bbl' not found.
 
-No file QMnotes.bbl.
+No file main.bbl.
 Package biblatex Info: Reference section=0 on input line 35.
 Package biblatex Info: Reference segment=0 on input line 35.
 *geometry* driver: auto-detecting
@@ -1291,23 +1291,20 @@ Package fontspec Info: Font family 'KaitiSC(0)' created for font 'Kaiti SC'
 [1
 
 
-] (./QMnotes.toc)
+] (./main.toc)
 \tf@toc=\write5
-\openout5 = `QMnotes.toc'.
+\openout5 = `main.toc'.
 
  [1
 
 ]
-LaTeX Font Info:    Font shape `TU/SongtiSCLight(0)/m/sl' in size <10> not available
-(Font)              Font shape `TU/SongtiSCLight(0)/m/it' tried instead on input line 41.
- [2]
 Chapter 1.
 [1
 
 ]
-\openout2 = `sections/PartI_WaveFunction.aux'.
+\openout2 = `sections/PartI/SectionI.aux'.
 
- (./sections/PartI_WaveFunction.tex
+ (./sections/PartI/SectionI.tex
 
 Package xeCJK Warning: Unknown CJK family `FZHeiTi' is being ignored.
 (xeCJK)                
@@ -1318,130 +1315,25 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/n' in size <14.4> not ava
 (Font)              Font shape `TU/TimesNewRoman(0)/b/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `TU/SongtiSCLight(0)/bx/n' in size <14.4> not available
 (Font)              Font shape `TU/SongtiSCLight(0)/b/n' tried instead on input line 1.
-File: sections/fig/WavefunctionCollapse.png Graphic file (type bmp)
-<sections/fig/WavefunctionCollapse.png>
-[2
+)
+LaTeX Font Info:    Font shape `TU/SongtiSCLight(0)/m/sl' in size <10> not available
+(Font)              Font shape `TU/SongtiSCLight(0)/m/it' tried instead on input line 46.
+ [2
 
-] [3]
-File: sections/fig/UncertaintyI.png Graphic file (type bmp)
-<sections/fig/UncertaintyI.png>
-File: sections/fig/UncertaintyII.png Graphic file (type bmp)
-<sections/fig/UncertaintyII.png>
- [4]) [5]
-Chapter 2.
-[6
-
-
-
-]
-\openout2 = `sections/PartII_ShrodingerFunction.aux'.
-
- (./sections/PartII_ShrodingerFunction.tex
-Overfull \hbox (0.1159pt too wide) in paragraph at lines 29--30
-[]\TU/SongtiSCLight(0)/m/n/10 虽 然 波 函 数 本 身 和 时 间 有 关，|  但 是 计 算 几 率 密 度 的 时 候，|  时 间 因 子 相 互 抵 消  |— — — —|  在 根 据 式[]\TU/lmr/m/n/10 1.5.7[]\TU/SongtiSCLight(0)/m/n/10 得
- []
-
-[7
-
-]
-Missing character: There is no ， (U+FF0C) in font [lmroman10-regular]:mapping=tex-text;!
-File: sections/fig/1DInfiniteSquarePotential_1.png Graphic file (type bmp)
-<sections/fig/1DInfiniteSquarePotential_1.png>
- [8] [9] [10]
-LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/bx/n' in size <12> not available
-(Font)              Font shape `TU/TimesNewRoman(0)/b/n' tried instead on input line 198.
-LaTeX Font Info:    Font shape `TU/SongtiSCLight(0)/bx/n' in size <12> not available
-(Font)              Font shape `TU/SongtiSCLight(0)/b/n' tried instead on input line 198.
- [11] [12] [13]
-Missing character: There is no 其 (U+5176) in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 中 (U+4E2D) in font [lmroman10-regular]:mapping=tex-text;!
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 404.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\delta' on input line 404.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 404.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 413.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\delta' on input line 413.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 413.
-
-) [14]
-Chapter 3.
-[15
-
-
-
-]
-\openout2 = `sections/PartIII_HilbertSpace.aux'.
-
- (./sections/PartIII_HilbertSpace.tex [16
-
-] [17]) [18]
-Chapter 4.
-[19
-
-
-
-]
-Chapter 5.
-[20
-
-]
-Chapter 6.
-[21
-
-]
-\openout2 = `sections/PartV/PartV_PerturbationTheory.aux'.
-
- (./sections/PartV/PartV_PerturbationTheory.tex [22
-
-]) [23]
-Chapter 7.
-[24
-
-
-
-]
-Chapter 8.
-[25
-
-]
-\openout2 = `sections/Parctise.aux'.
-
- (./sections/Parctise.tex) [26
-
-] (./QMnotes.aux (./sections/PartI_WaveFunction.aux) (./sections/PartII_ShrodingerFunction.aux) (./sections/PartIII_HilbertSpace.aux) (./sections/PartV/PartV_PerturbationTheory.aux) (./sections/Parctise.aux))
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package rerunfilecheck Info: File `QMnotes.out' has not changed.
-(rerunfilecheck)             Checksum: 4F424A4355FC68D52E9A3FAC4B41EF98;3295.
-Package logreq Info: Writing requests to 'QMnotes.run.xml'.
-\openout1 = `QMnotes.run.xml'.
+] (./main.aux (./sections/PartI/SectionI.aux))
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: FECBA058C52C08AF19E4F9647B345AD6;177.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26923 strings out of 476919
- 542264 string characters out of 5821841
- 1458937 words of memory out of 5000000
- 46442 multiletter control sequences out of 15000+600000
- 412241 words of font info for 118 fonts, out of 8000000 for 9000
+ 26479 strings out of 476919
+ 518397 string characters out of 5821841
+ 1419906 words of memory out of 5000000
+ 46046 multiletter control sequences out of 15000+600000
+ 410608 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 101i,12n,104p,736b,839s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 101i,8n,104p,733b,839s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on QMnotes.pdf (29 pages).
+Output written on main.pdf (4 pages).

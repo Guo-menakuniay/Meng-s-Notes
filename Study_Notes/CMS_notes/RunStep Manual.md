@@ -117,17 +117,32 @@ cmsenv
 
 [you can look up more information in here](https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookWhichRelease)
 
-### "SCRAM"
+## Condor命令[[*]](https://twiki.cern.ch/twiki/bin/view/CMSPublic/CompOpsGlideinWMSCondorCommands)
 
-## condor命令[[*]](https://twiki.cern.ch/twiki/bin/view/CMSPublic/CompOpsGlideinWMSCondorCommands)
+> 参考资料
+>
+> - CERNWiki[https://twiki.cern.ch/twiki/bin/view/CMSPublic/CompOpsGlideinWMSCondorCommands]
+> - HTCondor Manual[https://htcondor.readthedocs.io/en/latest/man-pages/condor_q.html]
+> - Condor Pulic[https://www.cl.cam.ac.uk/manuals/condor-V6_8_3-Manual/Contents.html]
 
-**condor_q  查看正在运行的工作序列**
+### **condor_q  查看正在运行的工作序列**
 
 > Condor_q -name <Job_name> 可以查找指定名字的工作
-
-**condor_rm <job#>  通过工作编号删除序列中的工作** 
-
-> Condor_rm -const (expr) 可以根据表达式判断需要删除的工作
 >
-> ​	condor_rm -const 'jobstatus==5' 删除所有Hold状态的任务
+> condor_q  usr 直接跟用户的名字查找对应用户提交的工作
+>
+> condor_q  -nobatch 可以显示提交工作的状态和优先级
+>
+> ![image-20220715161837669](/Users/menakuniay/Library/Application Support/typora-user-images/image-20220715161837669.png)
 
+Condor_q -analyze 可以显示进程不工作的具体原因
+
+### **condor_rm <job#>  通过工作编号删除序列中的工作** 
+
+> condor_rm -const (expr) 可以根据表达式判断需要删除的工作
+>
+> condor_rm -const 'jobstatus==5' 删除所有Hold状态的任务
+
+## Condor常见命令
+
+参考文档[https://www.cl.cam.ac.uk/manuals/condor-V6_8_3-Manual/2_6Managing_Job.html]
